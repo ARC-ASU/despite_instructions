@@ -51,8 +51,8 @@ The release retains only the completed cohorts used by the paper. It excludes un
 
 This public repository was exported from the reviewed release snapshot with one initial commit. No branches, tags, commits, or manuscript files from the original private research and Overleaf repositories were imported.
 
-## README figures
+## Figures
 
-Run `python scripts/plot_results.py --output-dir outputs/figures` after installing the `plots` extra. It recomputes statistics from the trial records and exports `main_results` and `interventions` as both SVG and high-resolution PNG. To refresh the README assets, use `--output-dir assets`.
+The README uses Figure 1 from the paper, provided as a rendered SVG in `assets/figure1_overview.svg`.
 
-The main figure compares original messages with standard-message and fresh-receiver controls. Whiskers are 95% bootstrap intervals over games. The intervention figure shows receiver-memory means and all ten paired post-hoc paraphrasing games, without jitter or hidden overlapping observations. The figures are generated independently of the manuscript; no manuscript files are required.
+For additional result plots, install the `plots` extra and run `python scripts/plot_results.py --output-dir outputs/figures`. This recomputes statistics from the trial records and exports `main_results` and `interventions` as SVG and PNG.
