@@ -1,0 +1,4685 @@
+{
+  "source": "results/openai-sol-prior-ladder-learning/openai-sol-prior-ladder-learning-v2-full-live-20260903-150138.jsonl",
+  "source_sha256": "4304b2f688409f23d2a54ea222d1a1b057487791cc1d108d1f8121fe848afe84",
+  "reference_audit": "7ef6852:review/fixed-sender-reference-audit.json",
+  "early_checkpoints": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "records": [
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.625,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.328125,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.671875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.3125,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.390625,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.46875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 0.75,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 0.75,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.40625,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.875,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.5625,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "anti_focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.671875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.375,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.390625,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.875,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.859375,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 0.625,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.359375,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.625,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.453125,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.375,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.625,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.53125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.5,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.375,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 0.875,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.53125,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.5,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.75,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.625,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "compass_cycle",
+      "condition": "focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.875,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.75,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.828125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.21875,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.375,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.328125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.375,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.25,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.375,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.328125,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.125,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 0.75,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.171875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 0.875,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.375,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.125,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.875,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.265625,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "anti_focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.125,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.171875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.875,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.984375,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.875,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.984375,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "day_cycle",
+      "condition": "focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.5,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.34375,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.6875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.3125,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.5,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.4375,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.453125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 0.875,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 0.875,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.46875,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.375,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.375,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.515625,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "anti_focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.6875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.3125,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.375,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.703125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.296875,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.25,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.40625,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.453125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.375,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 0.75,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 0.875,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.484375,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.125,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.515625,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "inspection_paraphrases",
+      "condition": "focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.375,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.75,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.703125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.125,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.5,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.25,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.5,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.625,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.46875,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.125,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 0.625,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.203125,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.375,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.46875,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.125,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.25,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.75,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.3125,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.5,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.375,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.28125,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.375,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.375,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.625,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.390625,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "anti_focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 0.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.25,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.375,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 0.625,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.359375,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 0,
+      "state_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4,
+        2,
+        1,
+        1,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.75,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.625,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.4375,
+          "greedy": 0.5
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.625,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.796875,
+        "independent": 0.359375,
+        "greedy": 0.4140625
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 1,
+      "state_sequence": [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        1,
+        3,
+        3,
+        4,
+        3,
+        2,
+        1,
+        4,
+        1,
+        4,
+        2,
+        4,
+        3,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 2,
+      "state_sequence": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        3,
+        3,
+        4,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.4375
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.4765625
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 3,
+      "state_sequence": [
+        3,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        2,
+        1,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 0.625,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 0.875,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.7291666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9791666666666666
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 0.859375,
+        "independent": 0.375,
+        "greedy": 0.49479166666666663
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 4,
+      "state_sequence": [
+        4,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2,
+        4,
+        4,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.9375,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 5,
+      "state_sequence": [
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3,
+        4,
+        3,
+        1,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.6666666666666666
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.6875,
+          "greedy": 0.9583333333333334
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 0.9583333333333334
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.47916666666666663
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 6,
+      "state_sequence": [
+        2,
+        3,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        4,
+        2,
+        1,
+        4,
+        4
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.8125,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    },
+    {
+      "family": "weather_severity",
+      "condition": "focal",
+      "rollout": 7,
+      "state_sequence": [
+        1,
+        3,
+        4,
+        3,
+        4,
+        4,
+        2,
+        3,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4,
+        2,
+        3,
+        4,
+        3,
+        1,
+        1,
+        2
+      ],
+      "curve": {
+        "0": {
+          "model": 1.0,
+          "independent": 0.25,
+          "greedy": 0.25
+        },
+        "1": {
+          "model": 1.0,
+          "independent": 0.3125,
+          "greedy": 0.375
+        },
+        "2": {
+          "model": 1.0,
+          "independent": 0.375,
+          "greedy": 0.5
+        },
+        "4": {
+          "model": 1.0,
+          "independent": 0.5,
+          "greedy": 0.75
+        },
+        "8": {
+          "model": 1.0,
+          "independent": 0.75,
+          "greedy": 1.0
+        },
+        "12": {
+          "model": 1.0,
+          "independent": 0.875,
+          "greedy": 1.0
+        },
+        "24": {
+          "model": 1.0,
+          "independent": 1.0,
+          "greedy": 1.0
+        }
+      },
+      "early_auc": {
+        "model": 1.0,
+        "independent": 0.375,
+        "greedy": 0.5
+      }
+    }
+  ]
+}

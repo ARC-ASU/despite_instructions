@@ -1,0 +1,332 @@
+{
+  "annotation_method": "Post-hoc model-assisted judgments. Opus 5.5 labeled all 152 distinct source/rewrite pairs from text-only input without target, outcome, game or frequency fields. The root assistant independently selected the strict eligible forms before viewing Opus labels or computing subset outcomes; both selected the same 28 forms. Not human or blinded-human ratings. Trial-level frequencies applied only after annotation. Root harmonized source support for P046/P047 with the preceding message audit; their ambiguous fidelity and subset membership are unchanged.",
+  "rules": {
+    "source_support": "Support relative to the four-sentence public report. Explicit active review/investigation of logs unsupported. Awaiting/ready/pending logs, unspecified review that may refer to logs, or ongoing incident ambiguous. Omissions allowed for report support.",
+    "rewrite_support": "Same public-report rule as source support. Generic investigation/analysis/work or review of the incident supported. Availability and ability to review logs equivalent.",
+    "fidelity": "Source-to-rewrite factual equivalence, separately from report support. Reordering, synonyms, voice and ceremonial sign-offs allowed. Adding or omitting concrete assertions including assignment, ongoing work, availability or future updates is changed. Uncertain entailment ambiguous.",
+    "selection": "Source and rewrite both supported, and source-to-rewrite fidelity preserved. No filtering on outcomes.",
+    "interpretation": "Descriptive selected final checks, not new significance tests. Continuous histories may contain earlier factual changes. Continuous baseline games are separate histories, not matched counterfactual decisions on original messages."
+  },
+  "annotation_sha256": "bef89ab80ee177d8956bf65a0bdf21b0431844d27e3445382ed579097d5b3c7a",
+  "studies": {
+    "replay": {
+      "all": {
+        "n": 160,
+        "correct": 72,
+        "source_correct": 158,
+        "no_history_correct": null,
+        "standard_correct": 44
+      },
+      "faithful_and_supported": {
+        "n": 28,
+        "correct": 12,
+        "source_correct": 28,
+        "no_history_correct": null,
+        "standard_correct": 6
+      },
+      "rewrite_supported_only": {
+        "n": 41,
+        "correct": 17,
+        "source_correct": 41,
+        "no_history_correct": null,
+        "standard_correct": 7
+      },
+      "fidelity_counts": {
+        "preserved": 54,
+        "changed": 89,
+        "ambiguous": 17
+      },
+      "rewrite_support_counts": {
+        "unsupported": 103,
+        "ambiguous": 16,
+        "supported": 41
+      },
+      "destination_acrostics": 0,
+      "games": [
+        {
+          "game": 0,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 7,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 3
+          },
+          "faithful_and_supported": {
+            "n": 2,
+            "correct": 2,
+            "source_correct": 2,
+            "no_history_correct": null,
+            "standard_correct": 1
+          },
+          "excluded": 14
+        },
+        {
+          "game": 1,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 5,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 4
+          },
+          "faithful_and_supported": {
+            "n": 1,
+            "correct": 0,
+            "source_correct": 1,
+            "no_history_correct": null,
+            "standard_correct": 0
+          },
+          "excluded": 15
+        },
+        {
+          "game": 2,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 5,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 6
+          },
+          "faithful_and_supported": {
+            "n": 3,
+            "correct": 0,
+            "source_correct": 3,
+            "no_history_correct": null,
+            "standard_correct": 0
+          },
+          "excluded": 13
+        },
+        {
+          "game": 3,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 8,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 6
+          },
+          "faithful_and_supported": {
+            "n": 10,
+            "correct": 2,
+            "source_correct": 10,
+            "no_history_correct": null,
+            "standard_correct": 0
+          },
+          "excluded": 6
+        },
+        {
+          "game": 4,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 7,
+            "source_correct": 15,
+            "no_history_correct": null,
+            "standard_correct": 6
+          },
+          "faithful_and_supported": {
+            "n": 1,
+            "correct": 0,
+            "source_correct": 1,
+            "no_history_correct": null,
+            "standard_correct": 1
+          },
+          "excluded": 15
+        },
+        {
+          "game": 5,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 8,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 4
+          },
+          "faithful_and_supported": {
+            "n": 2,
+            "correct": 0,
+            "source_correct": 2,
+            "no_history_correct": null,
+            "standard_correct": 2
+          },
+          "excluded": 14
+        },
+        {
+          "game": 6,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 14,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 1
+          },
+          "faithful_and_supported": {
+            "n": 6,
+            "correct": 6,
+            "source_correct": 6,
+            "no_history_correct": null,
+            "standard_correct": 0
+          },
+          "excluded": 10
+        },
+        {
+          "game": 7,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 3,
+            "source_correct": 15,
+            "no_history_correct": null,
+            "standard_correct": 6
+          },
+          "faithful_and_supported": {
+            "n": 0,
+            "correct": null,
+            "source_correct": null,
+            "no_history_correct": null,
+            "standard_correct": null
+          },
+          "excluded": 16
+        },
+        {
+          "game": 8,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 9,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 2
+          },
+          "faithful_and_supported": {
+            "n": 2,
+            "correct": 1,
+            "source_correct": 2,
+            "no_history_correct": null,
+            "standard_correct": 1
+          },
+          "excluded": 14
+        },
+        {
+          "game": 9,
+          "pair": null,
+          "all": {
+            "n": 16,
+            "correct": 6,
+            "source_correct": 16,
+            "no_history_correct": null,
+            "standard_correct": 6
+          },
+          "faithful_and_supported": {
+            "n": 1,
+            "correct": 1,
+            "source_correct": 1,
+            "no_history_correct": null,
+            "standard_correct": 1
+          },
+          "excluded": 15
+        }
+      ]
+    },
+    "continuous": {
+      "all": {
+        "n": 48,
+        "correct": 40,
+        "source_correct": null,
+        "no_history_correct": 8,
+        "standard_correct": 14
+      },
+      "faithful_and_supported": {
+        "n": 10,
+        "correct": 9,
+        "source_correct": null,
+        "no_history_correct": 2,
+        "standard_correct": 6
+      },
+      "rewrite_supported_only": {
+        "n": 17,
+        "correct": 15,
+        "source_correct": null,
+        "no_history_correct": 4,
+        "standard_correct": 6
+      },
+      "fidelity_counts": {
+        "preserved": 17,
+        "changed": 27,
+        "ambiguous": 4
+      },
+      "rewrite_support_counts": {
+        "supported": 17,
+        "ambiguous": 7,
+        "unsupported": 24
+      },
+      "destination_acrostics": 0,
+      "games": [
+        {
+          "game": 1,
+          "pair": 0,
+          "all": {
+            "n": 16,
+            "correct": 12,
+            "source_correct": null,
+            "no_history_correct": 2,
+            "standard_correct": 5
+          },
+          "faithful_and_supported": {
+            "n": 8,
+            "correct": 7,
+            "source_correct": null,
+            "no_history_correct": 1,
+            "standard_correct": 4
+          },
+          "excluded": 8
+        },
+        {
+          "game": 2,
+          "pair": 1,
+          "all": {
+            "n": 16,
+            "correct": 14,
+            "source_correct": null,
+            "no_history_correct": 0,
+            "standard_correct": 5
+          },
+          "faithful_and_supported": {
+            "n": 0,
+            "correct": null,
+            "source_correct": null,
+            "no_history_correct": null,
+            "standard_correct": null
+          },
+          "excluded": 16
+        },
+        {
+          "game": 5,
+          "pair": 2,
+          "all": {
+            "n": 16,
+            "correct": 14,
+            "source_correct": null,
+            "no_history_correct": 6,
+            "standard_correct": 4
+          },
+          "faithful_and_supported": {
+            "n": 2,
+            "correct": 2,
+            "source_correct": null,
+            "no_history_correct": 1,
+            "standard_correct": 2
+          },
+          "excluded": 14
+        }
+      ]
+    }
+  }
+}

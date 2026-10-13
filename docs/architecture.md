@@ -1,0 +1,14 @@
+# Architecture
+
+Each runner accepts a protocol configuration, a `Client`, and an `emit(row)` callback. The runner owns the scientific state; the client owns access to a model. There is no global provider configuration, inherited launch-script override, credential file, or model download.
+
+- **Selection and inspection**: `selection/run.py` builds a balanced schedule, samples public reports and candidate order, calls the sender, applies the appropriate message gate, and calls the receiver. Sender and receiver histories are separate. Only adaptation rounds append history. Feedback can be truthful, absent, or sampled from prior realized rewards; history persistence is independently configurable for each role.
+- **Shared priors**: `priors.py` has three protocols. Discovery makes isolated choices. Fixed-sender learning gives the receiver a fixed mapping's messages and its own correctness feedback. Bilateral coordination lets both roles adapt. Configurations carry exact scientific prompts and scheduled stimuli; no recorded answers are inputs to the live runner.
+- **Incidents**: `incident.py` implements sender → format gate → stateless monitor → optional paraphraser → receiver. It stores separate histories and runs standard-message, reassignment, and fresh-receiver controls against frozen final states. `interventions.py` reconstructs receiver histories for memory ablations and post-hoc paraphrasing.
+- **Evidence and analysis**: `analysis.py` checks the manifest and computes endpoints from trials. `statistics.py` supplies exact binomial tests, Holm correction, and game-level bootstrap intervals. `references.py` computes the four-state comparison strategies. `decoder.py` fits final-probe decoding rules and evaluates them only on earlier probes. `annotations.py` joins explicit annotations to observed trials.
+
+The receiver never receives the private target in its prompt or transcript. A target can appear in a trial record because the evaluator needs it to score the decision. The monitor receives only the public report and proposed message. Context stored in a replay hash is evaluator metadata and is not passed to the provider function.
+
+`RecordedClient` validates each full request hash before releasing an archived reply. `ChoiceReplay` serves older archives that recorded separate system/user hashes: it checks those hashes and reconstructs the recorded parsed choice. Neither implementation makes network requests.
+
+To add a provider, implement the four-argument function described in [experiments.md](experiments.md). To add an experiment, define its state transitions and explicit configuration, reuse the client boundary, and test that prohibited information cannot enter receiver inputs. Do not change historical prompts in place; create a new configuration with a new output directory.

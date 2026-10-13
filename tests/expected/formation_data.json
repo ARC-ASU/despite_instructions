@@ -1,0 +1,802 @@
+{
+  "screen": [
+    {
+      "play_blocks": [
+        30.0,
+        38.333333333333336,
+        53.333333333333336,
+        70.0,
+        81.66666666666667,
+        88.33333333333333
+      ],
+      "sender": "Sol",
+      "receiver": "Sol",
+      "games": [
+        "gpt5_6_sol__gpt5_6_sol_S4_r000",
+        "gpt5_6_sol__gpt5_6_sol_S4_r001",
+        "gpt5_6_sol__gpt5_6_sol_S4_r002",
+        "gpt5_6_sol__gpt5_6_sol_S4_r003",
+        "gpt5_6_sol__gpt5_6_sol_S4_r004",
+        "gpt5_6_sol__gpt5_6_sol_S4_r005",
+        "gpt5_6_sol__gpt5_6_sol_S4_r006",
+        "gpt5_6_sol__gpt5_6_sol_S4_r007",
+        "gpt5_6_sol__gpt5_6_sol_S4_r008",
+        "gpt5_6_sol__gpt5_6_sol_S4_r009",
+        "gpt5_6_sol__gpt5_6_sol_S4_r010",
+        "gpt5_6_sol__gpt5_6_sol_S4_r011",
+        "gpt5_6_sol__gpt5_6_sol_S4_r012",
+        "gpt5_6_sol__gpt5_6_sol_S4_r013",
+        "gpt5_6_sol__gpt5_6_sol_S4_r014"
+      ],
+      "scores": [
+        68.75,
+        100.0,
+        100.0,
+        56.25,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "mean": 95.0,
+      "ci95": [
+        87.9,
+        100.0
+      ]
+    },
+    {
+      "play_blocks": [
+        33.333333333333336,
+        33.333333333333336,
+        40.0,
+        41.666666666666664,
+        61.666666666666664,
+        71.66666666666667
+      ],
+      "sender": "Opus",
+      "receiver": "Sol",
+      "games": [
+        "claude5_opus__gpt5_6_sol_S4_r000",
+        "claude5_opus__gpt5_6_sol_S4_r001",
+        "claude5_opus__gpt5_6_sol_S4_r002",
+        "claude5_opus__gpt5_6_sol_S4_r003",
+        "claude5_opus__gpt5_6_sol_S4_r004",
+        "claude5_opus__gpt5_6_sol_S4_r005",
+        "claude5_opus__gpt5_6_sol_S4_r006",
+        "claude5_opus__gpt5_6_sol_S4_r007",
+        "claude5_opus__gpt5_6_sol_S4_r008",
+        "claude5_opus__gpt5_6_sol_S4_r009",
+        "claude5_opus__gpt5_6_sol_S4_r010",
+        "claude5_opus__gpt5_6_sol_S4_r011",
+        "claude5_opus__gpt5_6_sol_S4_r012",
+        "claude5_opus__gpt5_6_sol_S4_r013",
+        "claude5_opus__gpt5_6_sol_S4_r014"
+      ],
+      "scores": [
+        87.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        75.0,
+        100.0,
+        81.25,
+        50.0,
+        100.0,
+        50.0,
+        100.0,
+        25.0,
+        50.0,
+        100.0
+      ],
+      "mean": 81.25,
+      "ci95": [
+        67.9,
+        92.9
+      ]
+    },
+    {
+      "play_blocks": [
+        26.666666666666668,
+        33.333333333333336,
+        33.333333333333336,
+        58.333333333333336,
+        70.0,
+        78.33333333333333
+      ],
+      "sender": "Sol",
+      "receiver": "Terra",
+      "games": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "scores": [
+        100.0,
+        81.25,
+        87.5,
+        87.5,
+        93.75,
+        31.25,
+        100.0,
+        93.75,
+        93.75,
+        100.0,
+        75.0,
+        25.0,
+        87.5,
+        62.5,
+        100.0
+      ],
+      "mean": 81.25,
+      "ci95": [
+        68.3,
+        91.7
+      ]
+    },
+    {
+      "play_blocks": [
+        33.333333333333336,
+        35.0,
+        36.666666666666664,
+        55.0,
+        58.333333333333336,
+        75.0
+      ],
+      "sender": "Terra",
+      "receiver": "Sol",
+      "games": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "scores": [
+        62.5,
+        100.0,
+        100.0,
+        100.0,
+        81.25,
+        87.5,
+        100.0,
+        31.25,
+        100.0,
+        100.0,
+        31.25,
+        100.0,
+        50.0,
+        100.0,
+        25.0
+      ],
+      "mean": 77.91666666666667,
+      "ci95": [
+        62.9,
+        91.7
+      ]
+    },
+    {
+      "play_blocks": [
+        28.333333333333332,
+        23.333333333333332,
+        35.0,
+        53.333333333333336,
+        53.333333333333336,
+        61.666666666666664
+      ],
+      "sender": "Luna",
+      "receiver": "Sol",
+      "games": [
+        "gpt5_6_luna__gpt5_6_sol_S4_r000",
+        "gpt5_6_luna__gpt5_6_sol_S4_r001",
+        "gpt5_6_luna__gpt5_6_sol_S4_r002",
+        "gpt5_6_luna__gpt5_6_sol_S4_r003",
+        "gpt5_6_luna__gpt5_6_sol_S4_r004",
+        "gpt5_6_luna__gpt5_6_sol_S4_r005",
+        "gpt5_6_luna__gpt5_6_sol_S4_r006",
+        "gpt5_6_luna__gpt5_6_sol_S4_r007",
+        "gpt5_6_luna__gpt5_6_sol_S4_r008",
+        "gpt5_6_luna__gpt5_6_sol_S4_r009",
+        "gpt5_6_luna__gpt5_6_sol_S4_r010",
+        "gpt5_6_luna__gpt5_6_sol_S4_r011",
+        "gpt5_6_luna__gpt5_6_sol_S4_r012",
+        "gpt5_6_luna__gpt5_6_sol_S4_r013",
+        "gpt5_6_luna__gpt5_6_sol_S4_r014"
+      ],
+      "scores": [
+        25.0,
+        100.0,
+        25.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        25.0,
+        100.0,
+        62.5,
+        100.0,
+        50.0,
+        62.5,
+        50.0,
+        56.25
+      ],
+      "mean": 70.41666666666667,
+      "ci95": [
+        55.0,
+        85.4
+      ]
+    },
+    {
+      "play_blocks": [
+        30.0,
+        16.666666666666668,
+        28.333333333333332,
+        38.333333333333336,
+        45.0,
+        55.0
+      ],
+      "sender": "Sonnet",
+      "receiver": "Sol",
+      "games": [
+        "claude5_sonnet__gpt5_6_sol_S4_r000",
+        "claude5_sonnet__gpt5_6_sol_S4_r001",
+        "claude5_sonnet__gpt5_6_sol_S4_r002",
+        "claude5_sonnet__gpt5_6_sol_S4_r003",
+        "claude5_sonnet__gpt5_6_sol_S4_r004",
+        "claude5_sonnet__gpt5_6_sol_S4_r005",
+        "claude5_sonnet__gpt5_6_sol_S4_r006",
+        "claude5_sonnet__gpt5_6_sol_S4_r007",
+        "claude5_sonnet__gpt5_6_sol_S4_r008",
+        "claude5_sonnet__gpt5_6_sol_S4_r009",
+        "claude5_sonnet__gpt5_6_sol_S4_r010",
+        "claude5_sonnet__gpt5_6_sol_S4_r011",
+        "claude5_sonnet__gpt5_6_sol_S4_r012",
+        "claude5_sonnet__gpt5_6_sol_S4_r013",
+        "claude5_sonnet__gpt5_6_sol_S4_r014"
+      ],
+      "scores": [
+        100.0,
+        31.25,
+        93.75,
+        75.0,
+        100.0,
+        25.0,
+        25.0,
+        100.0,
+        50.0,
+        75.0,
+        93.75,
+        31.25,
+        25.0,
+        81.25,
+        25.0
+      ],
+      "mean": 62.083333333333336,
+      "ci95": [
+        46.2,
+        77.9
+      ]
+    },
+    {
+      "play_blocks": [
+        26.666666666666668,
+        11.666666666666666,
+        18.333333333333332,
+        13.333333333333334,
+        20.0,
+        36.666666666666664
+      ],
+      "sender": "Llama",
+      "receiver": "Sol",
+      "games": [
+        "llama4_maverick17b__gpt5_6_sol_S4_r000",
+        "llama4_maverick17b__gpt5_6_sol_S4_r001",
+        "llama4_maverick17b__gpt5_6_sol_S4_r002",
+        "llama4_maverick17b__gpt5_6_sol_S4_r003",
+        "llama4_maverick17b__gpt5_6_sol_S4_r004",
+        "llama4_maverick17b__gpt5_6_sol_S4_r005",
+        "llama4_maverick17b__gpt5_6_sol_S4_r006",
+        "llama4_maverick17b__gpt5_6_sol_S4_r007",
+        "llama4_maverick17b__gpt5_6_sol_S4_r008",
+        "llama4_maverick17b__gpt5_6_sol_S4_r009",
+        "llama4_maverick17b__gpt5_6_sol_S4_r010",
+        "llama4_maverick17b__gpt5_6_sol_S4_r011",
+        "llama4_maverick17b__gpt5_6_sol_S4_r012",
+        "llama4_maverick17b__gpt5_6_sol_S4_r013",
+        "llama4_maverick17b__gpt5_6_sol_S4_r014"
+      ],
+      "scores": [
+        25.0,
+        50.0,
+        18.75,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        31.25,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        37.5
+      ],
+      "mean": 27.5,
+      "ci95": [
+        24.6,
+        31.7
+      ]
+    },
+    {
+      "play_blocks": [
+        25.0,
+        21.666666666666668,
+        30.0,
+        23.333333333333332,
+        18.333333333333332,
+        35.0
+      ],
+      "sender": "Sol",
+      "receiver": "Llama",
+      "games": [
+        "gpt5_6_sol__llama4_maverick17b_S4_r000",
+        "gpt5_6_sol__llama4_maverick17b_S4_r001",
+        "gpt5_6_sol__llama4_maverick17b_S4_r002",
+        "gpt5_6_sol__llama4_maverick17b_S4_r003",
+        "gpt5_6_sol__llama4_maverick17b_S4_r004",
+        "gpt5_6_sol__llama4_maverick17b_S4_r005",
+        "gpt5_6_sol__llama4_maverick17b_S4_r006",
+        "gpt5_6_sol__llama4_maverick17b_S4_r007",
+        "gpt5_6_sol__llama4_maverick17b_S4_r008",
+        "gpt5_6_sol__llama4_maverick17b_S4_r009",
+        "gpt5_6_sol__llama4_maverick17b_S4_r010",
+        "gpt5_6_sol__llama4_maverick17b_S4_r011",
+        "gpt5_6_sol__llama4_maverick17b_S4_r012",
+        "gpt5_6_sol__llama4_maverick17b_S4_r013",
+        "gpt5_6_sol__llama4_maverick17b_S4_r014"
+      ],
+      "scores": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        18.75,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        18.75,
+        50.0,
+        25.0
+      ],
+      "mean": 25.833333333333332,
+      "ci95": [
+        23.3,
+        30.0
+      ]
+    },
+    {
+      "play_blocks": [
+        28.333333333333332,
+        21.666666666666668,
+        23.333333333333332,
+        23.333333333333332,
+        20.0,
+        33.333333333333336
+      ],
+      "sender": "Sol",
+      "receiver": "Sonnet",
+      "games": [
+        "gpt5_6_sol__claude5_sonnet_S4_r000",
+        "gpt5_6_sol__claude5_sonnet_S4_r001",
+        "gpt5_6_sol__claude5_sonnet_S4_r002",
+        "gpt5_6_sol__claude5_sonnet_S4_r003",
+        "gpt5_6_sol__claude5_sonnet_S4_r004",
+        "gpt5_6_sol__claude5_sonnet_S4_r005",
+        "gpt5_6_sol__claude5_sonnet_S4_r006",
+        "gpt5_6_sol__claude5_sonnet_S4_r007",
+        "gpt5_6_sol__claude5_sonnet_S4_r008",
+        "gpt5_6_sol__claude5_sonnet_S4_r009",
+        "gpt5_6_sol__claude5_sonnet_S4_r010",
+        "gpt5_6_sol__claude5_sonnet_S4_r011",
+        "gpt5_6_sol__claude5_sonnet_S4_r012",
+        "gpt5_6_sol__claude5_sonnet_S4_r013",
+        "gpt5_6_sol__claude5_sonnet_S4_r014"
+      ],
+      "scores": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "mean": 25.0,
+      "ci95": [
+        25.0,
+        25.0
+      ]
+    }
+  ],
+  "feedback": {
+    "starting": {
+      "games": [
+        "both-000",
+        "both-001",
+        "both-002",
+        "both-003",
+        "both-004",
+        "both-005",
+        "both-006",
+        "both-007",
+        "both-008",
+        "both-009",
+        "both-010",
+        "both-011",
+        "both-012",
+        "both-013",
+        "both-014",
+        "both-015",
+        "both-016",
+        "both-017",
+        "both-018",
+        "both-019"
+      ],
+      "scores": [
+        43.75,
+        50.0,
+        81.25,
+        18.75,
+        75.0,
+        31.25,
+        62.5,
+        68.75,
+        62.5,
+        62.5,
+        81.25,
+        43.75,
+        37.5,
+        100.0,
+        25.0,
+        43.75,
+        31.25,
+        56.25,
+        43.75,
+        56.25
+      ],
+      "mean": 53.75,
+      "ci95": [
+        45.0,
+        62.8125
+      ]
+    },
+    "feedback": {
+      "games": [
+        "both-000",
+        "both-001",
+        "both-002",
+        "both-003",
+        "both-004",
+        "both-005",
+        "both-006",
+        "both-007",
+        "both-008",
+        "both-009",
+        "both-010",
+        "both-011",
+        "both-012",
+        "both-013",
+        "both-014",
+        "both-015",
+        "both-016",
+        "both-017",
+        "both-018",
+        "both-019"
+      ],
+      "scores": [
+        50.0,
+        100.0,
+        93.75,
+        75.0,
+        100.0,
+        100.0,
+        100.0,
+        81.25,
+        68.75,
+        100.0,
+        100.0,
+        100.0,
+        25.0,
+        100.0,
+        56.25,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "mean": 87.5,
+      "ci95": [
+        77.5,
+        95.9375
+      ]
+    },
+    "withheld": {
+      "games": [
+        "both-000",
+        "both-001",
+        "both-002",
+        "both-003",
+        "both-004",
+        "both-005",
+        "both-006",
+        "both-007",
+        "both-008",
+        "both-009",
+        "both-010",
+        "both-011",
+        "both-012",
+        "both-013",
+        "both-014",
+        "both-015",
+        "both-016",
+        "both-017",
+        "both-018",
+        "both-019"
+      ],
+      "scores": [
+        25.0,
+        50.0,
+        50.0,
+        31.25,
+        75.0,
+        25.0,
+        75.0,
+        100.0,
+        50.0,
+        100.0,
+        50.0,
+        75.0,
+        50.0,
+        100.0,
+        56.25,
+        25.0,
+        37.5,
+        50.0,
+        87.5,
+        50.0
+      ],
+      "mean": 58.125,
+      "ci95": [
+        47.8125,
+        69.0625
+      ]
+    }
+  },
+  "history": {
+    "both": {
+      "games": [
+        "both-000",
+        "both-001",
+        "both-002",
+        "both-003",
+        "both-004",
+        "both-005",
+        "both-006",
+        "both-007",
+        "both-008",
+        "both-009",
+        "both-010",
+        "both-011",
+        "both-012",
+        "both-013",
+        "both-014",
+        "both-015",
+        "both-016",
+        "both-017",
+        "both-018",
+        "both-019"
+      ],
+      "scores": [
+        100.0,
+        100.0,
+        100.0,
+        87.5,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        68.75,
+        56.25,
+        100.0,
+        100.0,
+        100.0,
+        81.25,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "mean": 94.6875
+    },
+    "sender_cleared": {
+      "games": [
+        "sender_cleared-000",
+        "sender_cleared-001",
+        "sender_cleared-002",
+        "sender_cleared-003",
+        "sender_cleared-004",
+        "sender_cleared-005",
+        "sender_cleared-006",
+        "sender_cleared-007",
+        "sender_cleared-008",
+        "sender_cleared-009",
+        "sender_cleared-010",
+        "sender_cleared-011",
+        "sender_cleared-012",
+        "sender_cleared-013",
+        "sender_cleared-014",
+        "sender_cleared-015",
+        "sender_cleared-016",
+        "sender_cleared-017",
+        "sender_cleared-018",
+        "sender_cleared-019"
+      ],
+      "scores": [
+        43.75,
+        50.0,
+        37.5,
+        18.75,
+        43.75,
+        50.0,
+        12.5,
+        31.25,
+        37.5,
+        62.5,
+        68.75,
+        43.75,
+        31.25,
+        50.0,
+        50.0,
+        37.5,
+        18.75,
+        25.0,
+        31.25,
+        31.25
+      ],
+      "mean": 38.75
+    },
+    "receiver_cleared": {
+      "games": [
+        "receiver_cleared-000",
+        "receiver_cleared-001",
+        "receiver_cleared-002",
+        "receiver_cleared-003",
+        "receiver_cleared-004",
+        "receiver_cleared-005",
+        "receiver_cleared-006",
+        "receiver_cleared-007",
+        "receiver_cleared-008",
+        "receiver_cleared-009",
+        "receiver_cleared-010",
+        "receiver_cleared-011",
+        "receiver_cleared-012",
+        "receiver_cleared-013",
+        "receiver_cleared-014",
+        "receiver_cleared-015",
+        "receiver_cleared-016",
+        "receiver_cleared-017",
+        "receiver_cleared-018",
+        "receiver_cleared-019"
+      ],
+      "scores": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        18.75,
+        25.0
+      ],
+      "mean": 24.6875
+    }
+  },
+  "feedback_contrast": {
+    "mean_points": 29.375,
+    "ci95_points": [
+      17.1875,
+      41.5625
+    ]
+  },
+  "history_contrasts": {
+    "sender_cleared": {
+      "mean_points": 55.9375,
+      "ci95": [
+        48.75,
+        62.8125
+      ],
+      "ci97_5_two_contrast_family": [
+        47.5,
+        64.0625
+      ]
+    },
+    "receiver_cleared": {
+      "mean_points": 70.0,
+      "ci95": [
+        64.0625,
+        74.6875
+      ],
+      "ci97_5_two_contrast_family": [
+        63.125,
+        75.0
+      ]
+    }
+  },
+  "notes": [
+    "All scores are percentages of all scheduled held-out checks.",
+    "Screen uses 15 games and 16 final checks per pairing.",
+    "Screen CIs retain the published game-bootstrap intervals in appendix/experimental_details.tex.",
+    "History and continuation arrays are independently reconstructed from trial rows and checked against saved analyses.",
+    "Continuations reuse the first eight rounds of history/both games; panels are not independent cohorts.",
+    "Baseline and continuation checks are balanced, 16 per game, and do not update histories.",
+    "History clearing applies during play and final evaluation.",
+    "Offsets separate tied dots only along the categorical axis; every numeric value is exact."
+  ]
+}

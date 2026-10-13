@@ -1,0 +1,302 @@
+{
+  "posthoc": [
+    {
+      "game": 0,
+      "original": 16,
+      "paraphrase": 7,
+      "n": 16,
+      "chance_adjusted_p": 0.7955725188367069,
+      "reduction_adjusted_p": 0.01171875
+    },
+    {
+      "game": 1,
+      "original": 16,
+      "paraphrase": 5,
+      "n": 16,
+      "chance_adjusted_p": 1,
+      "reduction_adjusted_p": 0.00439453125
+    },
+    {
+      "game": 2,
+      "original": 16,
+      "paraphrase": 5,
+      "n": 16,
+      "chance_adjusted_p": 1,
+      "reduction_adjusted_p": 0.00439453125
+    },
+    {
+      "game": 3,
+      "original": 16,
+      "paraphrase": 8,
+      "n": 16,
+      "chance_adjusted_p": 0.271299562882632,
+      "reduction_adjusted_p": 0.01953125
+    },
+    {
+      "game": 4,
+      "original": 15,
+      "paraphrase": 7,
+      "n": 16,
+      "chance_adjusted_p": 0.7955725188367069,
+      "reduction_adjusted_p": 0.01953125
+    },
+    {
+      "game": 5,
+      "original": 16,
+      "paraphrase": 8,
+      "n": 16,
+      "chance_adjusted_p": 0.271299562882632,
+      "reduction_adjusted_p": 0.01953125
+    },
+    {
+      "game": 6,
+      "original": 16,
+      "paraphrase": 14,
+      "n": 16,
+      "chance_adjusted_p": 2.628657966852188e-06,
+      "reduction_adjusted_p": 0.25
+    },
+    {
+      "game": 7,
+      "original": 15,
+      "paraphrase": 3,
+      "n": 16,
+      "chance_adjusted_p": 1,
+      "reduction_adjusted_p": 0.00244140625
+    },
+    {
+      "game": 8,
+      "original": 16,
+      "paraphrase": 9,
+      "n": 16,
+      "chance_adjusted_p": 0.07469720439985394,
+      "reduction_adjusted_p": 0.01953125
+    },
+    {
+      "game": 9,
+      "original": 16,
+      "paraphrase": 6,
+      "n": 16,
+      "chance_adjusted_p": 1,
+      "reduction_adjusted_p": 0.0068359375
+    }
+  ],
+  "formation": [
+    {
+      "game": 0,
+      "pair": 0,
+      "arm": "baseline",
+      "checks": [
+        {
+          "phase": "initial",
+          "correct": 2,
+          "n": 8
+        },
+        {
+          "phase": "mid20",
+          "correct": 7,
+          "n": 8
+        },
+        {
+          "phase": "mid40",
+          "correct": 8,
+          "n": 8
+        },
+        {
+          "phase": "final",
+          "correct": 16,
+          "n": 16
+        }
+      ],
+      "controls": {
+        "standard": 4,
+        "fresh": 0,
+        "reassigned": 0,
+        "fresh_adjusted_p": 0.00018310546875,
+        "standard_adjusted_p": 0.002197265625
+      },
+      "chance_adjusted_p": 1.3969838619232178e-09,
+      "donor_correct": 16
+    },
+    {
+      "game": 1,
+      "pair": 0,
+      "arm": "paraphrase",
+      "checks": [
+        {
+          "phase": "initial",
+          "correct": 1,
+          "n": 8
+        },
+        {
+          "phase": "mid20",
+          "correct": 3,
+          "n": 8
+        },
+        {
+          "phase": "mid40",
+          "correct": 8,
+          "n": 8
+        },
+        {
+          "phase": "final",
+          "correct": 12,
+          "n": 16
+        }
+      ],
+      "controls": {
+        "standard": 5,
+        "fresh": 2,
+        "reassigned": 4,
+        "fresh_adjusted_p": 0.005859375,
+        "standard_adjusted_p": 0.0234375
+      },
+      "chance_adjusted_p": 0.00022864295169711113,
+      "donor_correct": 12
+    },
+    {
+      "game": 2,
+      "pair": 1,
+      "arm": "paraphrase",
+      "checks": [
+        {
+          "phase": "initial",
+          "correct": 2,
+          "n": 8
+        },
+        {
+          "phase": "mid20",
+          "correct": 3,
+          "n": 8
+        },
+        {
+          "phase": "mid40",
+          "correct": 4,
+          "n": 8
+        },
+        {
+          "phase": "final",
+          "correct": 14,
+          "n": 16
+        }
+      ],
+      "controls": {
+        "standard": 5,
+        "fresh": 0,
+        "reassigned": 0,
+        "fresh_adjusted_p": 0.0006103515625,
+        "standard_adjusted_p": 0.0078125
+      },
+      "chance_adjusted_p": 1.5771947801113129e-06,
+      "donor_correct": 16
+    },
+    {
+      "game": 3,
+      "pair": 1,
+      "arm": "baseline",
+      "checks": [
+        {
+          "phase": "initial",
+          "correct": 2,
+          "n": 8
+        },
+        {
+          "phase": "mid20",
+          "correct": 8,
+          "n": 8
+        },
+        {
+          "phase": "mid40",
+          "correct": 8,
+          "n": 8
+        },
+        {
+          "phase": "final",
+          "correct": 16,
+          "n": 16
+        }
+      ],
+      "controls": {
+        "standard": 5,
+        "fresh": 11,
+        "reassigned": 0,
+        "standard_adjusted_p": 0.00341796875,
+        "fresh_adjusted_p": 0.03125
+      },
+      "chance_adjusted_p": 1.3969838619232178e-09,
+      "donor_correct": 16
+    },
+    {
+      "game": 4,
+      "pair": 2,
+      "arm": "baseline",
+      "checks": [
+        {
+          "phase": "initial",
+          "correct": 5,
+          "n": 8
+        },
+        {
+          "phase": "mid20",
+          "correct": 8,
+          "n": 8
+        },
+        {
+          "phase": "mid40",
+          "correct": 8,
+          "n": 8
+        },
+        {
+          "phase": "final",
+          "correct": 16,
+          "n": 16
+        }
+      ],
+      "controls": {
+        "standard": 4,
+        "fresh": 1,
+        "reassigned": 0,
+        "fresh_adjusted_p": 0.000335693359375,
+        "standard_adjusted_p": 0.002197265625
+      },
+      "chance_adjusted_p": 1.3969838619232178e-09,
+      "donor_correct": 16
+    },
+    {
+      "game": 5,
+      "pair": 2,
+      "arm": "paraphrase",
+      "checks": [
+        {
+          "phase": "initial",
+          "correct": 3,
+          "n": 8
+        },
+        {
+          "phase": "mid20",
+          "correct": 3,
+          "n": 8
+        },
+        {
+          "phase": "mid40",
+          "correct": 7,
+          "n": 8
+        },
+        {
+          "phase": "final",
+          "correct": 14,
+          "n": 16
+        }
+      ],
+      "controls": {
+        "standard": 4,
+        "fresh": 6,
+        "reassigned": 1,
+        "standard_adjusted_p": 0.005859375,
+        "fresh_adjusted_p": 0.0234375
+      },
+      "chance_adjusted_p": 1.5771947801113129e-06,
+      "donor_correct": 14
+    }
+  ]
+}

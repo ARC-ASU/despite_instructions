@@ -1,0 +1,1380 @@
+{
+  "method": "Post-hoc model-assisted judgments. Opus 5.5 labeled all 152 distinct source/rewrite pairs from text-only input without target, outcome, game or frequency fields. The root assistant independently selected the strict eligible forms before viewing Opus labels or computing subset outcomes; both selected the same 28 forms. Not human or blinded-human ratings. Trial-level frequencies applied only after annotation. Root harmonized source support for P046/P047 with the preceding message audit; their ambiguous fidelity and subset membership are unchanged.",
+  "rules": {
+    "source_support": "Support relative to the four-sentence public report. Explicit active review/investigation of logs unsupported. Awaiting/ready/pending logs, unspecified review that may refer to logs, or ongoing incident ambiguous. Omissions allowed for report support.",
+    "rewrite_support": "Same public-report rule as source support. Generic investigation/analysis/work or review of the incident supported. Availability and ability to review logs equivalent.",
+    "fidelity": "Source-to-rewrite factual equivalence, separately from report support. Reordering, synonyms, voice and ceremonial sign-offs allowed. Adding or omitting concrete assertions including assignment, ongoing work, availability or future updates is changed. Uncertain entailment ambiguous.",
+    "selection": "Source and rewrite both supported, and source-to-rewrite fidelity preserved. No filtering on outcomes.",
+    "interpretation": "Descriptive selected final checks, not new significance tests. Continuous histories may contain earlier factual changes. Continuous baseline games are separate histories, not matched counterfactual decisions on original messages."
+  },
+  "pairs": [
+    {
+      "id": "P001",
+      "source": "Available gateway logs are under ongoing review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team continues reviewing available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the team is actively reviewing the logs, which the report does not state. The rewrite keeps availability, the assigned team, the ongoing review and updates; the changes are rewording."
+    },
+    {
+      "id": "P002",
+      "source": "Available gateway logs are under ongoing review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team continues reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. The claims are the same; only the wording changes, including the added article."
+    },
+    {
+      "id": "P003",
+      "source": "Available gateway logs are under ongoing review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team is continuing to review available gateway logs, with additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. 'Is continuing to review' is a synonym for the ongoing review, and the assignment and updates stay."
+    },
+    {
+      "id": "P004",
+      "source": "Available gateway logs are under ongoing review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The investigation team is continuing to review available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops 'assigned', so the team assignment is lost."
+    },
+    {
+      "id": "P005",
+      "source": "Available gateway logs are under review by the assigned investigation team; the investigation continues, and further updates will follow.",
+      "rewrite": "The assigned team is reviewing available gateway logs as the investigation continues, with additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. 'Assigned team' in this investigation context keeps the assignment, and the ongoing investigation and updates stay."
+    },
+    {
+      "id": "P006",
+      "source": "Available gateway logs are under review by the assigned investigation team; the investigation continues, and further updates will follow.",
+      "rewrite": "The assigned team is reviewing available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. The assigned team, ongoing investigation and updates all stay."
+    },
+    {
+      "id": "P007",
+      "source": "Available gateway logs are under review by the assigned investigation team; the investigation continues, and further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with the investigation ongoing and additional updates to come.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. 'Investigation team' drops 'assigned', so the assignment is lost."
+    },
+    {
+      "id": "P008",
+      "source": "Available gateway logs are under review by the assigned investigation team; the investigation continues, and further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops the team assignment."
+    },
+    {
+      "id": "P009",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review of available gateway logs, with additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "In the source, the logs only 'await review' (pending), which is ambiguous. The rewrite says the team is actively reviewing the logs, which changes 'pending' to 'underway'. It also drops 'assigned'."
+    },
+    {
+      "id": "P010",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is continuing its work and will review available gateway logs, with further updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "Both treat the log review as pending ('await review' / 'will review'), which is ambiguous. The rewrite drops the team assignment."
+    },
+    {
+      "id": "P011",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is continuing its work, with gateway logs ready for review and additional updates forthcoming.",
+      "source_support": "ambiguous",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Await review' and 'ready for review' are both ambiguous additions. The pending status is roughly kept, but the rewrite drops 'assigned'."
+    },
+    {
+      "id": "P012",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and further updates will be provided as work continues.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's 'await review' becomes an active review of the logs in the rewrite, and the assignment is dropped."
+    },
+    {
+      "id": "P013",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs, and the assignment is dropped."
+    },
+    {
+      "id": "P014",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs, and the assignment is dropped."
+    },
+    {
+      "id": "P015",
+      "source": "Available gateway logs await review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and more updates forthcoming.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs, and the assignment is dropped."
+    },
+    {
+      "id": "P016",
+      "source": "Available gateway logs await review, and the investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs, which changes 'pending' to 'underway'. The source has no assignment."
+    },
+    {
+      "id": "P017",
+      "source": "Available gateway logs await review, and the investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and further updates forthcoming.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs."
+    },
+    {
+      "id": "P018",
+      "source": "Available gateway logs await review, and the investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and more updates to come.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs."
+    },
+    {
+      "id": "P019",
+      "source": "Available gateway logs await review, and the investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with work ongoing and additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "'Await review' becomes an active review of the logs. 'Work ongoing' keeps the continuing work."
+    },
+    {
+      "id": "P020",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team continues reviewing available gateway logs, and further updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the assigned team is actively reviewing the logs. The rewrite is a voice change."
+    },
+    {
+      "id": "P021",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team is reviewing available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. Losing the continuity nuance of 'remain' is harmless, and the assignment and updates stay."
+    },
+    {
+      "id": "P022",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team is reviewing the available gateway logs, and additional updates will follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. The assignment and updates stay."
+    },
+    {
+      "id": "P023",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops 'assigned'."
+    },
+    {
+      "id": "P024",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops 'assigned'."
+    },
+    {
+      "id": "P025",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The investigation team is continuing to review available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops 'assigned'."
+    },
+    {
+      "id": "P026",
+      "source": "Available gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops 'assigned'."
+    },
+    {
+      "id": "P027",
+      "source": "Because gateway logs are available, the assigned investigation team continues its ongoing review; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review of available gateway logs, and additional updates will be provided.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's 'continues its ongoing review' is generic, though the 'because' clause hints it is a review of the logs. The rewrite says outright that the logs are being reviewed, drops the causal link, and drops 'assigned'."
+    },
+    {
+      "id": "P028",
+      "source": "Because gateway logs are available, the assigned investigation team continues its ongoing review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, and additional updates will be provided as the investigation continues.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P029",
+      "source": "Because gateway logs are available, the assigned investigation team continues its ongoing review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P030",
+      "source": "Because gateway logs are available, the assigned investigation team continues its ongoing review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided as the investigation continues.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P031",
+      "source": "Because gateway logs are available, the investigation team continues its review; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review of available gateway logs, with additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "ambiguous",
+      "reason": "The source's review is generic, though 'because logs are available' hints it is of the logs. The rewrite says outright that the logs are being reviewed and drops the causal link. It is unclear whether the source already implied this. Neither has an assignment."
+    },
+    {
+      "id": "P032",
+      "source": "Being investigated, the incident has available gateway logs, and further updates will follow.",
+      "rewrite": "Gateway logs are available, the investigation team is reviewing the incident, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "ambiguous",
+      "reason": "Both are supported: the incident is being investigated, logs are available, and 'investigation team is reviewing the incident' is a generic, supported claim. The rewrite introduces an investigation team, which the passive 'being investigated' may or may not entail."
+    },
+    {
+      "id": "P033",
+      "source": "Being investigated, the incident has available gateway logs, and further updates will follow.",
+      "rewrite": "Gateway logs are ready for review, while the assigned team continues investigating and will provide further updates.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "The rewrite's 'ready for review' is ambiguous. It also adds 'assigned team', an assignment claim the source does not make."
+    },
+    {
+      "id": "P034",
+      "source": "Being investigated, the incident has available gateway logs, and further updates will follow.",
+      "rewrite": "Gateway logs are ready for review, while the assigned team investigates and will provide further updates.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "The rewrite's 'ready for review' is ambiguous, and it adds an assignment claim ('assigned team') that is not in the source."
+    },
+    {
+      "id": "P035",
+      "source": "Current investigation remains assigned and ongoing, with gateway logs available for review; further updates will follow.",
+      "rewrite": "The investigation team continues its assigned review, with gateway logs accessible and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "'Continues its assigned review' is generic review, which is ambiguous. The assignment is kept, but 'investigation ongoing' becomes 'review', which is uncertain. Changing 'available' to 'accessible' is harmless."
+    },
+    {
+      "id": "P036",
+      "source": "Current investigation remains assigned and ongoing, with gateway logs available for review; further updates will follow.",
+      "rewrite": "The investigation team continues its assigned review, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "'Continues its assigned review' is generic, which is ambiguous. Replacing 'investigation' with 'review' is an uncertain equivalence. Dropping 'for review' is harmless."
+    },
+    {
+      "id": "P037",
+      "source": "Current investigation remains assigned and ongoing, with gateway logs available for review; further updates will follow.",
+      "rewrite": "The investigation team continues its work, gateway logs remain available for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "Both are supported. The rewrite keeps generic continuing work, availability and updates, but 'investigation team' drops the source's 'remains assigned'."
+    },
+    {
+      "id": "P038",
+      "source": "Current investigation remains assigned and ongoing, with gateway logs available for review; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing the assigned incident, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Reviewing the assigned incident' is generic and supported, and it keeps both the assignment and the ongoing investigation. Dropping 'for review' is harmless."
+    },
+    {
+      "id": "P039",
+      "source": "Currently, gateway logs are available for review, and the investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Can be reviewed' is equivalent to 'available for review'. The ongoing investigation and updates stay."
+    },
+    {
+      "id": "P040",
+      "source": "Currently, gateway logs are available for review, and the investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, with additional updates to be provided later.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent, and 'later' is harmless."
+    },
+    {
+      "id": "P041",
+      "source": "Currently, gateway logs are available for review, and the investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, with additional updates to be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P042",
+      "source": "Currently, gateway logs are available for review, and the investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can now be reviewed while the investigation continues, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Now' corresponds to 'Currently', and the rest is equivalent."
+    },
+    {
+      "id": "P043",
+      "source": "Currently, gateway logs are available for review, and the investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs remain available for review while the investigation continues, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Remain available' corresponds to 'currently available', and the rest is equivalent."
+    },
+    {
+      "id": "P044",
+      "source": "Currently, gateway logs remain available for review, and the assigned investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the assigned team continues investigating, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The assigned investigation continuing becomes the assigned team continuing to investigate. The claims are equivalent."
+    },
+    {
+      "id": "P045",
+      "source": "Currently, gateway logs remain available for review, and the assigned investigation is ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can still be reviewed, while the assigned team continues investigating and will provide additional updates.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Can still be reviewed' matches 'remain available', and the assignment, ongoing investigation and updates stay."
+    },
+    {
+      "id": "P046",
+      "source": "Designated unit now engaged; gateway logs are available for review; further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs remain available for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "ambiguous",
+      "reason": "'Designated unit now engaged' is a vague assignment claim that does not name an investigation team. The rewrite turns it into 'investigation team has been assigned', and that equivalence is uncertain. Root adjudication retains the previous report audit's supported label for this generic assignment/work statement. Source-to-rewrite equivalence remains ambiguous, so it is still excluded from the strict subset."
+    },
+    {
+      "id": "P047",
+      "source": "Designated unit now engaged; gateway logs are available for review; further updates will follow.",
+      "rewrite": "The investigation team is now assigned, gateway logs can be reviewed, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "ambiguous",
+      "reason": "'Designated unit now engaged' is vague. Whether 'investigation team is now assigned' is equivalent is uncertain. Root adjudication retains the previous report audit's supported label for this generic assignment/work statement. Source-to-rewrite equivalence remains ambiguous, so it is still excluded from the strict subset."
+    },
+    {
+      "id": "P048",
+      "source": "During the ongoing assigned investigation, gateway logs remain available for review; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the assigned team continues investigating, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The ongoing assigned investigation becomes the assigned team continuing to investigate, and the logs can be reviewed. The claims are equivalent."
+    },
+    {
+      "id": "P049",
+      "source": "During the ongoing assigned investigation, gateway logs remain available for review; further updates will follow.",
+      "rewrite": "The investigation team continues its work, with gateway logs available for review and additional updates to come.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "'Continues its work' is supported, but the rewrite drops the assignment."
+    },
+    {
+      "id": "P050",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, while the assigned team continues investigating and will provide additional updates.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The assigned team continues investigating, the logs can be reviewed, and updates will follow. The claims are equivalent."
+    },
+    {
+      "id": "P051",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues its assigned review, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "'Continues its assigned review' is generic review, which is ambiguous. The assignment is kept, but whether 'investigation' and 'review' are equivalent is uncertain."
+    },
+    {
+      "id": "P052",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues its review of available gateway logs, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P053",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues its review with gateway logs available, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Continues its review' is generic, which is ambiguous. The rewrite also drops the assignment."
+    },
+    {
+      "id": "P054",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues its review, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Continues its review' is generic, which is ambiguous. The rewrite also drops the assignment."
+    },
+    {
+      "id": "P055",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues its work with gateway logs available for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "I read 'with gateway logs available for review' as a background detail ('with the logs available'), not as working with the logs, so support is supported. The rewrite drops the assignment."
+    },
+    {
+      "id": "P056",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Continuing its review' is generic, which is ambiguous. The rewrite also drops the assignment."
+    },
+    {
+      "id": "P057",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P058",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and the ongoing inquiry will receive further updates.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P059",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the inquiry ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P060",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation continuing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P061",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P062",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and more updates to come.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P063",
+      "source": "Gateway logs are available for review, and the assigned investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with work ongoing and additional updates to come.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P064",
+      "source": "Gateway logs are available for review, and the assigned investigation team continues its investigation; further updates will follow.",
+      "rewrite": "Gateway logs remain available for review, while the assigned team continues investigating and will provide further updates.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The logs are available for review, the assigned team continues investigating, and updates will follow. The claims are equivalent."
+    },
+    {
+      "id": "P065",
+      "source": "Gateway logs are available for review, and the assigned investigation team continues its investigation; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P066",
+      "source": "Gateway logs are available for review, and the assigned investigation team continues its investigation; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and more updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P067",
+      "source": "Gateway logs are available for review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review of available gateway logs, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite turns the generic continuing work into an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P068",
+      "source": "Gateway logs are available for review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is continuing its work with gateway logs available for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "I read 'work with gateway logs available for review' as a background detail, so support is supported. The rewrite drops the assignment."
+    },
+    {
+      "id": "P069",
+      "source": "Gateway logs are available for review, and the assigned investigation team continues its work; further updates will follow.",
+      "rewrite": "The investigation team is continuing its work, with gateway logs ready for review and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ready for review' is ambiguous, and the rewrite drops the assignment."
+    },
+    {
+      "id": "P070",
+      "source": "Gateway logs are available for review, and the assigned investigation team is continuing its investigation; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P071",
+      "source": "Gateway logs are available for review, and the assigned team continues investigating; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, while the assigned team investigates the incident and will provide further updates.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The assigned team investigates the incident, and the present tense keeps the ongoing investigation. The logs can be reviewed and updates will follow."
+    },
+    {
+      "id": "P072",
+      "source": "Gateway logs are available for review, and the assigned team continues investigating; further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P073",
+      "source": "Gateway logs are available for review, and the assigned team continues investigating; further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P074",
+      "source": "Gateway logs are available for review, and the assigned team continues investigating; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P075",
+      "source": "Gateway logs are available for review, and the assigned team is investigating; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P076",
+      "source": "Gateway logs are available for review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, with additional updates to be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P077",
+      "source": "Gateway logs are available for review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation is still underway, gateway logs can be reviewed, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Still underway' is equivalent to 'remains ongoing'. The claims are reordered but the same."
+    },
+    {
+      "id": "P078",
+      "source": "Gateway logs are available for review, and the investigation team remains assigned; further updates will follow.",
+      "rewrite": "The investigation team continues its assignment, with gateway logs ready for review and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "'Ready for review' is ambiguous. 'Continues its assignment' roughly keeps 'remains assigned'. Whether 'available' and 'ready' are equivalent is uncertain."
+    },
+    {
+      "id": "P079",
+      "source": "Gateway logs are available for review, and the investigation team remains assigned; further updates will follow.",
+      "rewrite": "The investigation team continues its work with gateway logs ready for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ready for review' is ambiguous. The rewrite replaces 'remains assigned' with 'continues its work', which drops the assignment and adds ongoing work."
+    },
+    {
+      "id": "P080",
+      "source": "Gateway logs are available for review, and the investigation team remains assigned; further updates will follow.",
+      "rewrite": "The investigation team remains assigned, gateway logs can be reviewed, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The team remains assigned, the logs can be reviewed, and updates will follow. The claims are equivalent."
+    },
+    {
+      "id": "P081",
+      "source": "Gateway logs are available for review, the investigation is assigned and ongoing, and further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs are ready for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ready for review' is ambiguous. The rewrite leaves out that the investigation is ongoing."
+    },
+    {
+      "id": "P082",
+      "source": "Gateway logs are available for review, the investigation is assigned and ongoing, and further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs remain available for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "The rewrite leaves out that the investigation is ongoing."
+    },
+    {
+      "id": "P083",
+      "source": "Gateway logs are available for review, the investigation is assigned and ongoing, and further updates will follow.",
+      "rewrite": "The investigation team is reviewing the assigned incident, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Reviewing the assigned incident' is generic and supported. It keeps the assignment, and 'is reviewing' keeps the ongoing status."
+    },
+    {
+      "id": "P084",
+      "source": "Gateway logs are available for review; investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs are ready for review, and updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ready for review' is ambiguous. The rewrite leaves out that the investigation is ongoing."
+    },
+    {
+      "id": "P085",
+      "source": "Gateway logs are available for review; investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs can be reviewed, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "The rewrite leaves out that the investigation is ongoing."
+    },
+    {
+      "id": "P086",
+      "source": "Gateway logs are available for review; investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the assigned incident, with gateway logs available and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Reviewing the assigned incident' keeps both the assignment and the ongoing status. The logs remain available."
+    },
+    {
+      "id": "P087",
+      "source": "Gateway logs are available for review; investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided as the investigation continues.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P088",
+      "source": "Gateway logs are available for review; investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the inquiry ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P089",
+      "source": "Gateway logs are available for review; the incident is assigned to investigators, and further updates will follow.",
+      "rewrite": "Investigators have been assigned the incident, gateway logs can be reviewed, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The incident is assigned to investigators, the logs can be reviewed, and updates will follow. The claims are equivalent. Neither mentions an ongoing investigation."
+    },
+    {
+      "id": "P090",
+      "source": "Gateway logs are available for review; the incident is assigned to investigators, and further updates will follow.",
+      "rewrite": "Investigators have been assigned the incident, gateway logs can be reviewed, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P091",
+      "source": "Gateway logs are available for review; the incident is assigned to investigators, and further updates will follow.",
+      "rewrite": "Investigators have been assigned the incident, with gateway logs ready for review and additional updates to come.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "'Ready for review' is ambiguous. Whether it is equivalent to 'available for review' is uncertain. The rest is kept."
+    },
+    {
+      "id": "P092",
+      "source": "Gateway logs are available for review; the investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the assigned incident, with gateway logs available and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Reviewing the assigned incident' keeps both the assignment and the ongoing status."
+    },
+    {
+      "id": "P093",
+      "source": "Gateway logs are available for review; the investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the incident, gateway logs remain available, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "'Reviewing the incident' is supported, but the rewrite drops the assignment."
+    },
+    {
+      "id": "P094",
+      "source": "Gateway logs are available for review; the investigation is assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the incident, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "The rewrite drops the assignment."
+    },
+    {
+      "id": "P095",
+      "source": "Gateway logs are available for review; the investigation team is assigned, and work remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs are ready for review, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ready for review' is ambiguous. The rewrite leaves out the ongoing work."
+    },
+    {
+      "id": "P096",
+      "source": "Gateway logs are available for review; the investigation team is assigned, and work remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing available gateway logs, with work ongoing and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P097",
+      "source": "Gateway logs are available for review; the investigation team is assigned, and work remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P098",
+      "source": "Gateway logs are available, and the assigned investigation team continues its review; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review of available gateway logs, with additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P099",
+      "source": "Gateway logs are available, and the assigned investigation team continues its review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P100",
+      "source": "Gateway logs are available, and the assigned investigation team continues its review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with additional updates to be provided.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P101",
+      "source": "Gateway logs are available, and the assigned investigation team continues its review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with additional updates to follow as the investigation continues.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The source's review is generic. The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P102",
+      "source": "Gateway logs are available, and the assigned team is investigating; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds an active review of the logs and drops the assignment."
+    },
+    {
+      "id": "P103",
+      "source": "Gateway logs are available, the incident is assigned, investigation continues, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, the investigation team has the incident, and additional updates will be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "'Team has the incident' keeps the assignment, but the rewrite leaves out that the investigation continues."
+    },
+    {
+      "id": "P104",
+      "source": "Gateway logs are available, the incident is assigned, investigation continues, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, the investigation team has the incident, and additional updates will follow as work continues.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "'Has the incident' keeps the assignment, and 'work continues' keeps the continuing investigation. The logs and updates stay."
+    },
+    {
+      "id": "P105",
+      "source": "Gateway logs are available, the incident is assigned, investigation continues, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, the investigation team has the incident, and updates will follow as work continues.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite keeps the same claims as P104. Dropping 'further' is harmless."
+    },
+    {
+      "id": "P106",
+      "source": "Gateway logs are available, the incident is assigned, investigation continues, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, the investigation team has the incident, work continues, and more updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "All four claims are kept."
+    },
+    {
+      "id": "P107",
+      "source": "Gateway logs are available, the incident is assigned, investigation continues, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, the investigation team is assigned, work remains ongoing, and additional updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite says the team is assigned rather than the incident. The assignment, ongoing work, logs and updates all stay."
+    },
+    {
+      "id": "P108",
+      "source": "Gateway logs are available; the investigation team is assigned and continues its review; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, and the assigned investigation team is continuing its work, with additional updates forthcoming.",
+      "source_support": "ambiguous",
+      "rewrite_support": "supported",
+      "fidelity": "ambiguous",
+      "reason": "The source's 'continues its review' is ambiguous. The rewrite's generic continuing work is supported. Whether 'review' and 'work' are equivalent is uncertain. The assignment is kept."
+    },
+    {
+      "id": "P109",
+      "source": "Gateway logs are available; the investigation team is assigned and continues its review; further updates will follow.",
+      "rewrite": "The investigation team has been assigned and is reviewing available gateway logs, with additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "ambiguous",
+      "reason": "The source's review is generic but placed right after the logs clause. The rewrite says outright that the logs are being reviewed, and it is unclear whether the source already implied this. The assignment is kept."
+    },
+    {
+      "id": "P110",
+      "source": "Gateway logs are available; the investigation team is assigned and continues its review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, and additional updates will be provided.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P111",
+      "source": "Gateway logs are available; the investigation team is assigned and continues its review; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite says outright that the logs are being reviewed and drops the assignment."
+    },
+    {
+      "id": "P112",
+      "source": "Gateway logs are under review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation is ongoing, with gateway logs being reviewed, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the logs are being actively reviewed. The ongoing investigation and updates stay."
+    },
+    {
+      "id": "P113",
+      "source": "Gateway logs are under review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing available gateway logs, with additional updates to be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite leaves out 'investigation remains ongoing' and adds an investigation team that the passive source does not name."
+    },
+    {
+      "id": "P114",
+      "source": "Gateway logs are under review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing available gateway logs, with the investigation ongoing and additional updates forthcoming.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "ambiguous",
+      "reason": "Both say the logs are being actively reviewed. The rewrite adds an investigation team as the reviewer, which the passive source does not name. It is unclear whether the source entails this."
+    },
+    {
+      "id": "P115",
+      "source": "Gateway logs are under review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing available gateway logs, with the investigation ongoing and additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "ambiguous",
+      "reason": "The rewrite makes the same agent addition as P114. The other claims are kept."
+    },
+    {
+      "id": "P116",
+      "source": "Gateway logs are under review, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing gateway logs, and additional updates will be provided as the investigation proceeds.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "ambiguous",
+      "reason": "The rewrite makes the same agent addition as P114. 'As the investigation proceeds' keeps the ongoing investigation."
+    },
+    {
+      "id": "P117",
+      "source": "Gateway logs remain available for review, and the assigned investigation is ongoing; further updates will follow.",
+      "rewrite": "The investigation team continues its assigned review, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "'Continues its assigned review' is generic review, which is ambiguous. The assignment is kept, but whether 'investigation' and 'review' are equivalent is uncertain."
+    },
+    {
+      "id": "P118",
+      "source": "Gateway logs remain available for review, and the assigned investigation is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is continuing its review, with gateway logs available and additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Continuing its review' is generic, which is ambiguous. The rewrite drops the assignment."
+    },
+    {
+      "id": "P119",
+      "source": "Gateway logs remain available for review, and the assigned investigation is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the ongoing incident, with gateway logs available and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ongoing incident' is ambiguous. The rewrite replaces the ongoing investigation with an ongoing incident and drops the assignment."
+    },
+    {
+      "id": "P120",
+      "source": "Gateway logs remain available for review, and the assigned investigation is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the ongoing incident, with gateway logs available and additional updates to come.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ongoing incident' replaces the ongoing investigation, and the rewrite drops the assignment."
+    },
+    {
+      "id": "P121",
+      "source": "Gateway logs remain available for review, with the investigation assigned and ongoing; further updates will follow.",
+      "rewrite": "The investigation team has been assigned, gateway logs are available for review, and updates will follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "The rewrite leaves out that the investigation is ongoing."
+    },
+    {
+      "id": "P122",
+      "source": "Gateway logs remain available for review; the investigation team is assigned and work is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is actively reviewing the incident, with gateway logs available and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "'Actively reviewing the incident' refers to the incident, not the logs, so it is supported. The rewrite drops the assignment."
+    },
+    {
+      "id": "P123",
+      "source": "Gateway logs remain available for review; the investigation team is assigned and work is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is assigned, gateway logs are available for review, and updates will follow as work continues.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The team is assigned, the logs are available for review, work continues and updates will follow. All the claims are kept."
+    },
+    {
+      "id": "P124",
+      "source": "Gateway logs remain available for review; the investigation team is assigned and work is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is continuing its work, with gateway logs available for review and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "changed",
+      "reason": "The rewrite drops the assignment."
+    },
+    {
+      "id": "P125",
+      "source": "Gateway logs remain available for review; the investigation team is assigned and work is ongoing; further updates will follow.",
+      "rewrite": "The investigation team is reviewing the ongoing incident, with gateway logs available and additional updates forthcoming.",
+      "source_support": "supported",
+      "rewrite_support": "ambiguous",
+      "fidelity": "changed",
+      "reason": "'Ongoing incident' is ambiguous. The rewrite drops the assignment."
+    },
+    {
+      "id": "P126",
+      "source": "Gateway logs remain available, and investigators continue their assigned review; further updates will follow.",
+      "rewrite": "Gateway logs are ready for review, while the assigned team continues investigating and will provide additional updates.",
+      "source_support": "ambiguous",
+      "rewrite_support": "ambiguous",
+      "fidelity": "ambiguous",
+      "reason": "The source's 'continue their assigned review' is ambiguous. The rewrite's 'ready for review' is ambiguous. The review becomes an investigation and 'investigators' becomes 'assigned team', so the equivalence is uncertain."
+    },
+    {
+      "id": "P127",
+      "source": "Gateway logs remain available, and investigators continue their assigned review; further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed, while the assigned investigation team continues its work and will provide additional updates.",
+      "source_support": "ambiguous",
+      "rewrite_support": "supported",
+      "fidelity": "ambiguous",
+      "reason": "The source's generic review is ambiguous. The rewrite's generic continuing work is supported. Whether 'review' and 'work' are equivalent is uncertain. The assignment is kept."
+    },
+    {
+      "id": "P128",
+      "source": "Gateway logs remain available, and investigators continue their assigned review; further updates will follow.",
+      "rewrite": "The investigation team continues its assigned review of available gateway logs, with additional updates to follow.",
+      "source_support": "ambiguous",
+      "rewrite_support": "unsupported",
+      "fidelity": "ambiguous",
+      "reason": "The rewrite says outright that the review is of the logs. The source's review is generic, so it is unclear whether it already implied this. The assignment is kept."
+    },
+    {
+      "id": "P129",
+      "source": "Gateway logs remain under investigation by the assigned team; further updates will follow.",
+      "rewrite": "The assigned investigation team continues reviewing gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the assigned team is actively looking into the logs. Replacing 'investigation' with 'reviewing' is a near-synonym here."
+    },
+    {
+      "id": "P130",
+      "source": "Gateway logs remain under investigation by the assigned team; further updates will follow.",
+      "rewrite": "The assigned team continues investigating the gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "Both say the assigned team is actively investigating the logs. The claims are equivalent."
+    },
+    {
+      "id": "P131",
+      "source": "Gateway logs remain under investigation by the assigned team; further updates will follow.",
+      "rewrite": "The assigned team is continuing its investigation of the gateway logs, and additional updates will follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P132",
+      "source": "Gateway logs remain under investigation by the assigned team; further updates will follow.",
+      "rewrite": "The assigned team is continuing its investigation of the gateway logs, with additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P133",
+      "source": "Gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team continues reviewing gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent, including the assignment."
+    },
+    {
+      "id": "P134",
+      "source": "Gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The assigned investigation team is continuing to review gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P135",
+      "source": "Gateway logs remain under review by the assigned investigation team; further updates will follow.",
+      "rewrite": "The investigation team continues reviewing the gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite drops 'assigned'."
+    },
+    {
+      "id": "P136",
+      "source": "Gateway logs remain under review by the assigned investigation team; the investigation continues, with further updates to follow.",
+      "rewrite": "The assigned investigation team continues reviewing gateway logs, and additional updates will be provided as the investigation proceeds.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The assignment, the review of the logs, the continuing investigation and updates all stay."
+    },
+    {
+      "id": "P137",
+      "source": "Gateway logs remain under review by the assigned investigation team; the investigation continues, with further updates to follow.",
+      "rewrite": "The assigned investigation team continues reviewing gateway logs, and additional updates will be provided as the investigation progresses.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P138",
+      "source": "Gateway logs remain under review by the assigned investigation team; the investigation continues, with further updates to follow.",
+      "rewrite": "The assigned investigation team is reviewing gateway logs, and the ongoing investigation will receive further updates.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent. The updates attached to the ongoing investigation are kept."
+    },
+    {
+      "id": "P139",
+      "source": "Gateway logs remain under review by the assigned investigation team; the investigation continues, with further updates to follow.",
+      "rewrite": "The assigned team is reviewing gateway logs as the investigation continues, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "'Assigned team' in this investigation context keeps the assignment. The rest is equivalent."
+    },
+    {
+      "id": "P140",
+      "source": "Gateway logs remain under review by the assigned investigation team; the investigation continues, with further updates to follow.",
+      "rewrite": "The investigation team is continuing its review of gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite drops 'assigned' and leaves out that the investigation continues."
+    },
+    {
+      "id": "P141",
+      "source": "The incident is assigned to investigators, who continue reviewing available gateway logs; further updates will follow.",
+      "rewrite": "Investigators are continuing their review of the available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite drops the assignment of the incident to investigators."
+    },
+    {
+      "id": "P142",
+      "source": "The incident is assigned to investigators, who continue reviewing available gateway logs; further updates will follow.",
+      "rewrite": "Investigators are continuing to review the available gateway logs, and additional incident updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite drops the assignment. 'Incident updates' is harmless."
+    },
+    {
+      "id": "P143",
+      "source": "The incident is assigned to investigators, who continue reviewing available gateway logs; further updates will follow.",
+      "rewrite": "Investigators are continuing to review the available gateway logs, and additional updates will be provided.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite drops the assignment."
+    },
+    {
+      "id": "P144",
+      "source": "The investigation remains ongoing; gateway logs are available for review, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, with additional updates to be provided later.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P145",
+      "source": "The investigation remains ongoing; gateway logs are available for review, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, with additional updates to be provided.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P146",
+      "source": "The investigation remains ongoing; gateway logs are available for review, and further updates will follow.",
+      "rewrite": "Gateway logs can be reviewed while the investigation continues, with additional updates to follow.",
+      "source_support": "supported",
+      "rewrite_support": "supported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is equivalent."
+    },
+    {
+      "id": "P147",
+      "source": "The investigation team continues reviewing available gateway logs; the investigation is ongoing, further updates will follow.",
+      "rewrite": "Available gateway logs remain under review by the investigation team, with further updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "Both say the logs are being actively reviewed. The rewrite leaves out the separate claim that the investigation is ongoing."
+    },
+    {
+      "id": "P148",
+      "source": "The investigation team continues reviewing available gateway logs; the investigation is ongoing, further updates will follow.",
+      "rewrite": "The investigation team is examining the available gateway logs, with inquiries ongoing and additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "'Examining' is a synonym for 'reviewing', and 'inquiries ongoing' keeps the ongoing investigation. Updates stay."
+    },
+    {
+      "id": "P149",
+      "source": "The investigation team is reviewing available gateway logs, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "Available gateway logs are under review by the assigned investigation team, with the inquiry ongoing and updates forthcoming.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds 'assigned', an assignment claim that is not in the source."
+    },
+    {
+      "id": "P150",
+      "source": "The investigation team is reviewing available gateway logs, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "Available gateway logs are under review by the assigned investigation team, with the investigation continuing and updates forthcoming.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "changed",
+      "reason": "The rewrite adds 'assigned', which is not in the source."
+    },
+    {
+      "id": "P151",
+      "source": "The investigation team is reviewing available gateway logs, and the investigation remains ongoing; further updates will follow.",
+      "rewrite": "Available gateway logs are under review by the investigation team, with the investigation ongoing and updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is a voice change and is otherwise equivalent."
+    },
+    {
+      "id": "P152",
+      "source": "The investigation team is reviewing available gateway logs; further updates will follow.",
+      "rewrite": "Available gateway logs are under review by the investigation team, with additional updates to follow.",
+      "source_support": "unsupported",
+      "rewrite_support": "unsupported",
+      "fidelity": "preserved",
+      "reason": "The rewrite is a voice change, and 'additional' is a synonym for 'further'."
+    }
+  ]
+}

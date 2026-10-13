@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Despite Instructions: Frontier Agents Improvise Covert Channels at Test Time — Code and Data"
+type: software
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/ARC-ASU/despite_instructions"
+url: "https://github.com/ARC-ASU/despite_instructions"
+authors:
+  - family-names: Dineen
+    given-names: Jacob
+  - family-names: Ren
+    given-names: Silei
+  - family-names: Chen
+    given-names: Muhao
+  - family-names: Roth
+    given-names: Dan
+  - family-names: Zhou
+    given-names: Ben
+preferred-citation:
+  type: article
+  title: "Despite Instructions: Frontier Agents Improvise Covert Channels at Test Time"
+  authors:
+    - family-names: Dineen
+      given-names: Jacob
+    - family-names: Ren
+      given-names: Silei
+    - family-names: Chen
+      given-names: Muhao
+    - family-names: Roth
+      given-names: Dan
+    - family-names: Zhou
+      given-names: Ben
+  year: 2026
+  month: 9
+  doi: "10.48550/arXiv.2609.32701"
+  url: "https://arxiv.org/abs/2609.32701"

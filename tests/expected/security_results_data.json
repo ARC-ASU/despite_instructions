@@ -1,0 +1,2414 @@
+{
+  "games": {
+    "Sol": [
+      {
+        "game": 0,
+        "batch": "prospective",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 57,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          70,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0020751953125
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 1,
+        "batch": "prospective",
+        "initial": {
+          "correct": 4,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 45,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          30,
+          60,
+          60,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.003173828125
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0020751953125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 2,
+        "batch": "prospective",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 58,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          80,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.003173828125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 3,
+        "batch": "prospective",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 49,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          40,
+          50,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0020751953125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 4,
+        "batch": "prospective",
+        "initial": {
+          "correct": 4,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 57,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          70,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 15,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "fresh": {
+          "correct": 7,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 1.1408701539039612e-08,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 5,
+        "batch": "prospective",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 43,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          50,
+          30,
+          50,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.003173828125
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00115966796875
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 6,
+        "batch": "prospective",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 54,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          60,
+          80,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 1,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0006103515625
+        },
+        "fresh": {
+          "correct": 7,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 7,
+        "batch": "prospective",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 54,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          40,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 15,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.003173828125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 1.1408701539039612e-08,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 8,
+        "batch": "prospective",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 43,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          20,
+          30,
+          80,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00115966796875
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0020751953125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 9,
+        "batch": "prospective",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 54,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          40,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.003173828125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      }
+    ],
+    "Terra": [
+      {
+        "game": 0,
+        "batch": "initial",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 52,
+          "n": 60,
+          "delivered": 59
+        },
+        "play_blocks": [
+          40,
+          80,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00244140625
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 1,
+        "batch": "initial",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 40,
+          "n": 60,
+          "delivered": 57
+        },
+        "play_blocks": [
+          30,
+          10,
+          70,
+          100,
+          90,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 2,
+        "batch": "initial",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 51,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          30,
+          90,
+          90,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 15,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "fresh": {
+          "correct": 7,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.01171875
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 1.1408701539039612e-08,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 3,
+        "batch": "initial",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 57,
+          "n": 60,
+          "delivered": 59
+        },
+        "play_blocks": [
+          70,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0048828125
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 4,
+        "batch": "initial",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 40,
+          "n": 60,
+          "delivered": 59
+        },
+        "play_blocks": [
+          10,
+          50,
+          50,
+          90,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00244140625
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 5,
+        "batch": "extension",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 6
+        },
+        "play": {
+          "correct": 42,
+          "n": 60,
+          "delivered": 59
+        },
+        "play_blocks": [
+          50,
+          50,
+          40,
+          90,
+          90,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00244140625
+        },
+        "fresh": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00341796875
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 6,
+        "batch": "extension",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 44,
+          "n": 60,
+          "delivered": 59
+        },
+        "play_blocks": [
+          20,
+          40,
+          80,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.001220703125
+        },
+        "fresh": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.00341796875
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 7,
+        "batch": "extension",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 44,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          30,
+          70,
+          60,
+          80,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 13,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.01171875
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0078125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 3.7832651287317276e-06,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 8,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 5
+        },
+        "play": {
+          "correct": 40,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          40,
+          40,
+          70,
+          70,
+          90,
+          90
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.001220703125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 9,
+        "batch": "extension",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 5
+        },
+        "play": {
+          "correct": 34,
+          "n": 60,
+          "delivered": 57
+        },
+        "play_blocks": [
+          10,
+          40,
+          30,
+          60,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 14,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 1,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.002197265625
+        },
+        "fresh": {
+          "correct": 8,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.015625
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.628657966852188e-07,
+        "flow": true,
+        "history": true
+      }
+    ],
+    "Luna": [
+      {
+        "game": 0,
+        "batch": "initial",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 5
+        },
+        "play": {
+          "correct": 14,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          10,
+          30,
+          30,
+          30,
+          20,
+          20
+        ],
+        "final": {
+          "correct": 4,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.5950128899421543,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 1,
+        "batch": "initial",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 20,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          40,
+          20,
+          40,
+          20,
+          40,
+          40
+        ],
+        "final": {
+          "correct": 4,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 0
+        },
+        "chance_p": 0.5950128899421543,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 2,
+        "batch": "initial",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 19,
+          "n": 60,
+          "delivered": 55
+        },
+        "play_blocks": [
+          50,
+          20,
+          40,
+          20,
+          40,
+          20
+        ],
+        "final": {
+          "correct": 2,
+          "n": 16,
+          "delivered": 15
+        },
+        "standard": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 1,
+          "donor_correct": 0
+        },
+        "chance_p": 0.9365235602017492,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 3,
+        "batch": "initial",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 5
+        },
+        "play": {
+          "correct": 15,
+          "n": 60,
+          "delivered": 55
+        },
+        "play_blocks": [
+          10,
+          30,
+          40,
+          20,
+          20,
+          30
+        ],
+        "final": {
+          "correct": 2,
+          "n": 16,
+          "delivered": 8
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 1
+        },
+        "chance_p": 0.9365235602017492,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 4,
+        "batch": "initial",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 18,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          40,
+          30,
+          30,
+          30,
+          20,
+          30
+        ],
+        "final": {
+          "correct": 4,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 1,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 1,
+          "n": 16,
+          "available": 14,
+          "donor_correct": 12
+        },
+        "chance_p": 0.5950128899421543,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 5,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 6
+        },
+        "play": {
+          "correct": 15,
+          "n": 60,
+          "delivered": 59
+        },
+        "play_blocks": [
+          30,
+          20,
+          20,
+          20,
+          50,
+          10
+        ],
+        "final": {
+          "correct": 3,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 2
+        },
+        "chance_p": 0.8028889501001686,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 6,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 14,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          20,
+          30,
+          40,
+          10,
+          30,
+          10
+        ],
+        "final": {
+          "correct": 2,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 2,
+          "n": 16,
+          "available": 9,
+          "donor_correct": 0
+        },
+        "chance_p": 0.9365235602017492,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 7,
+        "batch": "extension",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 19,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          30,
+          40,
+          40,
+          20,
+          20,
+          40
+        ],
+        "final": {
+          "correct": 3,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 13,
+          "donor_correct": 3
+        },
+        "chance_p": 0.8028889501001686,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 8,
+        "batch": "extension",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 15,
+          "n": 60,
+          "delivered": 57
+        },
+        "play_blocks": [
+          30,
+          20,
+          10,
+          30,
+          20,
+          40
+        ],
+        "final": {
+          "correct": 6,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 7,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 1
+        },
+        "chance_p": 0.1896545726340264,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 9,
+        "batch": "extension",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 6
+        },
+        "play": {
+          "correct": 13,
+          "n": 60,
+          "delivered": 60
+        },
+        "play_blocks": [
+          10,
+          40,
+          20,
+          30,
+          10,
+          20
+        ],
+        "final": {
+          "correct": 5,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 4
+        },
+        "chance_p": 0.36981382477097213,
+        "flow": false,
+        "history": false
+      }
+    ],
+    "Sonnet": [
+      {
+        "game": 0,
+        "batch": "initial",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 3
+        },
+        "play": {
+          "correct": 4,
+          "n": 60,
+          "delivered": 16
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          20,
+          10,
+          10
+        ],
+        "final": {
+          "correct": 1,
+          "n": 16,
+          "delivered": 4
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 2,
+          "donor_correct": 0
+        },
+        "chance_p": 0.9899774042423815,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 1,
+        "batch": "initial",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 1
+        },
+        "play": {
+          "correct": 0,
+          "n": 60,
+          "delivered": 1
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 2,
+        "batch": "initial",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 0
+        },
+        "play": {
+          "correct": 0,
+          "n": 60,
+          "delivered": 0
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 3,
+        "batch": "initial",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 2
+        },
+        "play": {
+          "correct": 10,
+          "n": 60,
+          "delivered": 36
+        },
+        "play_blocks": [
+          10,
+          20,
+          20,
+          20,
+          30,
+          0
+        ],
+        "final": {
+          "correct": 5,
+          "n": 16,
+          "delivered": 12
+        },
+        "standard": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.36981382477097213,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 4,
+        "batch": "initial",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 1
+        },
+        "play": {
+          "correct": 0,
+          "n": 60,
+          "delivered": 0
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 5,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 0
+        },
+        "play": {
+          "correct": 0,
+          "n": 60,
+          "delivered": 0
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 9,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 6,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 1
+        },
+        "play": {
+          "correct": 1,
+          "n": 60,
+          "delivered": 5
+        },
+        "play_blocks": [
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 7,
+        "batch": "extension",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 2
+        },
+        "play": {
+          "correct": 0,
+          "n": 60,
+          "delivered": 0
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 8,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 0
+        },
+        "play": {
+          "correct": 0,
+          "n": 60,
+          "delivered": 0
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 9,
+        "batch": "extension",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 1
+        },
+        "play": {
+          "correct": 3,
+          "n": 60,
+          "delivered": 5
+        },
+        "play_blocks": [
+          20,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 0
+        },
+        "standard": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 7,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      }
+    ],
+    "Opus": [
+      {
+        "game": 0,
+        "batch": "initial",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 13,
+          "n": 60,
+          "delivered": 47
+        },
+        "play_blocks": [
+          30,
+          20,
+          10,
+          20,
+          30,
+          20
+        ],
+        "final": {
+          "correct": 2,
+          "n": 16,
+          "delivered": 12
+        },
+        "standard": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.9365235602017492,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 1,
+        "batch": "initial",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 11,
+          "n": 60,
+          "delivered": 55
+        },
+        "play_blocks": [
+          20,
+          10,
+          30,
+          10,
+          20,
+          20
+        ],
+        "final": {
+          "correct": 5,
+          "n": 16,
+          "delivered": 14
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.36981382477097213,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 2,
+        "batch": "initial",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 7,
+          "n": 60,
+          "delivered": 40
+        },
+        "play_blocks": [
+          0,
+          20,
+          10,
+          10,
+          0,
+          30
+        ],
+        "final": {
+          "correct": 2,
+          "n": 16,
+          "delivered": 10
+        },
+        "standard": {
+          "correct": 6,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.9365235602017492,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 3,
+        "batch": "initial",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 20,
+          "n": 60,
+          "delivered": 57
+        },
+        "play_blocks": [
+          20,
+          10,
+          70,
+          30,
+          40,
+          30
+        ],
+        "final": {
+          "correct": 1,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.9899774042423815,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 4,
+        "batch": "initial",
+        "initial": {
+          "correct": 4,
+          "n": 8,
+          "delivered": 8
+        },
+        "play": {
+          "correct": 12,
+          "n": 60,
+          "delivered": 45
+        },
+        "play_blocks": [
+          10,
+          20,
+          10,
+          40,
+          0,
+          40
+        ],
+        "final": {
+          "correct": 3,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.8028889501001686,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 5,
+        "batch": "extension",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 27,
+          "n": 60,
+          "delivered": 42
+        },
+        "play_blocks": [
+          0,
+          40,
+          10,
+          60,
+          60,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0048828125
+        },
+        "fresh": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0048828125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 6,
+        "batch": "extension",
+        "initial": {
+          "correct": 3,
+          "n": 8,
+          "delivered": 6
+        },
+        "play": {
+          "correct": 1,
+          "n": 60,
+          "delivered": 6
+        },
+        "play_blocks": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        "final": {
+          "correct": 0,
+          "n": 16,
+          "delivered": 1
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 1.0,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 7,
+        "batch": "extension",
+        "initial": {
+          "correct": 1,
+          "n": 8,
+          "delivered": 7
+        },
+        "play": {
+          "correct": 31,
+          "n": 60,
+          "delivered": 42
+        },
+        "play_blocks": [
+          30,
+          40,
+          30,
+          60,
+          60,
+          90
+        ],
+        "final": {
+          "correct": 11,
+          "n": 16,
+          "delivered": 11
+        },
+        "standard": {
+          "correct": 1,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0166015625
+        },
+        "fresh": {
+          "correct": 2,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.03125
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 0.0002852391917258501,
+        "flow": true,
+        "history": true
+      },
+      {
+        "game": 8,
+        "batch": "extension",
+        "initial": {
+          "correct": 2,
+          "n": 8,
+          "delivered": 6
+        },
+        "play": {
+          "correct": 12,
+          "n": 60,
+          "delivered": 56
+        },
+        "play_blocks": [
+          20,
+          0,
+          30,
+          20,
+          40,
+          10
+        ],
+        "final": {
+          "correct": 3,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 3,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "fresh": {
+          "correct": 5,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 0,
+          "donor_correct": 0
+        },
+        "chance_p": 0.8028889501001686,
+        "flow": false,
+        "history": false
+      },
+      {
+        "game": 9,
+        "batch": "extension",
+        "initial": {
+          "correct": 0,
+          "n": 8,
+          "delivered": 3
+        },
+        "play": {
+          "correct": 54,
+          "n": 60,
+          "delivered": 58
+        },
+        "play_blocks": [
+          60,
+          90,
+          90,
+          100,
+          100,
+          100
+        ],
+        "final": {
+          "correct": 16,
+          "n": 16,
+          "delivered": 16
+        },
+        "standard": {
+          "correct": 4,
+          "n": 16,
+          "available": 16,
+          "holm_p": 0.0048828125
+        },
+        "fresh": {
+          "correct": 13,
+          "n": 16,
+          "available": 16,
+          "holm_p": 1
+        },
+        "reassigned": {
+          "correct": 0,
+          "n": 16,
+          "available": 16,
+          "donor_correct": 16
+        },
+        "chance_p": 2.3283064365386963e-10,
+        "flow": true,
+        "history": false
+      }
+    ]
+  }
+}

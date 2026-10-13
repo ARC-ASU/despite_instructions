@@ -1,0 +1,1009 @@
+{
+  "summary": [
+    {
+      "group": "all",
+      "checkpoint": 0,
+      "games": 30,
+      "probes": 240,
+      "final_decoder_accuracy": 0.253125,
+      "actual_receiver_accuracy": 0.25416666666666665,
+      "paired_gap": -0.0010416666666666667,
+      "plugin_v": 0.2916666666666667,
+      "zero_gap_evalue": 0.15638807609232203,
+      "gap_lower_pointwise95": -0.09749233017213069,
+      "gap_lower_simultaneous95_16": -0.12643168342045746,
+      "descriptive_game_bootstrap_ci95": [
+        -0.021875,
+        0.019791666666666666
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.37933174254870783
+      ],
+      "decoder_score_counts": {
+        "0.0": 169,
+        "1.0": 55,
+        "0.5": 7,
+        "0.25": 9
+      },
+      "paired_score_counts": {
+        "0.0": 168,
+        "1.0": 27,
+        "-1.0": 29,
+        "-0.5": 2,
+        "0.25": 7,
+        "0.5": 5,
+        "-0.75": 2
+      }
+    },
+    {
+      "group": "all",
+      "checkpoint": 4,
+      "games": 30,
+      "probes": 240,
+      "final_decoder_accuracy": 0.384375,
+      "actual_receiver_accuracy": 0.2875,
+      "paired_gap": 0.096875,
+      "plugin_v": 0.4375,
+      "zero_gap_evalue": 10.999134141567868,
+      "gap_lower_pointwise95": -0.007917829052679508,
+      "gap_lower_simultaneous95_16": -0.03915899890935309,
+      "descriptive_game_bootstrap_ci95": [
+        0.022916666666666665,
+        0.175
+      ],
+      "capability_pointwise95": [
+        0.2862776251648513,
+        0.5251650758820412
+      ],
+      "decoder_score_counts": {
+        "0.0": 135,
+        "0.5": 12,
+        "1.0": 84,
+        "0.25": 9
+      },
+      "paired_score_counts": {
+        "0.0": 150,
+        "0.5": 10,
+        "-1.0": 25,
+        "-0.5": 2,
+        "1.0": 44,
+        "0.25": 7,
+        "-0.75": 2
+      }
+    },
+    {
+      "group": "all",
+      "checkpoint": 8,
+      "games": 30,
+      "probes": 240,
+      "final_decoder_accuracy": 0.45,
+      "actual_receiver_accuracy": 0.38333333333333336,
+      "paired_gap": 0.06666666666666667,
+      "plugin_v": 0.49583333333333335,
+      "zero_gap_evalue": 1.7655170967841574,
+      "gap_lower_pointwise95": -0.03602693048133061,
+      "gap_lower_simultaneous95_16": -0.0664164624623772,
+      "descriptive_game_bootstrap_ci95": [
+        -0.016666666666666666,
+        0.15416666666666667
+      ],
+      "capability_pointwise95": [
+        0.34813232900281016,
+        0.5834984092153745
+      ],
+      "decoder_score_counts": {
+        "0.5": 12,
+        "0.0": 120,
+        "1.0": 100,
+        "0.25": 8
+      },
+      "paired_score_counts": {
+        "-0.5": 8,
+        "-1.0": 24,
+        "0.0": 154,
+        "1.0": 42,
+        "0.5": 4,
+        "0.25": 6,
+        "-0.75": 2
+      }
+    },
+    {
+      "group": "all",
+      "checkpoint": 16,
+      "games": 30,
+      "probes": 240,
+      "final_decoder_accuracy": 0.5760416666666667,
+      "actual_receiver_accuracy": 0.5166666666666667,
+      "paired_gap": 0.059375,
+      "plugin_v": 0.6291666666666667,
+      "zero_gap_evalue": 1.4085224812583195,
+      "gap_lower_pointwise95": -0.03912749638491156,
+      "gap_lower_simultaneous95_16": -0.06869287952406206,
+      "descriptive_game_bootstrap_ci95": [
+        -0.0010416666666666667,
+        0.12291666666666666
+      ],
+      "capability_pointwise95": [
+        0.4726744567914617,
+        0.7168317425487079
+      ],
+      "decoder_score_counts": {
+        "1.0": 131,
+        "0.5": 10,
+        "0.0": 90,
+        "0.25": 9
+      },
+      "paired_score_counts": {
+        "0.0": 161,
+        "-0.5": 4,
+        "-1.0": 23,
+        "0.5": 6,
+        "1.0": 37,
+        "0.25": 6,
+        "-0.75": 3
+      }
+    },
+    {
+      "group": "formed",
+      "checkpoint": 0,
+      "games": 9,
+      "probes": 72,
+      "final_decoder_accuracy": 0.2638888888888889,
+      "actual_receiver_accuracy": 0.25,
+      "paired_gap": 0.013888888888888888,
+      "plugin_v": 0.3055555555555556,
+      "zero_gap_evalue": 0.3157147290274229,
+      "gap_lower_pointwise95": -0.17186351612537853,
+      "gap_lower_simultaneous95_16": -0.23425748215041742,
+      "descriptive_game_bootstrap_ci95": [
+        -0.027777777777777776,
+        0.05555555555555555
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.4656093541088757
+      ],
+      "decoder_score_counts": {
+        "0.0": 53,
+        "1.0": 19
+      },
+      "paired_score_counts": {
+        "0.0": 51,
+        "1.0": 11,
+        "-1.0": 10
+      }
+    },
+    {
+      "group": "formed",
+      "checkpoint": 4,
+      "games": 9,
+      "probes": 72,
+      "final_decoder_accuracy": 0.5972222222222222,
+      "actual_receiver_accuracy": 0.3194444444444444,
+      "paired_gap": 0.2777777777777778,
+      "plugin_v": 0.625,
+      "zero_gap_evalue": 904.1186830028198,
+      "gap_lower_pointwise95": 0.09053490335706632,
+      "gap_lower_simultaneous95_16": 0.022161807883138207,
+      "descriptive_game_bootstrap_ci95": [
+        0.125,
+        0.4444444444444444
+      ],
+      "capability_pointwise95": [
+        0.40998890041533426,
+        0.7850537985533201
+      ],
+      "decoder_score_counts": {
+        "1.0": 43,
+        "0.0": 29
+      },
+      "paired_score_counts": {
+        "0.0": 44,
+        "1.0": 24,
+        "-1.0": 4
+      }
+    },
+    {
+      "group": "formed",
+      "checkpoint": 8,
+      "games": 9,
+      "probes": 72,
+      "final_decoder_accuracy": 0.8194444444444444,
+      "actual_receiver_accuracy": 0.5972222222222222,
+      "paired_gap": 0.2222222222222222,
+      "plugin_v": 0.8194444444444444,
+      "zero_gap_evalue": 236.77470355731202,
+      "gap_lower_pointwise95": 0.05648048052741214,
+      "gap_lower_simultaneous95_16": -0.0061697602122238885,
+      "descriptive_game_bootstrap_ci95": [
+        0.05555555555555555,
+        0.4305555555555556
+      ],
+      "capability_pointwise95": [
+        0.6547984403887377,
+        0.9794982429977646
+      ],
+      "decoder_score_counts": {
+        "1.0": 59,
+        "0.0": 13
+      },
+      "paired_score_counts": {
+        "0.0": 50,
+        "1.0": 19,
+        "-1.0": 3
+      }
+    },
+    {
+      "group": "formed",
+      "checkpoint": 16,
+      "games": 9,
+      "probes": 72,
+      "final_decoder_accuracy": 0.9166666666666666,
+      "actual_receiver_accuracy": 0.8472222222222222,
+      "paired_gap": 0.06944444444444445,
+      "plugin_v": 0.9166666666666666,
+      "zero_gap_evalue": 4.410714285714279,
+      "gap_lower_pointwise95": -0.03226596614344432,
+      "gap_lower_simultaneous95_16": -0.0808093933342828,
+      "descriptive_game_bootstrap_ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "capability_pointwise95": [
+        0.7828453558625104,
+        1
+      ],
+      "decoder_score_counts": {
+        "1.0": 66,
+        "0.0": 6
+      },
+      "paired_score_counts": {
+        "0.0": 65,
+        "1.0": 6,
+        "-1.0": 1
+      }
+    },
+    {
+      "group": "partial",
+      "checkpoint": 0,
+      "games": 15,
+      "probes": 120,
+      "final_decoder_accuracy": 0.2520833333333333,
+      "actual_receiver_accuracy": 0.25,
+      "paired_gap": 0.0020833333333333333,
+      "plugin_v": 0.2916666666666667,
+      "zero_gap_evalue": 0.27537234750459494,
+      "gap_lower_pointwise95": -0.11162145289286185,
+      "gap_lower_simultaneous95_16": -0.1516288993767657,
+      "descriptive_game_bootstrap_ci95": [
+        -0.022916666666666665,
+        0.027083333333333334
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.4156438059255158
+      ],
+      "decoder_score_counts": {
+        "0.0": 87,
+        "1.0": 28,
+        "0.5": 4,
+        "0.25": 1
+      },
+      "paired_score_counts": {
+        "0.0": 95,
+        "-0.5": 2,
+        "0.25": 1,
+        "0.5": 2,
+        "1.0": 10,
+        "-1.0": 10
+      }
+    },
+    {
+      "group": "partial",
+      "checkpoint": 4,
+      "games": 15,
+      "probes": 120,
+      "final_decoder_accuracy": 0.3104166666666667,
+      "actual_receiver_accuracy": 0.26666666666666666,
+      "paired_gap": 0.04375,
+      "plugin_v": 0.39166666666666666,
+      "zero_gap_evalue": 0.5901979817492544,
+      "gap_lower_pointwise95": -0.0878015310201658,
+      "gap_lower_simultaneous95_16": -0.13169245010192748,
+      "descriptive_game_bootstrap_ci95": [
+        -0.014583333333333334,
+        0.11041666666666666
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.5156438059255157
+      ],
+      "decoder_score_counts": {
+        "0.0": 78,
+        "0.5": 8,
+        "1.0": 33,
+        "0.25": 1
+      },
+      "paired_score_counts": {
+        "0.0": 84,
+        "0.5": 6,
+        "-1.0": 12,
+        "-0.5": 2,
+        "1.0": 15,
+        "0.25": 1
+      }
+    },
+    {
+      "group": "partial",
+      "checkpoint": 8,
+      "games": 15,
+      "probes": 120,
+      "final_decoder_accuracy": 0.30833333333333335,
+      "actual_receiver_accuracy": 0.30833333333333335,
+      "paired_gap": 0.0,
+      "plugin_v": 0.4,
+      "zero_gap_evalue": 0.2055393309856295,
+      "gap_lower_pointwise95": -0.1458366039972278,
+      "gap_lower_simultaneous95_16": -0.19142965776070947,
+      "descriptive_game_bootstrap_ci95": [
+        -0.10833333333333334,
+        0.10833333333333334
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.5239771392588491
+      ],
+      "decoder_score_counts": {
+        "0.5": 8,
+        "0.0": 79,
+        "1.0": 33
+      },
+      "paired_score_counts": {
+        "-0.5": 6,
+        "-1.0": 16,
+        "0.0": 78,
+        "1.0": 18,
+        "0.5": 2
+      }
+    },
+    {
+      "group": "partial",
+      "checkpoint": 16,
+      "games": 15,
+      "probes": 120,
+      "final_decoder_accuracy": 0.4895833333333333,
+      "actual_receiver_accuracy": 0.425,
+      "paired_gap": 0.06458333333333334,
+      "plugin_v": 0.575,
+      "zero_gap_evalue": 0.7009342180554274,
+      "gap_lower_pointwise95": -0.09046207799415751,
+      "gap_lower_simultaneous95_16": -0.1390013637046818,
+      "descriptive_game_bootstrap_ci95": [
+        -0.04375,
+        0.17916666666666667
+      ],
+      "capability_pointwise95": [
+        0.3481092340979948,
+        0.6989771392588491
+      ],
+      "decoder_score_counts": {
+        "1.0": 55,
+        "0.5": 7,
+        "0.0": 57,
+        "0.25": 1
+      },
+      "paired_score_counts": {
+        "0.0": 73,
+        "-0.5": 3,
+        "-1.0": 16,
+        "0.5": 4,
+        "1.0": 23,
+        "0.25": 1
+      }
+    },
+    {
+      "group": "stuck",
+      "checkpoint": 0,
+      "games": 6,
+      "probes": 48,
+      "final_decoder_accuracy": 0.23958333333333334,
+      "actual_receiver_accuracy": 0.2708333333333333,
+      "paired_gap": -0.03125,
+      "plugin_v": 0.2708333333333333,
+      "zero_gap_evalue": 0.2222558095867041,
+      "gap_lower_pointwise95": -0.2829026021501405,
+      "gap_lower_simultaneous95_16": -0.3635913661010949,
+      "descriptive_game_bootstrap_ci95": [
+        -0.07291666666666667,
+        0.0
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.4668584022582547
+      ],
+      "decoder_score_counts": {
+        "0.0": 29,
+        "1.0": 8,
+        "0.25": 8,
+        "0.5": 3
+      },
+      "paired_score_counts": {
+        "0.0": 22,
+        "-1.0": 9,
+        "1.0": 6,
+        "-0.75": 2,
+        "0.25": 6,
+        "0.5": 3
+      }
+    },
+    {
+      "group": "stuck",
+      "checkpoint": 4,
+      "games": 6,
+      "probes": 48,
+      "final_decoder_accuracy": 0.25,
+      "actual_receiver_accuracy": 0.2916666666666667,
+      "paired_gap": -0.041666666666666664,
+      "plugin_v": 0.2708333333333333,
+      "zero_gap_evalue": 0.20844008579936396,
+      "gap_lower_pointwise95": -0.2891295084798875,
+      "gap_lower_simultaneous95_16": -0.3689376153803833,
+      "descriptive_game_bootstrap_ci95": [
+        -0.1875,
+        0.0625
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.4668584022582547
+      ],
+      "decoder_score_counts": {
+        "0.0": 28,
+        "1.0": 8,
+        "0.25": 8,
+        "0.5": 4
+      },
+      "paired_score_counts": {
+        "0.0": 22,
+        "1.0": 5,
+        "-1.0": 9,
+        "0.25": 6,
+        "-0.75": 2,
+        "0.5": 4
+      }
+    },
+    {
+      "group": "stuck",
+      "checkpoint": 8,
+      "games": 6,
+      "probes": 48,
+      "final_decoder_accuracy": 0.25,
+      "actual_receiver_accuracy": 0.25,
+      "paired_gap": 0.0,
+      "plugin_v": 0.25,
+      "zero_gap_evalue": 0.33452024544080783,
+      "gap_lower_pointwise95": -0.21563309104652656,
+      "gap_lower_simultaneous95_16": -0.2918864051228086,
+      "descriptive_game_bootstrap_ci95": [
+        0.0,
+        0.0
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.44602506892492133
+      ],
+      "decoder_score_counts": {
+        "1.0": 8,
+        "0.0": 28,
+        "0.25": 8,
+        "0.5": 4
+      },
+      "paired_score_counts": {
+        "0.0": 26,
+        "-1.0": 5,
+        "1.0": 5,
+        "0.25": 6,
+        "-0.75": 2,
+        "0.5": 2,
+        "-0.5": 2
+      }
+    },
+    {
+      "group": "stuck",
+      "checkpoint": 16,
+      "games": 6,
+      "probes": 48,
+      "final_decoder_accuracy": 0.28125,
+      "actual_receiver_accuracy": 0.25,
+      "paired_gap": 0.03125,
+      "plugin_v": 0.3333333333333333,
+      "zero_gap_evalue": 0.39941320385769724,
+      "gap_lower_pointwise95": -0.2130114574540598,
+      "gap_lower_simultaneous95_16": -0.2943155134908866,
+      "descriptive_game_bootstrap_ci95": [
+        -0.041666666666666664,
+        0.09375
+      ],
+      "capability_pointwise95": [
+        0.25,
+        0.5293584022582547
+      ],
+      "decoder_score_counts": {
+        "0.0": 27,
+        "1.0": 10,
+        "0.25": 8,
+        "0.5": 3
+      },
+      "paired_score_counts": {
+        "0.0": 23,
+        "1.0": 8,
+        "-1.0": 6,
+        "-0.75": 3,
+        "0.25": 5,
+        "0.5": 2,
+        "-0.5": 1
+      }
+    }
+  ],
+  "rules": {
+    "S4_r001": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "S4_r000": [
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r002": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r003": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r006": [
+      [
+        0
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "S4_r005": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "S4_r004": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r008": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r007": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ]
+    ],
+    "S4_r009": [
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r010": [
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r011": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r012": [
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r013": [
+      [
+        1
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "S4_r015": [
+      [
+        0
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "S4_r016": [
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r014": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r017": [
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ],
+    "S4_r018": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "S4_r020": [
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r019": [
+      [
+        1
+      ],
+      [
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "S4_r022": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ],
+    "S4_r021": [
+      [
+        1
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "S4_r023": [
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r024": [
+      [
+        3
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "S4_r025": [
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0
+      ]
+    ],
+    "S4_r026": [
+      [
+        2
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ]
+    ],
+    "S4_r027": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "S4_r028": [
+      [
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "S4_r029": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "invalid_final_probe": [
+    "S4_r022_t024_eval_e015"
+  ]
+}

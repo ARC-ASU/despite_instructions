@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "description": "Paper-scoped, sanitized scientific observations. Historical model identifiers are retained as recorded. Manuscript files, development logs and unrelated experiments are not included.",
+  "datasets": {
+    "selection_screen": {
+      "file": "data/selection_screen.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 5400,
+      "sha256": "2f01fa73cd3bd119c8e6261d042121332c2ce07becea1d1d8fb765f74f2ac1d5",
+      "source_file": "results/stage2_directed_20260812-043252.jsonl",
+      "source_sha256": "100bc5c93828585a093785d2cc38a86789b7aa93013e7ce23e64bcde182a486c",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Counterfactual rows from this screen omitted: the published intervention table uses selection_feedback. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_feedback": {
+      "file": "data/selection_feedback.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 10076,
+      "sha256": "7b5531a94a2dfd8db8b2d2528cd962eafd0702db5a50d0a1333edf88df34d865",
+      "source_file": "results/C1_20260812-214353.jsonl",
+      "source_sha256": "3cbc5f692cd4cb8d86e178c3e7917e81dbe9eaa1b0024927bc5219249a38bd16",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_shuffled": {
+      "file": "data/selection_shuffled.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 2400,
+      "sha256": "25f8235480914b1d18d836093ced143902b8fecaa4f3de7aad87c29d279569d4",
+      "source_file": "results/C3_20260813-205626.jsonl",
+      "source_sha256": "3ad663ae1adbeadf666b61445d25b71f54fd6f19e0517f53b73ffb78cd0e70bd",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_history": {
+      "file": "data/selection_history.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 4080,
+      "sha256": "90417cb8a132daf29c5bb9d2b7f3d005615b131afdbe928467e805312af884fa",
+      "source_file": "results/D1_20260813-063736.jsonl",
+      "source_sha256": "4de38dbb0734eeb2c59861a1a62f1e944b85cb0807043e7bba63eee4bd102429",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Counterfactual rows from this screen omitted: the published intervention table uses selection_feedback. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_sol_terra": {
+      "file": "data/selection_sol_terra.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 600,
+      "sha256": "87c2a9095dc22c707ced9f6c140cccb3cd1fe6f9cbb92f7c1631d4acfd3a378b",
+      "source_file": "results/sol-terra-screen-20260916/live.jsonl",
+      "source_sha256": "38ad0688ae76ffbf4c0716db471ba67ed6c3f5a2c90892a69d374318c3888b32",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_terra_sol": {
+      "file": "data/selection_terra_sol.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 600,
+      "sha256": "85da1ab483c9b1ee793f100448e66ea5edfba362b67ffa09be2457f64dcd83d9",
+      "source_file": "results/terra-sol-screen-20260916/live.jsonl",
+      "source_sha256": "7e106df7cbd0a5b8d83161e33c5ebc3c1da4029666755889eeadd3f06f1f14ed",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_sol_history": {
+      "file": "data/selection_sol_history.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 2400,
+      "sha256": "faafd0128758b06139818f872d2a10493f02044822c24dc28b460351a598f2c8",
+      "source_file": "results/sol-history-openrouter/live-20260908-122135.jsonl",
+      "source_sha256": "d5ca118e83ee1676383157aaa3b5cc4402295e1f593b74295ff435abe630e5a5",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "selection_sol_continuation": {
+      "file": "data/selection_sol_continuation.jsonl.gz",
+      "study": "sentence_selection",
+      "rows": 1600,
+      "sha256": "003d8fad00c2b4e367d7b9e050c52168ab4001d8342eb0b4f5a18c2d5ab8ce10",
+      "source_file": "results/sol-feedback-continuation/continuation-20260908.jsonl",
+      "source_sha256": "9589ed1c2c1ba1e75aec4632a9a2a55067dde7ae310313c0718ebc95ccd7a686",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "earlier_permitted": {
+      "file": "data/earlier_permitted.jsonl.gz",
+      "study": "earlier_freeform",
+      "rows": 840,
+      "sha256": "b9ac325a6eb8db40e1c0a37bf260b74ee070d6ab5197968029b5d958e5404ea7",
+      "source_file": "results/E2k_20260814-212148.jsonl",
+      "source_sha256": "f88ca29572ca3d3b7c50b3ade77027cb7544e93b14c4cc61153301ad099f73b8",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "earlier_confidential": {
+      "file": "data/earlier_confidential.jsonl.gz",
+      "study": "earlier_freeform",
+      "rows": 2240,
+      "sha256": "f24998cf304b636e590c56faa4bda573676cb7ec4e6bdca9c69bcd010b8b0db9",
+      "source_file": "results/e2_ladder_20260812-042120.jsonl",
+      "source_sha256": "357b4435929b0274ad72c9cae7e5ad405a02ead78a0a4aba705d638aed4f8351",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "prior_discovery": {
+      "file": "data/prior_discovery.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 1536,
+      "sha256": "fec288a071b5c1f23940bc23221964bd8c3dea574cf8e80564d0e0d9b793f44c",
+      "source_file": "results/openai-sol-prior-ladder/openai-sol-prior-ladder-v1-prior-live-20260903-130312.jsonl",
+      "source_sha256": "953d554d396ff82fa31f45ce272dc537d272fcce24ef97c0c41f7a1333865228",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "prior_learning": {
+      "file": "data/prior_learning.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 5120,
+      "sha256": "ac1c35995cca79369a62cddb7e393475e8491c0f1772502bb0fc1f70a67330d3",
+      "source_file": "results/openai-sol-prior-ladder-learning/openai-sol-prior-ladder-learning-v2-full-live-20260903-150138.jsonl",
+      "source_sha256": "4304b2f688409f23d2a54ea222d1a1b057487791cc1d108d1f8121fe848afe84",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "prior_scaled_screen": {
+      "file": "data/prior_scaled_screen.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 384,
+      "sha256": "18d18377be5f34bfebfe088fe4a35cc3d1f2a0a33ca3d1798802cc1d89295b5f",
+      "source_file": "results/openai-sol-scaled-prior-screen/openai-sol-scaled-prior-screen-v1-full-live-20260903-184510.jsonl",
+      "source_sha256": "f1b6359b60ed599b93c5449e5b2c65057801e5618fb0ef384f1bb68649ff5e59",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "prior_scaled_learning": {
+      "file": "data/prior_scaled_learning.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 768,
+      "sha256": "c4df1af99e71f3e4a47e55153136ac95e8b0771e5e15cbfd58709a27fa62cfae",
+      "source_file": "results/openai-sol-scaled-prior-learning/openai-sol-scaled-prior-learning-repair-v1-full-live-20260903-193412.combined.jsonl",
+      "source_sha256": "18fc4a5d478ffca8585c8aacada88b7fe8f433bcf90e050cac9680c700239afa",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "prior_bilateral_topup": {
+      "file": "data/prior_bilateral_topup.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 240,
+      "sha256": "2b14a7cbbd12f2c634e7a4a6a9d4b1f2859f28512140ac32889494257b7116d0",
+      "source_file": "results/live-pair-four-games/live-20260909-111603.jsonl",
+      "source_sha256": "347a0710f5ffa3086216f134a13c899f77abc007ffca2a381761a05cd48c6e51",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/prior_bilateral_topup.jsonl.gz",
+        "sha256": "a92f71d6d4d77d6255b112ec136249e0fd648f6e94cfb9bcf42664591316bf86",
+        "rows": 480,
+        "transformation": "Replies reconstructed from validated message/guess observations; prompt hashes from original request events. Transport retries are excluded."
+      }
+    },
+    "prior_generated_weather": {
+      "file": "data/prior_generated_weather.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 320,
+      "sha256": "f3995b8b534d56a5cccbecec3902ed69a7171273908f4de135e92764244465af",
+      "source_file": "results/sol-weather-feedback-extension/sol-weather-feedback-extension-live-20260905-163728.jsonl",
+      "source_sha256": "bc791c34973bea2dd748d8c51b219e37e2fd82849580bafdf4bddec9adb45d34",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/prior_generated_weather.jsonl.gz",
+        "sha256": "b40ac1d8aaca1f186fb484596259958d168b746ac90b3eb160448ff0fbc0c5c7",
+        "rows": 640,
+        "transformation": "Replies reconstructed from validated message/guess observations; prompt hashes from original request events. Transport retries are excluded."
+      }
+    },
+    "prior_bilateral_k16": {
+      "file": "data/prior_bilateral_k16.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 80,
+      "sha256": "fc22caef92826e8e6fe8f706cde79d6c06172070f8b4adb85500dfdb3707fdfa",
+      "source_file": "results/openai-sol-bilateral-k16/sol-bilateral-k16-live-20260905-083123.jsonl",
+      "source_sha256": "56e9297de6d38621710bbe74b35ddd0a279ffd052215ece8f9c03d7a4ebfbbc0",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/prior_bilateral_k16.jsonl.gz",
+        "sha256": "ed5bdecad7c5ba757beb0f37e15ffbc7f58aa89f4ee6a38762872d6fd527c3cb",
+        "rows": 160,
+        "transformation": "Replies reconstructed from validated message/guess observations; prompt hashes from original request events. Transport retries are excluded."
+      }
+    },
+    "prior_bilateral_k64": {
+      "file": "data/prior_bilateral_k64.jsonl.gz",
+      "study": "shared_priors",
+      "rows": 160,
+      "sha256": "cdc58d7bf7c236bf16a033ec7fd1681f834bc3fc915323d733263bfb8b13542c",
+      "source_file": "results/openai-sol-bilateral-k64/sol-bilateral-k64-live-20260905-090215.jsonl",
+      "source_sha256": "b166dbeeedb6228f7fdba221f749eae0f4850195602d7bc6942a41a25fc24fdb",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/prior_bilateral_k64.jsonl.gz",
+        "sha256": "7ddcaf34686b5e2c43d92e26cfe2febb011d035239648fc619389a7e6a3f4ae5",
+        "rows": 320,
+        "transformation": "Replies reconstructed from validated message/guess observations; prompt hashes from original request events. Transport retries are excluded."
+      }
+    },
+    "incident_sol": {
+      "file": "data/incident_sol.jsonl.gz",
+      "study": "incident_sol",
+      "rows": 1320,
+      "sha256": "a596b049e9487a5f4df77b39225fc74b6c4bede06b47acd7a9cdbd86619e97c9",
+      "source_file": "results/flagship-sol-cohort-20260921/live/trials.jsonl",
+      "source_sha256": "ebd987895e79d5191e04a4cc799bd6bb66c4e180225ce4279481e90d255c1c30",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_sol.jsonl.gz",
+        "sha256": "8604686a0af8f4f963ddf5769bc7c9653dcaab71a280f0f4bac9104f0712c331",
+        "calls": 3000,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_terra_1": {
+      "file": "data/incident_terra_1.jsonl.gz",
+      "study": "incident_terra",
+      "rows": 660,
+      "sha256": "b6c77fdf8890c394227b6837ca61d0d6e5c69a5588f5b364cf6da08808530caf",
+      "source_file": "results/flagship-terra-sol-continuation-20260921/live/trials.jsonl",
+      "source_sha256": "70efc5a94158138dc228c969d2f7235b29ff182e6cff9d63427ca5c7f30cbd8a",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_terra_1.jsonl.gz",
+        "sha256": "e34253dce356d976c9a810ac6516165d941dc30d83c4477441db92f6841e65e0",
+        "calls": 1479,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_terra_2": {
+      "file": "data/incident_terra_2.jsonl.gz",
+      "study": "incident_terra",
+      "rows": 660,
+      "sha256": "178f771635437fcf1bafb2b1efa51676cb0301f8f7f8ad8c209ff5eaf0d417a6",
+      "source_file": "results/flagship-terra-sol-extension-20260922/live/trials.jsonl",
+      "source_sha256": "c94e058fafbb3065dc01336d821f53388102d33644b24f40122f43616acffdc1",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_terra_2.jsonl.gz",
+        "sha256": "431b19ae7704ec6358a1aad4ea27f5561ebcf291cdbe992391838936da32214e",
+        "calls": 1474,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_luna_1": {
+      "file": "data/incident_luna_1.jsonl.gz",
+      "study": "incident_luna",
+      "rows": 660,
+      "sha256": "edc1f111284393bd5dc2fa1da12e8c37aea5c36c410db54821d0795a3bdc7aab",
+      "source_file": "results/flagship-luna-sol-20260921/live/trials.jsonl",
+      "source_sha256": "1a7792fa1d51b36efbdc383cd6ed17c649a8944c1e62856d2c43ccb96adb5b56",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_luna_1.jsonl.gz",
+        "sha256": "1d996b2179f709d7f6d166bc484ab25078dd3ff905633555d613bab58d7dcc31",
+        "calls": 1415,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_luna_2": {
+      "file": "data/incident_luna_2.jsonl.gz",
+      "study": "incident_luna",
+      "rows": 660,
+      "sha256": "6bc17bd6fe16a52a447517d8d7923eebc10aa369ed3309dd696e3508318387d8",
+      "source_file": "results/flagship-luna-sol-extension-timeout-continuation-20260922/live/trials.jsonl",
+      "source_sha256": "1cf6fe6d8b45590b3411c5ac902ec193664bdd30e96962897b3d2a8df33fbd0e",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_luna_2.jsonl.gz",
+        "sha256": "874121dd2280a50ceff75ab45526f2afd78c34ca54b75aca3d1ced2e02313918",
+        "calls": 1470,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_sonnet_1": {
+      "file": "data/incident_sonnet_1.jsonl.gz",
+      "study": "incident_sonnet",
+      "rows": 660,
+      "sha256": "34599ee5f9ea31122f61618e6e623bd82c2bd54d2e5aa2de2e86f7e110636996",
+      "source_file": "results/flagship-sonnet-sol-continuation-20260921/live/trials.jsonl",
+      "source_sha256": "075accf192872d573c5a6dc669ceffd9759c76784a128a716cbdc547925fc797",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_sonnet_1.jsonl.gz",
+        "sha256": "937a90a2c41c65bbf838fef6e7ba773858df19679c227160cec1e8dd76d40d9d",
+        "calls": 1060,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_sonnet_2": {
+      "file": "data/incident_sonnet_2.jsonl.gz",
+      "study": "incident_sonnet",
+      "rows": 660,
+      "sha256": "9a73adf874299dbeb1e7245993dc36c9ce18d4494bd9e3b5d9d7855e9d2a0dfd",
+      "source_file": "results/flagship-sonnet-sol-extension-20260922/live/trials.jsonl",
+      "source_sha256": "2cdf4fb628d03c004c6b1269deef5f75c810c7ffeccacefd9f857e32fc77b953",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_sonnet_2.jsonl.gz",
+        "sha256": "3d83be3dded442e81cb46672b4f24d05f63dc7251ebabfb6b1238204f84ddb89",
+        "calls": 928,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_opus_1": {
+      "file": "data/incident_opus_1.jsonl.gz",
+      "study": "incident_opus",
+      "rows": 660,
+      "sha256": "ae8f5ea88187bc4dbc31285f73b3a9c9509705094f68003b8403d51e82b8ae4e",
+      "source_file": "results/flagship-opus-sol-20260921/live/trials.jsonl",
+      "source_sha256": "62eb11aa81371a8dd050b1777ef42b07c4f2d03d3edd395211fb2bdd6bdda3fd",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_opus_1.jsonl.gz",
+        "sha256": "a0cc91bb315992f1c9ec5a0e57c0133d65409ace492516bf1f5803a8d00c78d2",
+        "calls": 1331,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "incident_opus_2": {
+      "file": "data/incident_opus_2.jsonl.gz",
+      "study": "incident_opus",
+      "rows": 660,
+      "sha256": "1247f8e444f445d6ce359ccf3c234080392525d5d5d272613612582965a699d9",
+      "source_file": "results/flagship-opus-sol-extension-20260922/live/trials.jsonl",
+      "source_sha256": "2d2d11f74f261cd7ae5accaba68548ac779140bd87cdd193736e398054be85cd",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/incident_opus_2.jsonl.gz",
+        "sha256": "671f4c10f4f4cf4b8cf80f833032bbe59f81660e9a0f74051a0a80265513f0b8",
+        "calls": 1323,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "paraphrase_posthoc": {
+      "file": "data/paraphrase_posthoc.jsonl.gz",
+      "study": "paraphrase_posthoc",
+      "rows": 160,
+      "sha256": "85c0d18bf989f5803cc8e9a22c7fb869add19a85d80c43247b76028182d41638",
+      "source_file": "results/flagship-paraphrase-posthoc-20260921/live/trials.jsonl",
+      "source_sha256": "a097ffa8dc4894995584f18a339aae9e6fc2ccd098d99b30059a188634010cc3",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "paraphrase_formation": {
+      "file": "data/paraphrase_formation.jsonl.gz",
+      "study": "paraphrase_formation",
+      "rows": 888,
+      "sha256": "04f81ac83497939331020a05cb2addc63b57e6b4272d640b22b199af92c054e4",
+      "source_file": "results/flagship-paraphrase-formation-20260921/live/trials.jsonl",
+      "source_sha256": "ae47b401e13a3d257bb9c081d710eedab8036bd8d03b7165b6caf597e35cd343",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed.",
+      "replay": {
+        "file": "data/replay/paraphrase_formation.jsonl.gz",
+        "sha256": "bdbbe93bef497ed48918578e4b0f8dc28906c24187744d7eef99aa150eb5a9fb",
+        "calls": 2366,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      }
+    },
+    "memory_sol": {
+      "file": "data/memory_sol.jsonl.gz",
+      "study": "memory_sol",
+      "rows": 960,
+      "sha256": "502e1092b38fa81fbbb79d8855a64fffc3ef8d61699a34c6bfac4c0b400915c7",
+      "source_file": "results/flagship-memory-20260925/live/trials.jsonl",
+      "source_sha256": "8ee47ea41786a272dedff8d1ad57892de99fe2e419cd55c5cad3239fe24d5456",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "memory_comparisons_1": {
+      "file": "data/memory_comparisons_1.jsonl.gz",
+      "study": "memory_comparisons",
+      "rows": 3108,
+      "sha256": "0d6dec31f7f35294485c27c02effe3bdff434c0421700f17a49577fc55aac148",
+      "source_file": "results/flagship-memory-comparisons-20260925/live/trials.jsonl",
+      "source_sha256": "905ea8bd11be225353b4d563d8773882ea93a86a915dc61354fafb6d7743d8a7",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "memory_comparisons_2": {
+      "file": "data/memory_comparisons_2.jsonl.gz",
+      "study": "memory_comparisons",
+      "rows": 732,
+      "sha256": "3d7f200794711dee1c830e48d47881f2ca1186c81498e0c3e11785b106781087",
+      "source_file": "results/flagship-memory-comparisons-20260925-continuation/live/trials.jsonl",
+      "source_sha256": "e8b17b6d5c00ab078b054d77e1fe14c27771430a5dafa01ffc37aa47a0c372d0",
+      "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    }
+  },
+  "artifacts": {
+    "configs/earlier_confidential.json": "b081fc5546054f1357527f08a9bb8c2a21a0a1e99129220a7089d500fc49ea5e",
+    "configs/earlier_permitted.json": "224a4dfa39428cd15f8f0f39b24fdfcd06c3fe1f4a2a28d8bd300c41c8b6dd57",
+    "configs/recorded/incident_luna_1.json": "f557870540feb4b8fde2c2f2ad48a1f29a383cca306131576415058f79dd9dd7",
+    "configs/recorded/incident_luna_2.json": "4f141aedd8dcf6021eabf6fc5ba1b927d822ea3a1893690e6c073be1354bbdbc",
+    "configs/recorded/incident_opus_1.json": "0182530b1598a35c9359c533be8ed91a075d7942b2820dbb9db263e775315f3c",
+    "configs/recorded/incident_opus_2.json": "0350e347b14fa98927fb53fd959b1bf934a34ab62462858f51348dd6c13be5e5",
+    "configs/recorded/incident_sol.json": "4d195b2c18149f60c8039e3cf4032c5a357cd3d2f7d0925fa7f3820637b50e23",
+    "configs/recorded/incident_sonnet_1.json": "e4a1d17b39b596c4acd21bdac03f18cdce53b76c3703f87342762b4b187cb954",
+    "configs/recorded/incident_sonnet_2.json": "c11c9a1eb9366bb6614ca5027739e4772153244a87d8f795686eb775be033353",
+    "configs/recorded/incident_terra_1.json": "070c5f84f4ccd1ed22b7d557985e79790227d067783c9ccc8d87c29264b0a6cf",
+    "configs/recorded/incident_terra_2.json": "151224c79df1506f0c5fe49437711c2734eba7fcea97f003c6286f88661edebb",
+    "configs/recorded/paraphrase_formation.json": "fad7662663cbb96e93ae570b778f0d5cfa7978471e70032742f831fe3d3b5431",
+    "configs/recorded/prior_bilateral_k16.json": "0399f2078775fa093193791db364ed12c6ee1b4160e360be6e03a691765dc79e",
+    "configs/recorded/prior_bilateral_k64.json": "8a0bd9befb3ed8cff8475b07ac5dede690e843dcb1747bac1aca480c3b2efbd5",
+    "configs/recorded/prior_bilateral_topup.json": "894fb7f82ad2f6100085b4d8835212dacd512b31524961c9d7244e44cde3658e",
+    "configs/recorded/prior_discovery.json": "d1d3450a0986660aef5c4d37bb2cbd2f073a67ddbc5b376ae8ce86977114a48b",
+    "configs/recorded/prior_generated_weather.json": "b09e9eadead2612fa996fdc3b5f6cb9106ccfeef19c7b16f54f98a2d8725532e",
+    "configs/recorded/prior_learning.json": "0b74b9b214ad524743dfc67f007024442fced756103f9a5f334a1a8e9d305f15",
+    "configs/recorded/prior_scaled_learning.json": "14cb448f4383049168044273028931941ec183cdd34b3439fd7776fc4847959c",
+    "configs/recorded/prior_scaled_screen.json": "2bae736fa55d043196e84f08c9c068d5d337333dbcc606dd30b853678702cd3e",
+    "configs/selection.json": "880a272bb66f2e23b9bf41ebfe852f84c053a029a59cd565ec0273a3ba5131d9",
+    "data/annotations/paraphrase_fidelity_annotations.json": "bef89ab80ee177d8956bf65a0bdf21b0431844d27e3445382ed579097d5b3c7a",
+    "data/annotations/security_message_annotations.json": "fba89a5fcba145b9946acd938b8face40a48ac918e9e5949220ea4007465706b"
+  }
+}
