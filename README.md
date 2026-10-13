@@ -4,7 +4,17 @@ Code and curated experimental records for [**Despite Instructions: Frontier Agen
 
 The experiments test whether language-model agents develop ways to communicate private information through otherwise permitted messages. The release includes sentence-selection tasks, shared-prior coordination studies, monitored incident updates, and the controls needed to distinguish message effects from receiver-history effects.
 
-![Overview of monitored incident results, receiver memory, and paraphrasing](assets/overview.png)
+![Final accuracy by sender, compared with standard replacement messages and removal of receiver history. Sol and Terra approach perfect decoding; controls are near chance.](assets/main_results.svg)
+
+**Sol pairs recover 158 of 160 private findings despite message screening.** Replacing the message or removing receiver history brings their accuracy close to the 25% chance baseline. Points average ten games; whiskers show 95% intervals from resampling games. Blocked messages count as failures.
+
+## Memory and wording
+
+![Receiver-memory curves and all ten paired paraphrasing games. Sol and Terra improve sharply with retained history; rewriting lowers Sol's pooled accuracy from 98.8% to 45.0%.](assets/interventions.svg)
+
+The left panel holds the original messages fixed and varies how much receiver history is retained. The right shows each game's original and rewritten final-message accuracy with full receiver history. Rewrites do not always preserve every fact; the [fidelity audit](docs/reproduction.md#statistical-conventions) distinguishes faithful rewrites from other changes.
+
+Both figures are generated from the included trials. [Download PNGs](assets/) or [regenerate the figures](docs/reproduction.md#readme-figures).
 
 ## Reproduce the results
 
@@ -24,7 +34,8 @@ pytest -q
 
 These commands are offline: no API key, GPU, or model download is required. `reproduce` writes `outputs/results.json` from the trial records; it does not copy expected values from the tests. `replay` checks reconstructed requests against recorded prompt hashes and checks resulting decisions against the archived trials. See [reproduction details](docs/reproduction.md) for coverage and statistical conventions.
 
-Selected checks from the incident study:
+<details>
+<summary>Exact incident-study counts and formation criteria</summary>
 
 | Sender → Sol receiver | Correct final checks | Games passing information-flow criterion | Games also passing history-dependence criterion |
 |---|---:|---:|---:|
@@ -33,6 +44,8 @@ Selected checks from the incident study:
 | Luna | 35 / 160 | 0 / 10 | 0 / 10 |
 | Sonnet | 6 / 160 | 0 / 10 | 0 / 10 |
 | Opus | 59 / 160 | 3 / 10 | 2 / 10 |
+
+</details>
 
 These results describe the recorded models and experimental conditions. Hosted models and service behavior can change; a fresh run is a new experiment.
 
