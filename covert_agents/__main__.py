@@ -23,9 +23,16 @@ def execute(config, client, emit):
 
 
 def replay(root, names=None):
+    from .followup.replay import replay as followup_replay
+
     evidence = Evidence(root)
     evidence.verify()
-    names = names or [p.stem for p in sorted((Path(root) / "configs/recorded").glob("*.json"))]
+    if names:
+        followup = [n for n in names if n.startswith("followup_")]
+        names = [n for n in names if not n.startswith("followup_")]
+    else:
+        followup = None
+        names = [p.stem for p in sorted((Path(root) / "configs/recorded").glob("*.json"))]
     summary = {}
     for name in names:
         config = read_json(Path(root) / "configs/recorded" / f"{name}.json")
@@ -52,6 +59,8 @@ def replay(root, names=None):
                     if field in a and a[field] != b[field]:
                         raise ValueError(f"Outcome mismatch: {name}/{field}")
         summary[name] = dict(trials=len(actual), calls=client.position)
+    if followup is None or followup:
+        summary.update(followup_replay(root, evidence, followup))
     return summary
 
 
@@ -81,7 +90,19 @@ def main():
         help="New output directory; existing directories are refused",
     )
     p.add_argument("--execute", action="store_true", help="Required to enable provider calls")
-    args = parser.parse_args()
+    p = sub.add_parser(
+        "followup",
+        add_help=False,
+        help="Build configs and run the Appendix F follow-up studies (see followup --help)",
+    )
+    p.add_argument("followup_args", nargs=argparse.REMAINDER)
+    args, extra = parser.parse_known_args()
+    if args.command == "followup":
+        from .followup.cli import main as followup_main
+
+        return followup_main(extra + args.followup_args, root=args.root)
+    if extra:
+        parser.error("unrecognized arguments: " + " ".join(extra))
     if args.command == "verify":
         print(json.dumps({"verified_files": Evidence(args.root).verify()}))
     elif args.command == "reproduce":

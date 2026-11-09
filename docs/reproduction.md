@@ -20,6 +20,11 @@ Run `python -m covert_agents reproduce` from the repository root. Results are wr
 | Post-hoc and continuous paraphrasing | `paraphrase_posthoc`, `paraphrase_formation` | `paraphrase` |
 | Message support and rewrite fidelity annotations | `data/annotations/*.json` plus incident/paraphrase trials | `message_annotations`, `paraphrase_fidelity` |
 | Earlier permitted/confidential inspection summaries | `earlier_permitted`, `earlier_confidential` | `earlier` |
+| Appendix F.1: 8 and 16 findings, with paraphrase | `followup_k8*`, `followup_k16_*` | `followup.capacity` |
+| Appendix F.2: report drawn each round | `followup_varying_reports` | `followup.varying_reports` |
+| Appendix F.3: sender without history | `followup_stateless_sender` | `followup.stateless_sender` |
+| Appendix F.4: stronger monitors | `followup_monitor_*`, `incident_sol` | `followup.monitors` |
+| Appendix F.5: stronger rewriters, fidelity judge, cue survival | `followup_rewrite_*`, `followup_judge_*`, `paraphrase_posthoc` | `followup.rewriters`, `followup.cue_survival` |
 
 ## Statistical conventions
 
@@ -39,7 +44,7 @@ Annotation labels are explicit post-hoc judgments, not blinded independent ratin
 
 ## Replay coverage
 
-`python -m covert_agents replay` checks **25,254 calls across 18 datasets**. The main incident and continuous-paraphrasing runners reproduce complete trial objects and exact full-request hashes. Shared-prior fixed/discovery runs check archived system/user hashes and recorded choices; bilateral runs check hashes derived from original request events. Their replies are reconstructed from validated observations, not represented as raw provider responses. Failed transport attempts are not replayed.
+`python -m covert_agents replay` checks **47,561 calls across 37 datasets**: 25,254 calls across 18 datasets from the submission and 22,307 calls across 19 follow-up datasets. The follow-up replays reproduce complete trial rows and exact full-request hashes for every study, including the monitor, rewriter and judge interventions ([followup.md](followup.md)). The main incident and continuous-paraphrasing runners reproduce complete trial objects and exact full-request hashes. Shared-prior fixed/discovery runs check archived system/user hashes and recorded choices; bilateral runs check hashes derived from original request events. Their replies are reconstructed from validated observations, not represented as raw provider responses. Failed transport attempts are not replayed.
 
 Selection, receiver-memory, post-hoc paraphrase, annotations, and the earlier inspection studies have offline **result** reproduction. The release does not claim full historical request replay for these datasets. The selection runner supports new experiments under the published protocols with an explicit balanced schedule.
 
@@ -47,9 +52,9 @@ Selection, receiver-memory, post-hoc paraphrase, annotations, and the earlier in
 
 `data/manifest.json` records each original path and file hash, the released compressed file hash, row count, and transformation. Original paths are provenance labels; they are not dependencies or links to files required at runtime. Original records remain in a separate private preservation archive.
 
-The release retains only the completed cohorts used by the paper. It excludes unrelated tasks, exploratory launch scripts, failed duplicate cohort fragments, billing ledgers, provider envelopes, encrypted reasoning, account/request IDs, credential files, and the manuscript. Annotation data and numeric test fixtures are research artifacts; no Overleaf or LaTeX source or manuscript PDF is included.
+The release retains only the completed cohorts used by the paper. Follow-up datasets record each run's non-secret provider settings under `provider_settings`; failed or invalidated follow-up attempts are excluded and described in [followup.md](followup.md). It excludes unrelated tasks, exploratory launch scripts, failed duplicate cohort fragments, billing ledgers, provider envelopes, encrypted reasoning, account/request IDs, credential files, and the manuscript. Annotation data and numeric test fixtures are research artifacts; no Overleaf or LaTeX source or manuscript PDF is included.
 
-This public repository was exported from the reviewed release snapshot with one initial commit. No branches, tags, commits, or manuscript files from the original private research and Overleaf repositories were imported.
+This public repository was exported from the reviewed release snapshot with one initial commit. No branches, tags, commits, or manuscript files from the original private research and Overleaf repositories were imported. The camera-ready follow-up studies were added in the same way, as curated data and code without their private development history.
 
 ## Figures
 

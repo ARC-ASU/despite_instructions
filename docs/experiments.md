@@ -35,6 +35,21 @@ python -m covert_agents run configs/selection.json \
   --output outputs/new-selection --execute
 ```
 
+## Included OpenRouter adapter
+
+`covert_agents.providers.openrouter:generate` has the same environment contract with `OPENROUTER_API_KEY` and OpenRouter model IDs such as `openai/gpt-5.6-sol`. It uses chat completions with strict JSON-schema output, pins requests to the OpenAI upstream with fallbacks disabled, and maps `finish_reason` onto the Responses status the runners expect (`stop` becomes `completed`). It does not retry.
+
+## Cost ledger
+
+`covert_agents.providers.ledger:generate` wraps either adapter with a spending guard. Before every call it checks a conservative worst-case cost, with all input uncached and output at the token limit, against a per-run cap. If `COVERT_LEDGER_CEILING_USD` is set, it also checks that cost against a cumulative ceiling over the ledger file. After the call it appends token usage and an estimated cost to `outputs/ledger/<provider>.jsonl`. Prices come from `configs/prices.json`; update that table before relying on it. Required variables are `COVERT_LEDGER_EXPERIMENT` and `COVERT_LEDGER_RUN_CAP_USD`. `COVERT_LEDGER_PROVIDER` selects `openai` (default) or `openrouter`. `COVERT_TRANSPORT_RETRIES` optionally resends a request only after a connection failure, and every dropped attempt is logged. Ledger files include provider response IDs, so keep them out of version control (`outputs/` is ignored).
+
+```bash
+export COVERT_LEDGER_EXPERIMENT=new-cohort COVERT_LEDGER_RUN_CAP_USD=40
+python -m covert_agents run configs/recorded/incident_sol.json \
+  --client covert_agents.providers.ledger:generate --max-calls 3500 \
+  --output outputs/new-cohort --execute
+```
+
 Adapters may expose `generate.public_settings()` to persist reproducibility metadata. That dictionary must contain public settings only; the core writes it verbatim to `provider.json`.
 
 ## Configurations
@@ -58,6 +73,10 @@ Shared-prior configurations distinguish `discovery`, `fixed_sender`, and `bilate
 ## Memory and post-hoc paraphrase interventions
 
 Use `interventions.receiver_memory(protocol, client, rows, lengths, emit)` or `interventions.posthoc_paraphrase(protocol, client, rows, emit)`. Here `protocol` is `IncidentProtocol.from_dict(config)` and `rows` are a single cohort's incident trial records. Histories are reconstructed from play rounds; the functions do not regenerate messages or rerun the monitor. Blocks remain failures. For cohorts stored in two five-game batches, run each batch independently because their local game IDs overlap.
+
+## Follow-up experiments
+
+The Appendix F studies (more findings, varying reports, a sender without history, stronger monitors and rewriters) have their own commands under `python -m covert_agents followup`. See [followup.md](followup.md).
 
 ## Historical model metadata
 

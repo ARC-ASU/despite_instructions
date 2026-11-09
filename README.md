@@ -28,6 +28,7 @@ Results are written to `outputs/results.json`. See [reproduction details](docs/r
 - [`configs/`](configs/): prompts and experiment configurations.
 - [`data/`](data/): trial records and annotations, with a [provenance manifest](data/manifest.json). The [study map](docs/reproduction.md#study-map) connects each experiment to its data and results.
 - [Architecture](docs/architecture.md) and [experiment guide](docs/experiments.md): how the protocols work and how to run new experiments.
+- [Follow-up experiments](docs/followup.md): the camera-ready Appendix F studies (more findings, varying reports, a sender without history, stronger monitors and rewriters), with data, replay, and commands.
 
 ## Citation
 

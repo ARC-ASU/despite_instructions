@@ -41,7 +41,13 @@ def normalize(response):
             elif part.get("type") == "refusal":
                 refusals.append(part["refusal"])
     return dict(
-        text="".join(text), status=response.get("status"), refusal="\n".join(refusals) or None
+        text="".join(text),
+        status=response.get("status"),
+        refusal="\n".join(refusals) or None,
+        # Non-secret accounting fields; CallableClient strips them before logging trials.
+        usage=response.get("usage"),
+        model=response.get("model"),
+        response_id=response.get("id"),
     )
 
 

@@ -22,4 +22,18 @@ Validation:
 - Gitleaks 8.30.1 reports no findings in the release files, including a separately decompressed copy of all datasets. A tracked-file check rejects manuscript files and common credential formats.
 - The public repository starts with one initial commit exported from the reviewed release snapshot. Earlier research/manuscript commits are not ancestors of this release.
 
+## Camera-ready update
+
+The camera-ready release adds the Appendix F follow-up studies ([followup.md](followup.md)):
+
+- **Data.** 19 curated datasets with archived calls, recorded configs that rebuild byte for byte from their stored arguments, and per-run provider settings.
+- **Code.** Package code for every runner (`covert_agents/followup/`), a `followup` command, OpenRouter and cost-ledger providers, and reproduction of every appendix number.
+- **Exclusions.** Failed attempts, billing ledgers, budgets, response IDs, and planning notes are excluded.
+
+Validation:
+
+- 40 tests, covering 47,561 replayed calls across 37 datasets, Appendix F values entered by hand from the manuscript, config rebuilds, the stateless-sender wrapper, the ledger, and the OpenRouter adapter.
+- Ruff lint passes.
+- `scripts/check_release.py` additionally rejects OpenRouter keys, bearer tokens, local home-directory paths, and tracked billing ledgers.
+
 Limitations are explicit in [reproduction.md](reproduction.md): not every historical study has full request replay; bootstrap seeds are standardized; remote model availability and stochastic responses are not validated by offline tests. The original private archive remains the preservation copy. The source research and Overleaf repositories remain private.

@@ -1,0 +1,22 @@
+{
+  "_source": "Numbers reported in the camera-ready Appendix F (Tables 12-16 and text), entered by hand.",
+  "capacity": {
+    "8": {"flow_games": 8, "final": 0.800, "final_flow": 0.945, "standard": 0.119, "fresh": 0.338,
+          "delivered": 0.981, "paraphrase": 0.250, "initial_letter": [74, 160]},
+    "16": {"flow_games": 8, "final": 0.731, "final_flow": 0.883, "standard": 0.075, "fresh": 0.419,
+           "delivered": 0.919, "paraphrase": 0.125, "initial_letter": [235, 320]}
+  },
+  "varying_reports": {"flow_games": 2, "before": 0.206, "final": 0.538, "standard": 0.206,
+                      "fresh": 0.356, "delivered": 0.931,
+                      "per_pair": [[15, 3, 8, 16], [9, 2, 8, 16], [15, 2, 6, 15], [11, 4, 7, 14],
+                                   [4, 3, 4, 13], [4, 2, 4, 15], [6, 4, 4, 16], [13, 3, 6, 16],
+                                   [5, 5, 6, 12], [4, 5, 4, 16]]},
+  "stateless_sender": {"flow_games": 0, "final": 0.269, "standard": 0.244, "fresh": 0.206,
+                       "delivered": 0.988, "distinct": 120, "shared": 23},
+  "monitors": {"report_only": [0, 160, 0, 50], "history_blind": [160, 160, 29, 50],
+               "history_oracle": [160, 160, 26, 50], "batch_auditor": [160, 160, 148, 160]},
+  "rewriters": {"paper": [72, null, 85, 79, 48, 20], "double": [58, 44, 108, 71, 52, 17],
+                "canonical": [58, 29, 4, 107, 99, 42], "slots": [60, 36, 4, 93, 80, 38]},
+  "cue_survival": {"kept": [38, 55], "lost": [34, 105],
+                   "survived": {"LEN": [6, 16], "unigram": [29, 98], "bigram": [42, 149], "INIT": [1, 59]}}
+}

@@ -5,8 +5,9 @@ from covert_agents.__main__ import replay
 
 def test_full_prompt_replay():
     report = replay(ROOT)
-    assert len(report) == 18
-    assert sum(r["calls"] for r in report.values()) == 25254
+    assert len(report) == 37
+    assert sum(r["calls"] for r in report.values()) == 25254 + 22307
+    assert sum(r["calls"] for n, r in report.items() if not n.startswith("followup_")) == 25254
 
 
 def test_all_incident_games(results, expected):
