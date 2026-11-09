@@ -114,7 +114,9 @@ def test_openai_adapter_request_and_refusal(monkeypatch):
 
     monkeypatch.setattr(openai, "urlopen", transport)
     reply = openai.generate("sender", "instructions", "input", {})
-    assert reply == dict(text="", status="completed", refusal="declined")
+    assert {k: reply[k] for k in ("text", "status", "refusal")} == dict(
+        text="", status="completed", refusal="declined"
+    )
     assert "test-placeholder" not in str(openai.settings())
 
 

@@ -373,11 +373,628 @@
       "source_file": "results/flagship-memory-comparisons-20260925-continuation/live/trials.jsonl",
       "source_sha256": "e8b17b6d5c00ab078b054d77e1fe14c27771430a5dafa01ffc37aa47a0c372d0",
       "transformation": "Scientific trial fields preserved; API identifiers, billing, raw provider envelopes, and encrypted reasoning removed. Reply text/status/refusal retained. Non-trial events excluded. Unused accounting and null legacy-task fields removed."
+    },
+    "followup_k8": {
+      "file": "data/followup_k8.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 1503,
+      "sha256": "eaa69396cbc2e02ae500f9ae600566f5dc7a5df0c70da873cd8494f6f990b408",
+      "source_file": "rebuttal/results/nmwc-02-k8/trials.jsonl",
+      "source_sha256": "9061dade83c6d23406af4dd7c7a01152cbc20b87841c3d79eec662defa0c2127",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k8.jsonl.gz",
+        "sha256": "e1626e8e6c900c19c0ac6e3c0860e5f67b8e9defee9d6638aa0cd5136d1c87d7",
+        "calls": 3800,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      }
+    },
+    "followup_k8_controls": {
+      "file": "data/followup_k8_controls.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 137,
+      "sha256": "ae1edb50c0fbdd90d88c1108e3fd7098b1143c17b2ba68c72f9b0d6699101336",
+      "source_file": "rebuttal/results/nmwc-02-k8-controls/trials.jsonl",
+      "source_sha256": "650eca2ad48b359374dea6d9e47fec4b019b4cdfe6f435a67b9caa5938e345b8",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k8_controls.jsonl.gz",
+        "sha256": "ac57db892ffc65f0b7c4edb49450ef7f9fbfddf28c875d526d7d863723ee17a8",
+        "calls": 137,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      }
+    },
+    "followup_k8_paraphrase": {
+      "file": "data/followup_k8_paraphrase.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 160,
+      "sha256": "4f5bdcc43e5b9eee939d6a5f62f44a8b881818e01bcb59482bfcfe46ac50817f",
+      "source_file": "rebuttal/results/nmwc-02-k8-paraphrase/trials.jsonl",
+      "source_sha256": "034a1bc99fff42b64b9d8383ab4f74cadb0189b2ec70e85eb8934e580a0a85ec",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k8_paraphrase.jsonl.gz",
+        "sha256": "ef550804c13ebd4239cf44b76cc84286544079112f04ef5213f1d7cc03b41996",
+        "calls": 314,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      }
+    },
+    "followup_k16_1": {
+      "file": "data/followup_k16_1.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 1640,
+      "sha256": "e9af409f8c418eb7f637955a26d5a6c0b090771803dcaffd35a7db90083e5ee2",
+      "source_file": "rebuttal/results/nmwc-02-k16/trials.jsonl",
+      "source_sha256": "334629b7c256fed2133d5054f32dba8e0d111e0b04b8864beb649ac9efd22936",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k16_1.jsonl.gz",
+        "sha256": "074dc5f1af99e20bcef6e954435666747af8018105e29c7bf2db6668cc462eda",
+        "calls": 3874,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      }
+    },
+    "followup_k16_2": {
+      "file": "data/followup_k16_2.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 1640,
+      "sha256": "e3388c78ce11bf124a6c0c1c7218a5a375f3ceb450faac493cc5b015faa6efc3",
+      "source_file": "rebuttal/results/nmwc-02-k16-b/trials.jsonl",
+      "source_sha256": "ff1f3740bb03f880c4387330704ac598261402d6afb24ec3a3aa9983098cb110",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k16_2.jsonl.gz",
+        "sha256": "6fb8db4b4c505cb2178b6aecd04a121406626511f43179e7a0390d97e1f2ea9c",
+        "calls": 3863,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openrouter-chat-completions",
+        "models": {
+          "sender": "openai/gpt-5.6-sol",
+          "receiver": "openai/gpt-5.6-sol",
+          "monitor": "openai/gpt-5.6-sol",
+          "paraphraser": "openai/gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "upstream": {
+          "order": [
+            "openai"
+          ],
+          "allow_fallbacks": false
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_k16_1_paraphrase": {
+      "file": "data/followup_k16_1_paraphrase.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 160,
+      "sha256": "0fff681d3e7353dafe26152143eebe530eab2868f83acb4954d4fe900c6238fa",
+      "source_file": "rebuttal/results/nmwc-02-k16-paraphrase/trials.jsonl",
+      "source_sha256": "9a037f1e1d73eff4a9755ba23ff9e868ad3ea5e9b25c14f58f33b3795ef2882c",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k16_1_paraphrase.jsonl.gz",
+        "sha256": "debeb17d4d12a119a2f3ce18d87933963ef2c494f9a59d7f948204fafbfca1d8",
+        "calls": 296,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_k16_2_paraphrase": {
+      "file": "data/followup_k16_2_paraphrase.jsonl.gz",
+      "study": "followup_capacity",
+      "rows": 160,
+      "sha256": "d61965624b2f37813a1ad9bcd8ce415ebdeeaa3da35c57a3b849fa911b00f6f8",
+      "source_file": "rebuttal/results/nmwc-02-k16-b-paraphrase/trials.jsonl",
+      "source_sha256": "9a6abc3a63db93085bd0d7b3e8f3d1e51fa395dd7b9bd072f96707ff6d78203a",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_k16_2_paraphrase.jsonl.gz",
+        "sha256": "faf6a4e691d2e8783a833855fe0b23213c0ba48a350b23f6a07e9df65dcd8964",
+        "calls": 292,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openrouter-chat-completions",
+        "models": {
+          "sender": "openai/gpt-5.6-sol",
+          "receiver": "openai/gpt-5.6-sol",
+          "monitor": "openai/gpt-5.6-sol",
+          "paraphraser": "openai/gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "upstream": {
+          "order": [
+            "openai"
+          ],
+          "allow_fallbacks": false
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_varying_reports": {
+      "file": "data/followup_varying_reports.jsonl.gz",
+      "study": "followup_varying_reports",
+      "rows": 1720,
+      "sha256": "47d7555b16bfdf4b05432c4ffddda042fd55c2d6b1362130b7e090286e12eee7",
+      "source_file": "rebuttal/results/aako-03-varying-reports/trials.jsonl",
+      "source_sha256": "9df73667cb1af660a593201f5bd9730f5ddf02a180ac2636c550847e42cde277",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_varying_reports.jsonl.gz",
+        "sha256": "d41ede971ddab3b05c2eb7ba6ed533d289d9e9a5922264ab76a84b26ecd4f8ec",
+        "calls": 4059,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openrouter-chat-completions",
+        "models": {
+          "sender": "openai/gpt-5.6-sol",
+          "receiver": "openai/gpt-5.6-sol",
+          "monitor": "openai/gpt-5.6-sol",
+          "paraphraser": "openai/gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "upstream": {
+          "order": [
+            "openai"
+          ],
+          "allow_fallbacks": false
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_stateless_sender": {
+      "file": "data/followup_stateless_sender.jsonl.gz",
+      "study": "followup_stateless_sender",
+      "rows": 1320,
+      "sha256": "0a6c15da3c8c87fab77ebd79caed95087bd23efda681c463134bf6a057287ac3",
+      "source_file": "rebuttal/results/aako-02-sender-reset/trials.jsonl",
+      "source_sha256": "15f348df96238623a423dabb3f196e3c226315b030b0bc07723d0606c880cc82",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_stateless_sender.jsonl.gz",
+        "sha256": "c79012db7778fc8e5ddc7dfd66b69c007f3af75ceaf66a79cfb9a3db3cbcf4e7",
+        "calls": 2992,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openrouter-chat-completions",
+        "models": {
+          "sender": "openai/gpt-5.6-sol",
+          "receiver": "openai/gpt-5.6-sol",
+          "monitor": "openai/gpt-5.6-sol",
+          "paraphraser": "openai/gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "upstream": {
+          "order": [
+            "openai"
+          ],
+          "allow_fallbacks": false
+        },
+        "sender_history": "stripped",
+        "transport_retries": 3
+      }
+    },
+    "followup_monitor_history_blind": {
+      "file": "data/followup_monitor_history_blind.jsonl.gz",
+      "study": "followup_monitors",
+      "rows": 210,
+      "sha256": "ab42c082242f70853b59abb8b48593d9b0b49f943035d6d4bc0a04fb6b22c5ef",
+      "source_file": "rebuttal/results/aako-01-history_blind/trials.jsonl",
+      "source_sha256": "211d602788c00905a28f2d2d68f07b8c478d787b74c49ac428072256bd8f1c26",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_monitor_history_blind.jsonl.gz",
+        "sha256": "230ecbdce6cc95eea477b5797fc6ba2a51c0300327d6a78490cea8346f62a0e1",
+        "calls": 210,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_monitor_history_oracle": {
+      "file": "data/followup_monitor_history_oracle.jsonl.gz",
+      "study": "followup_monitors",
+      "rows": 210,
+      "sha256": "e20e1a83f660e6be99f9fd7eea0a01b4e64929d10f09b4e0f669c027c2f48934",
+      "source_file": "rebuttal/results/aako-01-history_oracle/trials.jsonl",
+      "source_sha256": "9f72fd6328cb2013d5d4660e90128bb29a603d22c3fa85a25477d7e117fd58e7",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_monitor_history_oracle.jsonl.gz",
+        "sha256": "794214973050dfeb7daf96cf0ea2adb71de60f3d6242270886073d353c9fcf16",
+        "calls": 210,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_monitor_batch_auditor": {
+      "file": "data/followup_monitor_batch_auditor.jsonl.gz",
+      "study": "followup_monitors",
+      "rows": 320,
+      "sha256": "cb0b8f171abf387f8535b836128bc2a8ad6e4ae94e4b4f898e8dbcf6f369d59e",
+      "source_file": "rebuttal/results/aako-01-batch_auditor/trials.jsonl",
+      "source_sha256": "8c5978797a5a6ee365c9adbffe0b9a8cdac94c3e33feddbd4b9dc159c426a834",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_monitor_batch_auditor.jsonl.gz",
+        "sha256": "14b0cc93737b95c116a21157a31aceeb40edadeadb6ed67fba5d70667128e915",
+        "calls": 20,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_rewrite_double": {
+      "file": "data/followup_rewrite_double.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "1630fabf8360f28561fe1e850a3bb2b2bd83dcb343f92d62801f271949d0c0cd",
+      "source_file": "rebuttal/results/nmwc-03-double/trials.jsonl",
+      "source_sha256": "5acf2434dc3c61c87e25ed4de21bf862662e484c4355888e970692982e8cadb4",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_rewrite_double.jsonl.gz",
+        "sha256": "bf828635a033bb7eb672673b3f0325e689cf3c0f2b75ddf26751fb9ccc73cca0",
+        "calls": 640,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_rewrite_canonical": {
+      "file": "data/followup_rewrite_canonical.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "997c827d7b55034d5404e2d49956c4a1db7e826aef7d0ed1ad6bec9d7641d779",
+      "source_file": "rebuttal/results/nmwc-03-canonical/trials.jsonl",
+      "source_sha256": "ed062c751bb219a0ba254d533372c847831c0441fd7c107b2e0a0a58bfc3cabd",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_rewrite_canonical.jsonl.gz",
+        "sha256": "8c59df70bdd57b5b8040aee0b5afe69f3d40a103a5f23cdef6f5bd5c9b1ca864",
+        "calls": 480,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_rewrite_slots": {
+      "file": "data/followup_rewrite_slots.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "5ab6471756efe55c0ff90e3f4373ff50a97e93f915e7a53b387b6a1967e9f88a",
+      "source_file": "rebuttal/results/nmwc-03-slots/trials.jsonl",
+      "source_sha256": "7afe032e05874f3c76aa5006d7c4ac5310567b9267c5d341b8c85ce743974288",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_rewrite_slots.jsonl.gz",
+        "sha256": "9aa03188331ee6c19c19a0a58decc02a102d9ef19639d1a0b592b09cf16a305b",
+        "calls": 480,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_judge_paper": {
+      "file": "data/followup_judge_paper.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "edc4b301985bc23decad8e2874fd130cf8520f9fe66d8b9ecf1bfd2202649326",
+      "source_file": "rebuttal/results/nmwc-03-judge-paper/trials.jsonl",
+      "source_sha256": "e9c176e9eb3da5475b5c6e204d73c78edbfb2994cf0fd041e7c86fa6ca06e55c",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_judge_paper.jsonl.gz",
+        "sha256": "fb46abac6e67afb725abeceece5cab43605ff326f3a919bd5c06150fb0ca3ca6",
+        "calls": 160,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata."
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_judge_double": {
+      "file": "data/followup_judge_double.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "ea0d516ab4f23b0a15b47df4aa6f4f5111ff365756bd9975faeb3b496cd91a1d",
+      "source_file": "rebuttal/results/nmwc-03-judge-double/trials.jsonl",
+      "source_sha256": "3baa26a2bafab9998ef29c35efba7ecd01d23e424f12e5e83941b4e32d48a972",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_judge_double.jsonl.gz",
+        "sha256": "2603caab4d3cc0251e2bacd735596388c15169ee192affd9995d2edc3d498222",
+        "calls": 160,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata.",
+        "context_label": "rebuttal/results/nmwc-03-double"
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_judge_canonical": {
+      "file": "data/followup_judge_canonical.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "385853dfbea376dac22eb5b281b8249c66e847b52cbb3539a2102abbc4154c0a",
+      "source_file": "rebuttal/results/nmwc-03-judge-canonical/trials.jsonl",
+      "source_sha256": "451815369a6f88971ffd8bcecbc9bc276c2d92a7441d2072dfc3c4f8db2b0c11",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_judge_canonical.jsonl.gz",
+        "sha256": "637e49a477cda5ffabe09b85c309de4bb30a8dd5a61821753937ff26826654c6",
+        "calls": 160,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata.",
+        "context_label": "rebuttal/results/nmwc-03-canonical"
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
+    },
+    "followup_judge_slots": {
+      "file": "data/followup_judge_slots.jsonl.gz",
+      "study": "followup_rewriters",
+      "rows": 160,
+      "sha256": "76f629482af982017efcf458c38280bce3864e6ed951b3000ae4e76b1965d35d",
+      "source_file": "rebuttal/results/nmwc-03-judge-slots/trials.jsonl",
+      "source_sha256": "70f84fa778736944b7ef639b57e1f30ddf86aabcd1ba5156492264d2ebb38a4e",
+      "transformation": "Trial rows as written by the release runners (reply text/status/refusal only; no API identifiers, usage, billing, or provider envelopes). Judge rows carry the pair name instead of the original output path. Failed or invalidated attempts are excluded.",
+      "replay": {
+        "file": "data/replay/followup_judge_slots.jsonl.gz",
+        "sha256": "371150fde4d1260a47a1b1f10a420e734a299fdd1bae79d00ddbdc7c9d6c53dd",
+        "calls": 160,
+        "description": "Replies with hashes of exact role, instructions, content, schema, and context. No raw API metadata.",
+        "context_label": "rebuttal/results/nmwc-03-slots"
+      },
+      "provider_settings": {
+        "provider": "openai-responses",
+        "models": {
+          "sender": "gpt-5.6-sol",
+          "receiver": "gpt-5.6-sol",
+          "monitor": "gpt-5.6-sol",
+          "paraphraser": "gpt-5.6-sol"
+        },
+        "max_output_tokens": 2048,
+        "options": {
+          "reasoning": {
+            "effort": "low"
+          }
+        },
+        "transport_retries": 3
+      }
     }
   },
   "artifacts": {
     "configs/earlier_confidential.json": "b081fc5546054f1357527f08a9bb8c2a21a0a1e99129220a7089d500fc49ea5e",
     "configs/earlier_permitted.json": "224a4dfa39428cd15f8f0f39b24fdfcd06c3fe1f4a2a28d8bd300c41c8b6dd57",
+    "configs/followup/followup_k16_1.json": "ec4f240ac656d3e4d9b3876adbad7afd304195c0dcc6c2010bea3994d9513694",
+    "configs/followup/followup_k16_2.json": "3caf3f81e56baf23cc7d0ad78f20a3a48f450edcee2b4d93c87450c6b284102f",
+    "configs/followup/followup_k8.json": "4dc0395812e24bdd58de0dde072d45ea5fe7fd62d973dcbf6d7e232fce54dbbe",
+    "configs/followup/followup_varying_reports.json": "2e92471bddd84ff2b27eda44271dafafdc567e55915f4ddbfda25beeda146f79",
     "configs/recorded/incident_luna_1.json": "f557870540feb4b8fde2c2f2ad48a1f29a383cca306131576415058f79dd9dd7",
     "configs/recorded/incident_luna_2.json": "4f141aedd8dcf6021eabf6fc5ba1b927d822ea3a1893690e6c073be1354bbdbc",
     "configs/recorded/incident_opus_1.json": "0182530b1598a35c9359c533be8ed91a075d7942b2820dbb9db263e775315f3c",

@@ -1,0 +1,36 @@
+{
+  "note": "USD per million tokens, standard tier, short context, checked against the OpenAI and OpenRouter price lists on 2026-11-06. Prompt-cache writes are billed at 1.25x input, so cache_write_multiplier=1.25 prices every uncached input token at the write price as a conservative upper bound. Costs computed from this table are local estimates, not invoices; update it before relying on it for other models or dates.",
+  "cache_write_multiplier": 1.25,
+  "models": {
+    "gpt-5.6-sol": {
+      "input": 4.0,
+      "cached_input": 0.4,
+      "output": 20.0
+    },
+    "gpt-5.6-terra": {
+      "input": 2.0,
+      "cached_input": 0.2,
+      "output": 12.0
+    },
+    "gpt-5.6-luna": {
+      "input": 0.2,
+      "cached_input": 0.02,
+      "output": 1.2
+    },
+    "openai/gpt-5.6-sol": {
+      "input": 4.0,
+      "cached_input": 0.4,
+      "output": 20.0
+    },
+    "openai/gpt-5.6-terra": {
+      "input": 2.0,
+      "cached_input": 0.2,
+      "output": 12.0
+    },
+    "openai/gpt-5.6-luna": {
+      "input": 0.2,
+      "cached_input": 0.02,
+      "output": 1.2
+    }
+  }
+}

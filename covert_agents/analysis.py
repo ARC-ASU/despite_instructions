@@ -18,6 +18,7 @@ from .selection_analysis import results as selection_audits, paired_contrasts
 from .prior_analysis import results as prior_audits
 from .decoder import results as decoder_results
 from .annotations import message_results, fidelity_results
+from .followup.analysis import results as followup_results
 
 
 class Evidence:
@@ -470,4 +471,5 @@ def reproduce(root):
         memory=memory_results(evidence),
         paraphrase=paraphrase_results(evidence),
         earlier=earlier_results(evidence),
+        followup=followup_results(evidence),
     )

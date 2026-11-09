@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PATTERNS = {
     "private-key": rb"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----",
     "openai-key": rb"\bsk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{32,}",
+    "openrouter-key": rb"\bsk-or-v1-[A-Za-z0-9]{32,}",
+    "bearer-token": rb"Bearer [A-Za-z0-9._~+/-]{24,}",
+    "local-home-path": rb"(?:/home|/Users)/[A-Za-z0-9._-]+/",
     "github-token": rb"\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})",
     "aws-access-id": rb"\b(?:AKIA|ASIA)[A-Z0-9]{16}\b",
     "google-api-key": rb"\bAIza[A-Za-z0-9_-]{35}\b",
@@ -32,6 +35,8 @@ def main():
             problems.append((name, "manuscript-or-private-file"))
         if path.name.startswith(".env") and path.name != ".env.example":
             problems.append((name, "environment-file"))
+        if path.suffix == ".jsonl" and ("ledger" in path.parts or "ledger" in path.stem):
+            problems.append((name, "billing-ledger"))
         payload = path.read_bytes()
         if path.suffix == ".gz":
             payload = gzip.decompress(payload)
