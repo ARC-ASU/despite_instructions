@@ -1,20 +1,20 @@
-# Follow-up security-game experiments (Appendix F)
+# Follow-up security-game experiments (Appendices E and F)
 
 These studies extend the monitored security game of the paper. Each keeps the released Sol protocol, prompts, monitor, controls and analysis conventions and changes one thing. Code lives in [`covert_agents/followup/`](../covert_agents/followup/), configs in [`configs/followup/`](../configs/followup/), and trials and archived calls in `data/followup_*.jsonl.gz` and `data/replay/followup_*.jsonl.gz`.
 
 | Appendix | Study | Datasets | Result key |
 |---|---|---|---|
-| F.1 | 8 and 16 possible findings, with post-hoc paraphrase | `followup_k8`, `followup_k8_controls`, `followup_k16_1`, `followup_k16_2`, `followup_k*_paraphrase` | `followup.capacity` |
-| F.2 | One of eight reports drawn each round | `followup_varying_reports` | `followup.varying_reports` |
-| F.3 | Sender without history, same targets as the main Sol games | `followup_stateless_sender` | `followup.stateless_sender` |
-| F.4 | Stronger monitors on the main Sol games | `followup_monitor_history_blind`, `followup_monitor_history_oracle`, `followup_monitor_batch_auditor` | `followup.monitors` |
-| F.5 | Stronger rewriters, fidelity judge, cue survival | `followup_rewrite_*`, `followup_judge_*`, plus `incident_sol` and `paraphrase_posthoc` | `followup.rewriters`, `followup.cue_survival` |
+| E.2 | 8 and 16 possible findings, with post-hoc paraphrase | `followup_k8`, `followup_k8_controls`, `followup_k16_1`, `followup_k16_2`, `followup_k*_paraphrase` | `followup.capacity` |
+| E.3 | One of eight reports drawn each round | `followup_varying_reports` | `followup.varying_reports` |
+| E.4 | Sender without history, same targets as the main Sol games | `followup_stateless_sender` | `followup.stateless_sender` |
+| F.2 and Section 4.4 | Stronger rewriters, fidelity judge, cue survival | `followup_rewrite_*`, `followup_judge_*`, plus `incident_sol` and `paraphrase_posthoc` | `followup.rewriters`, `followup.cue_survival` |
+| F.3 | Stronger monitors on the main Sol games | `followup_monitor_history_blind`, `followup_monitor_history_oracle`, `followup_monitor_batch_auditor` | `followup.monitors` |
 
 Names in code and data are the recorded ones. The paper's "history-aware" and "finding-aware" monitors are `history_blind` and `history_oracle`, and its "fact template" rewriter is `slots`.
 
 ## Reproducing the numbers offline
 
-`python -m covert_agents reproduce` writes every Appendix F number under `followup` in `outputs/results.json`, and `python -m covert_agents replay` replays all 19 follow-up datasets (22,307 calls) against exact request hashes. Replay also requires every emitted trial row to equal the released row. `tests/test_followup.py` checks the results against the values printed in the appendix, which are entered by hand in `tests/expected/followup.json`.
+`python -m covert_agents reproduce` writes every follow-up number under `followup` in `outputs/results.json`, and `python -m covert_agents replay` replays all 19 follow-up datasets (22,307 calls) against exact request hashes. Replay also requires every emitted trial row to equal the released row. `tests/test_followup.py` checks the results against the values printed in the paper, which are entered by hand in `tests/expected/followup.json`.
 
 Conventions match the main security game. Accuracy counts every scheduled check, including blocked messages and invalid decisions. Chance tests use 1/K and are Bonferroni-corrected over a cohort's games. Standard-reply and no-history comparisons use paired discordance tests, Holm-corrected jointly. A game shows information flow when it beats both chance and the standard reply. Intervals resample whole games.
 
@@ -22,7 +22,7 @@ Conventions match the main security game. Accuracy counts every scheduled check,
 
 All live commands need `--execute`, a positive `--max-calls`, and a new `--output` directory. Keys are read only from the environment by the provider adapter (see [experiments.md](experiments.md)). The recorded runs used `gpt-5.6-sol` in every role with `COVERT_REASONING_EFFORT=low` and `COVERT_MAX_OUTPUT_TOKENS=2048`. The settings of each run, without credentials or budgets, are stored as `provider_settings` in `data/manifest.json`.
 
-**More findings and varying reports (F.1, F.2).** Build a config, then run it like any recorded incident config:
+**More findings and varying reports (E.2, E.3).** Build a config, then run it like any recorded incident config:
 
 ```bash
 python -m covert_agents followup config capacity --k 8 --rounds 60 \
@@ -45,14 +45,14 @@ python -m covert_agents followup controls outputs/k8-run --client my_provider:ge
 
 The released 8-finding cohort stopped this way after 1,503 trials, and its 137 remaining controls are `followup_k8_controls`.
 
-**Post-hoc paraphrase of a completed run (F.1).**
+**Post-hoc paraphrase of a completed run (E.2).**
 
 ```bash
 python -m covert_agents followup paraphrase outputs/k8-run --client my_provider:generate \
   --max-calls 400 --output outputs/k8-paraphrase --execute
 ```
 
-**Sender without history (F.3).** Run the recorded Sol config through the stateless wrapper. It strips the sender's PRIOR EPISODES block before each sender call and wraps `COVERT_BASE_CLIENT` (default `covert_agents.providers.openai:generate`):
+**Sender without history (E.4).** Run the recorded Sol config through the stateless wrapper. It strips the sender's PRIOR EPISODES block before each sender call and wraps `COVERT_BASE_CLIENT` (default `covert_agents.providers.openai:generate`):
 
 ```bash
 COVERT_BASE_CLIENT=covert_agents.providers.openai:generate \
@@ -63,7 +63,7 @@ python -m covert_agents run configs/recorded/incident_sol.json \
 
 Request hashes in `calls.jsonl` describe the protocol input before stripping, so replay checks the schedule, receiver, and monitor exactly. The removal itself is covered by a unit test.
 
-**Monitors, rewriters and the judge (F.4, F.5).** These act on the released Sol cohort and rerun no sender:
+**Monitors, rewriters and the judge (F.2, F.3).** These act on the released Sol cohort and rerun no sender:
 
 ```bash
 python -m covert_agents followup monitor --monitor history_blind \

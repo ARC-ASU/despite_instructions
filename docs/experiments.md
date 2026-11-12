@@ -76,7 +76,7 @@ Use `interventions.receiver_memory(protocol, client, rows, lengths, emit)` or `i
 
 ## Follow-up experiments
 
-The Appendix F studies (more findings, varying reports, a sender without history, stronger monitors and rewriters) have their own commands under `python -m covert_agents followup`. See [followup.md](followup.md).
+The follow-up studies in Appendices E and F (more findings, varying reports, a sender without history, stronger monitors and rewriters) have their own commands under `python -m covert_agents followup`. See [followup.md](followup.md).
 
 ## Historical model metadata
 

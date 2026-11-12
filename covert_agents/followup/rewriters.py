@@ -1,4 +1,4 @@
-"""Stronger rewriters and a fidelity judge on the released Sol finals (Appendix F.5).
+"""Stronger rewriters and a fidelity judge on the released Sol finals (Appendix F.2).
 
 Variants, as recorded: ``double`` applies the release paraphraser twice;
 ``canonical`` restates an update with a fixed phrase list in a fixed order;

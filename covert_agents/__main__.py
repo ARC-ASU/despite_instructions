@@ -94,7 +94,7 @@ def main():
     p = sub.add_parser(
         "followup",
         add_help=False,
-        help="Build configs and run the Appendix F follow-up studies (see followup --help)",
+        help="Build configs and run the Appendix E and F follow-up studies (see followup --help)",
     )
     p.add_argument("followup_args", nargs=argparse.REMAINDER)
     args, extra = parser.parse_known_args()

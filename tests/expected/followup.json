@@ -1,5 +1,5 @@
 {
-  "_source": "Numbers reported in the camera-ready Appendix F (Tables 12-16 and text), entered by hand.",
+  "_source": "Numbers reported in the camera-ready paper (Appendices E and F, Tables 1 and 10-13, Section 4.4), entered by hand.",
   "capacity": {
     "8": {"flow_games": 8, "final": 0.800, "final_flow": 0.945, "standard": 0.119, "fresh": 0.338,
           "delivered": 0.981, "paraphrase": 0.250, "initial_letter": [74, 160]},
