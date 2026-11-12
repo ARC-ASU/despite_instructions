@@ -1,11 +1,10 @@
 """Offline verification by default; live calls require an explicit provider plugin."""
 
 import argparse
-import importlib
 import json
 from pathlib import Path
 from .analysis import Evidence, reproduce
-from .clients import RecordedClient, CallableClient
+from .clients import RecordedClient, load_provider, record_run
 from .incident import IncidentProtocol
 from .io import read_json, read_rows, write_json
 from . import priors
@@ -118,26 +117,14 @@ def main():
         if args.max_calls <= 0:
             parser.error("--max-calls must be positive")
         config = read_json(args.config)
-        module, function = args.client.rsplit(":", 1)
-        generate = getattr(importlib.import_module(module), function)
-        args.output.mkdir(parents=True, exist_ok=False)
-        write_json(args.output / "config.json", config)
-        if hasattr(generate, "public_settings"):
-            write_json(args.output / "provider.json", generate.public_settings())
-        with (
-            (args.output / "calls.jsonl").open("x") as calls,
-            (args.output / "trials.jsonl").open("x") as trials,
-        ):
-
-            def emit(handle, row):
-                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-                handle.flush()
-
-            client = CallableClient(
-                generate, max_calls=args.max_calls, emit=lambda r: emit(calls, r)
-            )
-            execute(config, client, lambda r: emit(trials, r))
-        write_json(args.output / "completed.json", {"calls": client.calls})
+        generate = load_provider(args.client)
+        client = record_run(
+            args.output,
+            generate,
+            args.max_calls,
+            {"config.json": config},
+            lambda client, emit: execute(config, client, emit),
+        )
         print(f"Completed {client.calls} provider calls; outputs in {args.output}")
 
 
