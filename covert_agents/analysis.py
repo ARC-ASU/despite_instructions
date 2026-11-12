@@ -12,7 +12,7 @@ from pathlib import Path
 import hashlib
 import numpy as np
 from .io import read_json, read_rows
-from .statistics import binomial_tail, holm, estimate
+from .statistics import binomial_tail, estimate, holm, paired_sign_test
 from .references import reference_curves
 from .selection_analysis import results as selection_audits, paired_contrasts
 from .prior_analysis import results as prior_audits
@@ -127,13 +127,9 @@ def incident_results(evidence):
                 else:
                     if len(available) != 16:
                         raise ValueError("Missing paired control")
-                    wins = sum(
-                        final[r["case"]["index"]]["success"] and not r["success"] for r in available
+                    tests[game, condition] = paired_sign_test(
+                        (final[r["case"]["index"]]["success"], r["success"]) for r in available
                     )
-                    losses = sum(
-                        r["success"] and not final[r["case"]["index"]]["success"] for r in available
-                    )
-                    tests[game, condition] = binomial_tail(wins, wins + losses, 0.5)
             item["chance_p"] = binomial_tail(item["final"]["correct"], 16)
             games.append(item)
         for (g, c), p in holm(tests).items():
@@ -185,9 +181,7 @@ def paraphrase_results(evidence):
             o = originals[game, r["case"]["index"]]
             if o["success"] != r["original_success"] or o["message"] != r["original_message"]:
                 raise ValueError("Original/rewrite pairing mismatch")
-        wins = sum(r["original_success"] and not r["success"] for r in part)
-        losses = sum(r["success"] and not r["original_success"] for r in part)
-        tests[game] = binomial_tail(wins, wins + losses, 0.5)
+        tests[game] = paired_sign_test((r["original_success"], r["success"]) for r in part)
         correct = sum(r["success"] for r in part)
         post.append(
             dict(
@@ -235,9 +229,9 @@ def paraphrase_results(evidence):
             if c == "reassigned":
                 item["donor_correct"] = sum(r["action"] == [r["source_target"]] for r in rs)
             else:
-                wins = sum(final[r["case"]["index"]]["success"] and not r["success"] for r in rs)
-                losses = sum(r["success"] and not final[r["case"]["index"]]["success"] for r in rs)
-                tests[game, c] = binomial_tail(wins, wins + losses, 0.5)
+                tests[game, c] = paired_sign_test(
+                    (final[r["case"]["index"]]["success"], r["success"]) for r in rs
+                )
         formation.append(item)
     for (g, c), p in holm(tests).items():
         formation[g]["controls"][c + "_adjusted_p"] = p

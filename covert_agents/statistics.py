@@ -13,6 +13,19 @@ def binomial_tail(correct, total, probability=0.25):
     )
 
 
+def paired_sign_test(pairs):
+    """Exact one-sided discordance test that the first outcome beats the second.
+
+    ``pairs`` holds (first, second) successes for matched checks. Only discordant
+    pairs count; the p-value is P(wins >= observed) under Binomial(discordant, 1/2).
+    """
+    wins = losses = 0
+    for first, second in pairs:
+        wins += bool(first and not second)
+        losses += bool(second and not first)
+    return binomial_tail(wins, wins + losses, 0.5)
+
+
 def holm(pvalues):
     """Step-down familywise correction; keys are retained for matched reporting."""
     adjusted, previous = {}, 0.0

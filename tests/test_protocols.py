@@ -4,7 +4,7 @@ from covert_agents.clients import CallableClient, RecordedClient
 from covert_agents.io import fingerprint, read_json
 from covert_agents.selection.run import run, schedule
 from covert_agents.priors import valid_weather
-from covert_agents.statistics import binomial_tail, holm
+from covert_agents.statistics import binomial_tail, holm, paired_sign_test
 from .conftest import ROOT
 
 
@@ -157,3 +157,10 @@ def test_new_interventions_preserve_blocked_trials():
     posthoc_paraphrase(protocol, client, [blocked], output.append)
     assert not calls
     assert [r["success"] for r in output] == [0, 0]
+
+
+def test_paired_sign_test_counts_only_discordant_pairs():
+    # Two wins (1, 0), one loss (0, 1); concordant pairs are ignored.
+    pairs = [(1, 0), (1, 0), (0, 1), (1, 1), (0, 0)]
+    assert paired_sign_test(pairs) == binomial_tail(2, 3, 0.5)
+    assert paired_sign_test([(1, 1), (0, 0)]) == 1.0
