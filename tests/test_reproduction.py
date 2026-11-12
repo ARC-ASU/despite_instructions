@@ -104,3 +104,19 @@ def test_wording_reuse(results, expected):
     assert [b["rounds"] for b in actual["bins"]] == [50] * 12
     for key, values in reference["bins"].items():
         assert [b[key] for b in actual["bins"]] == values
+
+
+def test_control_intervals(results, expected):
+    reference = {k: v for k, v in expected("control_intervals").items() if k != "_source"}
+    actual = results["control_intervals"]
+    assert list(actual) == list(reference)
+    for sender, conditions in reference.items():
+        for condition, values in conditions.items():
+            got = actual[sender][condition]
+            assert got["games"] == 10 and got["confidence"] == 0.95
+            assert [100 * got["mean"], *(100 * x for x in got["ci"])] == pytest.approx(
+                values, abs=0.051
+            )  # the table rounds to 0.1%
+    stateless = results["followup"]["stateless_sender"]
+    assert actual["stateless_sender"]["standard"]["mean"] == stateless["standard"]
+    assert actual["stateless_sender"]["fresh"]["mean"] == stateless["fresh"]

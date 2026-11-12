@@ -169,6 +169,36 @@ def incident_results(evidence):
     return output
 
 
+def control_estimates(rows, game):
+    """Bootstrap estimates of standard-reply and no-history accuracy over ten games.
+
+    ``game`` maps a row to its game. A game's accuracy is the mean success over
+    its sixteen control checks; the interval resamples whole games.
+    """
+    output = {}
+    for condition in ("standard", "fresh"):
+        groups = defaultdict(list)
+        for r in rows:
+            if r["condition"] == condition:
+                groups[game(r)].append(r["success"])
+        if len(groups) != 10 or any(len(v) != 16 for v in groups.values()):
+            raise ValueError(f"Incomplete {condition} control")
+        output[condition] = estimate([sum(groups[g]) / 16 for g in sorted(groups)])
+    return output
+
+
+def control_intervals(evidence):
+    """Table 1 control intervals for the five incident senders and the stateless sender."""
+    output = {
+        sender: control_estimates(evidence.incident(sender), lambda r: r["global_game"])
+        for sender in ("sol", "terra", "opus", "luna", "sonnet")
+    }
+    output["stateless_sender"] = control_estimates(
+        evidence.rows("followup_stateless_sender"), lambda r: r["case"]["game"]
+    )
+    return output
+
+
 REUSE_CLASSES = ("repeat_success", "repeat_miss", "new", "other_finding")
 
 
@@ -554,6 +584,7 @@ def reproduce(root):
         shared_priors=shared_prior_results(evidence),
         prior_audits=prior_audits(evidence),
         incident=incident_results(evidence),
+        control_intervals=control_intervals(evidence),
         wording_reuse=dict(sol=wording_reuse(evidence)),
         memory=memory_results(evidence),
         paraphrase=paraphrase_results(evidence),

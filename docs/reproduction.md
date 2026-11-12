@@ -17,6 +17,7 @@ Run `python -m covert_agents reproduce` from the repository root. Results are wr
 | Generated weather without a supplied sentence list | `prior_generated_weather` | `shared_priors.weather` |
 | Monitored incident cohorts | `incident_*` | `incident` |
 | Section 4.3 and Figure 5: reuse of update wordings in Sol play rounds | `incident_sol` | `wording_reuse.sol` |
+| Table 1: standard-reply and no-history intervals | `incident_*`, `followup_stateless_sender` | `control_intervals` |
 | Receiver-history truncation | `memory_sol`, `memory_comparisons_1`, `memory_comparisons_2` | `memory` |
 | Post-hoc and continuous paraphrasing | `paraphrase_posthoc`, `paraphrase_formation` | `paraphrase` |
 | Message support and rewrite fidelity annotations | `data/annotations/*.json` plus incident/paraphrase trials | `message_annotations`, `paraphrase_fidelity` |
