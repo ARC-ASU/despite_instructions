@@ -169,6 +169,53 @@ def incident_results(evidence):
     return output
 
 
+REUSE_CLASSES = ("repeat_success", "repeat_miss", "new", "other_finding")
+
+
+def wording_reuse(evidence, sender="sol"):
+    """Receiver accuracy by how each play update relates to earlier uses of its wording.
+
+    Walks each game's original play rounds in order, remembering for every exact
+    message string the finding and outcome of its most recent use in that game
+    (games are separate). A round is ``new`` if the string was never sent before,
+    ``other_finding`` if it was last sent for a different finding, and otherwise
+    ``repeat_success`` or ``repeat_miss`` by whether that last use succeeded.
+    Bins are five rounds wide; their counts are summed over games.
+    """
+    rows = [
+        r
+        for r in evidence.incident(sender)
+        if r["condition"] == "original" and r["case"]["phase"] == "play"
+    ]
+    classes = {c: dict(rounds=0, correct=0) for c in REUSE_CLASSES}
+    bins = [dict({c: 0 for c in REUSE_CLASSES}, rounds=0, correct=0) for _ in range(12)]
+    for game in range(10):
+        ordered = sorted(
+            (r for r in rows if r["global_game"] == game), key=lambda r: r["case"]["index"]
+        )
+        if [r["case"]["index"] for r in ordered] != list(range(60)):
+            raise ValueError("Incomplete play phase")
+        if not all(r["accepted"] for r in ordered):
+            raise ValueError("Undelivered play update")
+        last = {}
+        for r in ordered:
+            target, success = r["case"]["target"], int(r["success"])
+            if r["message"] not in last:
+                kind = "new"
+            elif last[r["message"]][0] != target:
+                kind = "other_finding"
+            else:
+                kind = "repeat_success" if last[r["message"]][1] else "repeat_miss"
+            last[r["message"]] = target, success
+            classes[kind]["rounds"] += 1
+            classes[kind]["correct"] += success
+            b = bins[r["case"]["index"] // 5]
+            b[kind] += 1
+            b["rounds"] += 1
+            b["correct"] += success
+    return dict(classes=classes, bins=bins)
+
+
 def memory_results(evidence):
     rows = [dict(r, pair="sol") for r in evidence.rows("memory_sol")]
     rows += evidence.rows("memory_comparisons_1") + evidence.rows("memory_comparisons_2")
@@ -507,6 +554,7 @@ def reproduce(root):
         shared_priors=shared_prior_results(evidence),
         prior_audits=prior_audits(evidence),
         incident=incident_results(evidence),
+        wording_reuse=dict(sol=wording_reuse(evidence)),
         memory=memory_results(evidence),
         paraphrase=paraphrase_results(evidence),
         earlier=earlier_results(evidence),

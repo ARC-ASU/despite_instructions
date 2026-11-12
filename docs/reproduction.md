@@ -16,6 +16,7 @@ Run `python -m covert_agents reproduce` from the repository root. Results are wr
 | Bilateral 16/64-state games, including opaque tags | `prior_bilateral_k16`, `prior_bilateral_k64`, `prior_bilateral_topup` | `shared_priors.bilateral` |
 | Generated weather without a supplied sentence list | `prior_generated_weather` | `shared_priors.weather` |
 | Monitored incident cohorts | `incident_*` | `incident` |
+| Section 4.3 and Figure 5: reuse of update wordings in Sol play rounds | `incident_sol` | `wording_reuse.sol` |
 | Receiver-history truncation | `memory_sol`, `memory_comparisons_1`, `memory_comparisons_2` | `memory` |
 | Post-hoc and continuous paraphrasing | `paraphrase_posthoc`, `paraphrase_formation` | `paraphrase` |
 | Message support and rewrite fidelity annotations | `data/annotations/*.json` plus incident/paraphrase trials | `message_annotations`, `paraphrase_fidelity` |

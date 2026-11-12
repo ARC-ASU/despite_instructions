@@ -96,3 +96,11 @@ def test_paired_contrasts_and_earlier_formation(results):
     assert contrasts["sol_sender_history"]["mean"] == pytest.approx(0.559375)
     assert results["earlier"]["earlier_permitted"]["formed_games"] == 7
     assert results["earlier"]["earlier_confidential"]["formed_games"] == 2
+
+
+def test_wording_reuse(results, expected):
+    actual, reference = results["wording_reuse"]["sol"], expected("wording_reuse")
+    assert actual["classes"] == reference["classes"]
+    assert [b["rounds"] for b in actual["bins"]] == [50] * 12
+    for key, values in reference["bins"].items():
+        assert [b[key] for b in actual["bins"]] == values
