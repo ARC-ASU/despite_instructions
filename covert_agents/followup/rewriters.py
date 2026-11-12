@@ -11,7 +11,7 @@ source/rewrite pairs with the rules of the released fidelity annotation.
 
 import json
 
-from ..incident import NEUTRAL, PARAPHRASER
+from ..incident import NEUTRAL, PARAPHRASER, format_ok, paraphrase_request
 from ..interventions import final_messages, frozen_histories
 from ..io import parsed
 
@@ -83,8 +83,7 @@ def rewrite(protocol, client, public, message, variant):
     if variant == "double":
         current = message
         for _ in range(2):
-            content = json.dumps(dict(approved_incident_report=report, update_to_rewrite=current),
-                                 ensure_ascii=False)
+            content = paraphrase_request(report, current)
             raw = client.ask("paraphraser", PARAPHRASER, content, protocol.sender_schema)
             replies.append(raw)
             current = protocol.valid_message(raw)
@@ -92,8 +91,7 @@ def rewrite(protocol, client, public, message, variant):
                 return None, replies
         return current, replies
     if variant == "canonical":
-        content = json.dumps(dict(approved_incident_report=report, update_to_rewrite=message),
-                             ensure_ascii=False)
+        content = paraphrase_request(report, message)
         raw = client.ask("paraphraser", CANONICAL, content, protocol.sender_schema)
         replies.append(raw)
         return protocol.valid_message(raw), replies
@@ -110,9 +108,7 @@ def rewrite(protocol, client, public, message, variant):
             return None, replies
         # Renderings are fixed strings chosen by the defense, so the sender's word-count rule
         # does not apply; the digit, single-sentence and banned-token rules still do.
-        if any(c.isdigit() for c in text) or sum(text.count(c) for c in ".!?") > 1:
-            return None, replies
-        if any(w.strip(".,;:!?'\"()").lower() in protocol.banned_tokens for w in text.split()):
+        if not format_ok(text, protocol.banned_tokens, check_length=False):
             return None, replies
         return text, replies
     raise ValueError(f"Unknown variant {variant!r}")

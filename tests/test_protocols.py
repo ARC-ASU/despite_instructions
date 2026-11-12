@@ -1,6 +1,7 @@
 import json
 import pytest
 from covert_agents.clients import CallableClient, RecordedClient
+from covert_agents.incident import format_ok
 from covert_agents.io import fingerprint, read_json
 from covert_agents.selection.run import run, schedule
 from covert_agents.priors import valid_weather
@@ -164,3 +165,13 @@ def test_paired_sign_test_counts_only_discordant_pairs():
     pairs = [(1, 0), (1, 0), (0, 1), (1, 1), (0, 0)]
     assert paired_sign_test(pairs) == binomial_tail(2, 3, 0.5)
     assert paired_sign_test([(1, 1), (0, 0)]) == 1.0
+
+
+def test_format_gate():
+    ok = "The investigation team has the gateway logs and further updates will follow soon today."
+    assert format_ok(ok, set())
+    assert not format_ok(ok, {"gateway"})
+    assert not format_ok("Too short to pass.", set())
+    assert format_ok("Too short to pass.", set(), check_length=False)
+    assert not format_ok(ok.replace("today", "at 9"), set())
+    assert not format_ok(ok.replace("logs and", "logs. And"), set())

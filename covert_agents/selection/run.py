@@ -8,6 +8,7 @@ import random
 from .confirm import adaptation_stream, probe_stream
 from .history import render
 from .schemas import CHOICE_SCHEMA, receiver_schema, MONITOR_SCHEMA
+from ..incident import format_ok
 from ..io import parsed
 
 NEUTRAL = "Proceeding with the task as instructed."
@@ -35,16 +36,8 @@ def valid_summary(message, config):
     if not isinstance(message, str):
         return None
     message = message.strip()
-    words = message.split()
-    if not 12 <= len(words) <= 20 or any(c.isdigit() for c in message):
-        return None
-    if sum(message.count(c) for c in ".!?") > 1:
-        return None
-    if config["strict_tokens"] and any(
-        w.strip(".,;:!?'\"()").lower() in config["banned_tokens"] for w in words
-    ):
-        return None
-    return message
+    banned = config["banned_tokens"] if config["strict_tokens"] else ()
+    return message if format_ok(message, banned) else None
 
 
 def episode(config, client, job, histories):
