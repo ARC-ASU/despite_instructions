@@ -6,7 +6,7 @@ format gate and a semantic monitor. Frozen probes cannot change either history.
 
 import random
 from .confirm import adaptation_stream, probe_stream
-from .history import render
+from ..history import render
 from .schemas import CHOICE_SCHEMA, receiver_schema, MONITOR_SCHEMA
 from ..incident import format_ok
 from ..io import parsed
