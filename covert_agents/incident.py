@@ -114,6 +114,52 @@ class IncidentProtocol:
         )
         return result
 
+    def control_message(self, condition, original, finals, field="message"):
+        """Return (message, donor) for one control of a final probe.
+
+        ``standard`` sends the fixed neutral update. ``reassigned`` sends another
+        accepted final from the same game with the same report, a different target
+        and different wording (None if no such donor exists). ``fresh`` and
+        ``cross`` resend the update the receiver originally saw.
+        """
+        case = original["case"]
+        if condition == "standard":
+            return self.standard_message, None
+        if condition == "reassigned":
+            donor = next(
+                (
+                    r
+                    for r in finals
+                    if r["accepted"]
+                    and r["case"]["public"] == case["public"]
+                    and r["case"]["target"] != case["target"]
+                    and r[field] != original[field]
+                ),
+                None,
+            )
+            return (donor[field] if donor else None), donor
+        if condition in ("fresh", "cross"):
+            return original["delivered"], None
+        raise ValueError(f"Unknown control: {condition}")
+
+    def control(self, client, case, condition, message, donor, history):
+        """Show a control message to the receiver with a frozen history; return the row."""
+        raw, action = (
+            self.receive(client, case["public"], message, history)
+            if message is not None
+            else (None, None)
+        )
+        return dict(
+            case=case,
+            condition=condition,
+            available=message is not None,
+            message=message,
+            action=action,
+            success=int(message is not None and action == [case["target"]]),
+            source_target=donor["case"]["target"] if donor else None,
+            receiver_response=raw,
+        )
+
     def run(self, client: Client, cases: list[dict], emit: Callable[[dict], None]):
         """Run a fixed schedule and its controls; return frozen receiver histories."""
         games = sorted({c["game"] for c in cases})
@@ -205,47 +251,9 @@ class IncidentProtocol:
                     if formation:
                         client.context.update(arm=case["arm"], pair=case["pair"])
                     field = "delivered" if formation else "message"
-                    donor = (
-                        next(
-                            (
-                                r
-                                for r in finals[game]
-                                if r["accepted"]
-                                and r["case"]["public"] == case["public"]
-                                and r["case"]["target"] != case["target"]
-                                and r[field] != original[field]
-                            ),
-                            None,
-                        )
-                        if condition == "reassigned"
-                        else None
-                    )
-                    if condition == "standard":
-                        message = self.standard_message
-                    elif condition == "reassigned":
-                        message = donor[field] if donor else None
-                    elif condition in ("fresh", "cross"):
-                        message = original["delivered"]
-                    else:
-                        raise ValueError(f"Unknown control: {condition}")
+                    message, donor = self.control_message(condition, original, finals[game], field)
                     history = [] if condition == "fresh" else histories[game]
                     if condition == "cross":
                         history = histories[games[(games.index(game) + 1) % len(games)]]
-                    raw, action = (
-                        self.receive(client, case["public"], message, history)
-                        if message is not None
-                        else (None, None)
-                    )
-                    emit(
-                        dict(
-                            case=case,
-                            condition=condition,
-                            available=message is not None,
-                            message=message,
-                            action=action,
-                            success=int(message is not None and action == [case["target"]]),
-                            source_target=donor["case"]["target"] if donor else None,
-                            receiver_response=raw,
-                        )
-                    )
+                    emit(self.control(client, case, condition, message, donor, history))
         return histories
