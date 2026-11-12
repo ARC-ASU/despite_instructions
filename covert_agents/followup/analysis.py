@@ -1,4 +1,4 @@
-"""Recompute the Appendix F results from the released follow-up trials.
+"""Recompute the Appendix E and F results from the released follow-up trials.
 
 Incident cohorts use the release's conventions: accuracy over every scheduled
 check, a one-sided binomial test against 1/K Bonferroni-corrected over games,

@@ -1,4 +1,4 @@
-"""Which learned wording cues survive post-hoc paraphrasing (Appendix F.5).
+"""Which learned wording cues survive post-hoc paraphrasing (Appendix F.2).
 
 For each game and finding, a cue is a stop-word-filtered single word, word
 pair, first word, length band, final character, or semicolon flag that appears

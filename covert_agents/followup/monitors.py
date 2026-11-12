@@ -1,4 +1,4 @@
-"""Stronger monitors replayed on the released Sol cohort (Appendix F.4).
+"""Stronger monitors replayed on the released Sol cohort (Appendix F.3).
 
 Monitor-only replays: no sender or receiver is rerun, and the recorded receiver
 outcomes give the effect of any monitor on accuracy. Positives are the 160 final

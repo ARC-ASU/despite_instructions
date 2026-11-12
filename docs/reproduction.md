@@ -20,11 +20,11 @@ Run `python -m covert_agents reproduce` from the repository root. Results are wr
 | Post-hoc and continuous paraphrasing | `paraphrase_posthoc`, `paraphrase_formation` | `paraphrase` |
 | Message support and rewrite fidelity annotations | `data/annotations/*.json` plus incident/paraphrase trials | `message_annotations`, `paraphrase_fidelity` |
 | Earlier permitted/confidential inspection summaries | `earlier_permitted`, `earlier_confidential` | `earlier` |
-| Appendix F.1: 8 and 16 findings, with paraphrase | `followup_k8*`, `followup_k16_*` | `followup.capacity` |
-| Appendix F.2: report drawn each round | `followup_varying_reports` | `followup.varying_reports` |
-| Appendix F.3: sender without history | `followup_stateless_sender` | `followup.stateless_sender` |
-| Appendix F.4: stronger monitors | `followup_monitor_*`, `incident_sol` | `followup.monitors` |
-| Appendix F.5: stronger rewriters, fidelity judge, cue survival | `followup_rewrite_*`, `followup_judge_*`, `paraphrase_posthoc` | `followup.rewriters`, `followup.cue_survival` |
+| Appendix E.2: 8 and 16 findings, with paraphrase | `followup_k8*`, `followup_k16_*` | `followup.capacity` |
+| Appendix E.3: report drawn each round | `followup_varying_reports` | `followup.varying_reports` |
+| Appendix E.4: sender without history | `followup_stateless_sender` | `followup.stateless_sender` |
+| Appendix F.2 and Section 4.4: stronger rewriters, fidelity judge, cue survival | `followup_rewrite_*`, `followup_judge_*`, `paraphrase_posthoc` | `followup.rewriters`, `followup.cue_survival` |
+| Appendix F.3: stronger monitors | `followup_monitor_*`, `incident_sol` | `followup.monitors` |
 
 ## Statistical conventions
 

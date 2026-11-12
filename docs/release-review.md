@@ -24,7 +24,7 @@ Validation:
 
 ## Camera-ready update
 
-The camera-ready release adds the Appendix F follow-up studies ([followup.md](followup.md)):
+The camera-ready release adds the follow-up studies in Appendices E and F ([followup.md](followup.md)):
 
 - **Data.** 19 curated datasets with archived calls, recorded configs that rebuild byte for byte from their stored arguments, and per-run provider settings.
 - **Code.** Package code for every runner (`covert_agents/followup/`), a `followup` command, OpenRouter and cost-ledger providers, and reproduction of every appendix number.
@@ -32,7 +32,7 @@ The camera-ready release adds the Appendix F follow-up studies ([followup.md](fo
 
 Validation:
 
-- 40 tests, covering 47,561 replayed calls across 37 datasets, Appendix F values entered by hand from the manuscript, config rebuilds, the stateless-sender wrapper, the ledger, and the OpenRouter adapter.
+- 40 tests, covering 47,561 replayed calls across 37 datasets, Appendix E and F values entered by hand from the manuscript, config rebuilds, the stateless-sender wrapper, the ledger, and the OpenRouter adapter.
 - Ruff lint passes.
 - `scripts/check_release.py` additionally rejects OpenRouter keys, bearer tokens, local home-directory paths, and tracked billing ledgers.
 
