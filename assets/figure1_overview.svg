@@ -6,13 +6,13 @@
 <text x="2" y="150" font-size="24" text-anchor="start" font-weight="bold" fill="#1f1f1f">Early</text>
 <g transform="translate(102,142)" stroke="#1f1f1f" stroke-width="2.4699999999999998">
 <line x1="0" y1="-28.5" x2="0" y2="-19.95"/>
-<circle cx="0" cy="-31.349999999999998" r="4.2749999999999995" fill="#f2c230"/>
-<rect x="-28.5" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#d9362b"/>
-<rect x="22.799999999999997" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#d9362b"/>
+<circle cx="0" cy="-31.349999999999998" r="4.2749999999999995" fill="#DDCC77"/>
+<rect x="-28.5" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#CC6677"/>
+<rect x="22.799999999999997" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#CC6677"/>
 <rect x="-23.75" y="-19.95" width="47.5" height="39.9" rx="10.45" fill="#f4f5f7"/>
-<circle cx="-9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#29a9d6"/>
+<circle cx="-9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#88CCEE"/>
 <circle cx="-9.5" cy="-2.8499999999999996" r="2.4699999999999998" fill="#1f1f1f" stroke="none"/>
-<circle cx="9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#29a9d6"/>
+<circle cx="9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#88CCEE"/>
 <circle cx="9.5" cy="-2.8499999999999996" r="2.4699999999999998" fill="#1f1f1f" stroke="none"/>
 <rect x="-5.699999999999999" y="8.549999999999999" width="11.399999999999999" height="3.8" rx="1.9" fill="#1f1f1f" stroke="none"/>
 </g>
@@ -23,11 +23,11 @@
 <rect x="148" y="91" width="146" height="5" rx="2.5" fill="#c9cbd0"/>
 <text x="148" y="122" font-size="19.5" text-anchor="start" font-weight="normal" fill="#1f1f1f">Context</text>
 <rect x="148" y="132" width="150" height="5" rx="2.5" fill="#c9cbd0"/>
-<rect x="146" y="146" width="156" height="86" rx="5" fill="#fde8e8" stroke="#f3c2c2" stroke-width="1.5"/>
-<text x="154" y="169" font-size="19" text-anchor="start" font-weight="normal" fill="#cc1f1f">Confidential</text>
-<text x="154" y="191" font-size="19" text-anchor="start" font-weight="normal" fill="#cc1f1f">Keep confidential.</text>
-<rect x="154" y="203" width="138" height="5" rx="2.5" fill="#cc1f1f"/>
-<rect x="154" y="217" width="100" height="5" rx="2.5" fill="#cc1f1f"/>
+<rect x="146" y="146" width="156" height="86" rx="5" fill="#f6e3e7" stroke="#ecc6cf" stroke-width="1.5"/>
+<text x="154" y="169" font-size="19" text-anchor="start" font-weight="normal" fill="#882255">Confidential</text>
+<text x="154" y="191" font-size="19" text-anchor="start" font-weight="normal" fill="#882255">Keep confidential.</text>
+<rect x="154" y="203" width="138" height="5" rx="2.5" fill="#882255"/>
+<rect x="154" y="217" width="100" height="5" rx="2.5" fill="#882255"/>
 <text x="344" y="83.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#1f1f1f">History</text>
 <rect x="320" y="93.0" width="48" height="114" rx="7" fill="white" stroke="#4a5565" stroke-width="2.2"/>
 <path d="M331,103.0 H357 Q363,103.0 363,109.0 V121.0 Q363,127.0 357,127.0 H341 L333,134.0 L334,127.0 H331 Q325,127.0 325,121.0 V109.0 Q325,103.0 331,103.0 Z" fill="white" stroke="#4a5565" stroke-width="2.2" stroke-linejoin="round"/>
@@ -43,16 +43,16 @@
 <circle cx="352" cy="194.0" r="2.4" fill="#4a5565"/>
 <line x1="372" y1="150" x2="389" y2="150" stroke="#4a5565" stroke-width="2.6"/>
 <path d="M398,150 L387,144 L387,156 Z" fill="#4a5565"/>
-<rect x="402" y="118" width="276" height="64" rx="9" fill="#e8f0fb" stroke="#6f97d6" stroke-width="2.4"/>
+<rect x="402" y="118" width="276" height="64" rx="9" fill="#e7eef6" stroke="#4477AA" stroke-width="2.4"/>
 <text x="416" y="143" font-size="20.5" text-anchor="start" font-weight="normal" fill="#1f1f1f">Here is the updated summary</text>
 <text x="416" y="168" font-size="20.5" text-anchor="start" font-weight="normal" fill="#1f1f1f">for your review.</text>
 <line x1="606" y1="64" x2="542" y2="118" stroke="#4a5565" stroke-width="2" stroke-dasharray="6,5"/>
 <line x1="624" y1="67" x2="630" y2="118" stroke="#4a5565" stroke-width="2" stroke-dasharray="6,5"/>
 <path d="M596,52 Q620,33 644,52 Q620,71 596,52 Z" fill="white" stroke="#1f1f1f" stroke-width="2.6"/>
-<circle cx="620" cy="52" r="8.5" fill="#29a9d6" stroke="#1f1f1f" stroke-width="2"/>
+<circle cx="620" cy="52" r="8.5" fill="#88CCEE" stroke="#1f1f1f" stroke-width="2"/>
 <circle cx="620" cy="52" r="3.4" fill="#1f1f1f"/>
 <text x="652" y="59" font-size="19" text-anchor="start" font-weight="normal" fill="#1f1f1f">Message monitor</text>
-<circle cx="799" cy="53" r="10.5" fill="#3f9a4f"/>
+<circle cx="799" cy="53" r="10.5" fill="#44AA99"/>
 <path d="M794,53 L797.5,57 L804.5,48.5" fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="682" y1="150" x2="699" y2="150" stroke="#4a5565" stroke-width="2.6"/>
 <path d="M708,150 L697,144 L697,156 Z" fill="#4a5565"/>
@@ -71,13 +71,13 @@
 <circle cx="744" cy="204.0" r="2.4" fill="#4a5565"/>
 <g transform="translate(796,142)" stroke="#1f1f1f" stroke-width="2.7300000000000004">
 <line x1="0" y1="-31.5" x2="0" y2="-22.05"/>
-<circle cx="0" cy="-34.65" r="4.7250000000000005" fill="#f2c230"/>
-<rect x="-31.5" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#d9362b"/>
-<rect x="25.200000000000003" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#d9362b"/>
+<circle cx="0" cy="-34.65" r="4.7250000000000005" fill="#DDCC77"/>
+<rect x="-31.5" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#CC6677"/>
+<rect x="25.200000000000003" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#CC6677"/>
 <rect x="-26.25" y="-22.05" width="52.5" height="44.1" rx="11.55" fill="#f4f5f7"/>
-<circle cx="-10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#29a9d6"/>
+<circle cx="-10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#88CCEE"/>
 <circle cx="-10.5" cy="-3.1500000000000004" r="2.7300000000000004" fill="#1f1f1f" stroke="none"/>
-<circle cx="10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#29a9d6"/>
+<circle cx="10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#88CCEE"/>
 <circle cx="10.5" cy="-3.1500000000000004" r="2.7300000000000004" fill="#1f1f1f" stroke="none"/>
 <rect x="-6.300000000000001" y="9.450000000000001" width="12.600000000000001" height="4.2" rx="2.1" fill="#1f1f1f" stroke="none"/>
 </g>
@@ -118,13 +118,13 @@
 <text x="2" y="436" font-size="24" text-anchor="start" font-weight="bold" fill="#1f1f1f">Later</text>
 <g transform="translate(102,428)" stroke="#1f1f1f" stroke-width="2.4699999999999998">
 <line x1="0" y1="-28.5" x2="0" y2="-19.95"/>
-<circle cx="0" cy="-31.349999999999998" r="4.2749999999999995" fill="#f2c230"/>
-<rect x="-28.5" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#d9362b"/>
-<rect x="22.799999999999997" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#d9362b"/>
+<circle cx="0" cy="-31.349999999999998" r="4.2749999999999995" fill="#DDCC77"/>
+<rect x="-28.5" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#CC6677"/>
+<rect x="22.799999999999997" y="-7.6" width="5.699999999999999" height="17.099999999999998" rx="1.9" fill="#CC6677"/>
 <rect x="-23.75" y="-19.95" width="47.5" height="39.9" rx="10.45" fill="#f4f5f7"/>
-<circle cx="-9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#29a9d6"/>
+<circle cx="-9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#88CCEE"/>
 <circle cx="-9.5" cy="-2.8499999999999996" r="2.4699999999999998" fill="#1f1f1f" stroke="none"/>
-<circle cx="9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#29a9d6"/>
+<circle cx="9.5" cy="-2.8499999999999996" r="6.6499999999999995" fill="#88CCEE"/>
 <circle cx="9.5" cy="-2.8499999999999996" r="2.4699999999999998" fill="#1f1f1f" stroke="none"/>
 <rect x="-5.699999999999999" y="8.549999999999999" width="11.399999999999999" height="3.8" rx="1.9" fill="#1f1f1f" stroke="none"/>
 </g>
@@ -132,11 +132,11 @@
 <rect x="148" y="376" width="68" height="5" rx="2.5" fill="#c9cbd0"/>
 <rect x="224" y="376" width="74" height="5" rx="2.5" fill="#c9cbd0"/>
 <rect x="148" y="387" width="146" height="5" rx="2.5" fill="#c9cbd0"/>
-<rect x="146" y="398" width="156" height="86" rx="5" fill="#fde8e8" stroke="#f3c2c2" stroke-width="1.5"/>
-<text x="154" y="421" font-size="19" text-anchor="start" font-weight="normal" fill="#cc1f1f">Confidential</text>
-<text x="154" y="443" font-size="19" text-anchor="start" font-weight="normal" fill="#cc1f1f">Keep confidential.</text>
-<rect x="154" y="455" width="138" height="5" rx="2.5" fill="#cc1f1f"/>
-<rect x="154" y="469" width="100" height="5" rx="2.5" fill="#cc1f1f"/>
+<rect x="146" y="398" width="156" height="86" rx="5" fill="#f6e3e7" stroke="#ecc6cf" stroke-width="1.5"/>
+<text x="154" y="421" font-size="19" text-anchor="start" font-weight="normal" fill="#882255">Confidential</text>
+<text x="154" y="443" font-size="19" text-anchor="start" font-weight="normal" fill="#882255">Keep confidential.</text>
+<rect x="154" y="455" width="138" height="5" rx="2.5" fill="#882255"/>
+<rect x="154" y="469" width="100" height="5" rx="2.5" fill="#882255"/>
 <text x="344" y="357.5" font-size="19" text-anchor="middle" font-weight="normal" fill="#1f1f1f">History</text>
 <rect x="320" y="367.5" width="48" height="137" rx="7" fill="white" stroke="#4a5565" stroke-width="2.2"/>
 <path d="M331,377.5 H357 Q363,377.5 363,383.5 V390.5 Q363,396.5 357,396.5 H341 L333,403.5 L334,396.5 H331 Q325,396.5 325,390.5 V383.5 Q325,377.5 331,377.5 Z" fill="white" stroke="#4a5565" stroke-width="2.2" stroke-linejoin="round"/>
@@ -147,25 +147,25 @@
 <circle cx="335.0" cy="420.0" r="2.6" fill="#4a5565"/>
 <circle cx="344.0" cy="420.0" r="2.6" fill="#4a5565"/>
 <circle cx="353.0" cy="420.0" r="2.6" fill="#4a5565"/>
-<path d="M331,443.5 H357 Q363,443.5 363,449.5 V456.5 Q363,462.5 357,462.5 H341 L333,469.5 L334,462.5 H331 Q325,462.5 325,456.5 V449.5 Q325,443.5 331,443.5 Z" fill="#f9d4d4" stroke="#d9534f" stroke-width="2.2" stroke-linejoin="round"/>
-<circle cx="335.0" cy="453.0" r="2.6" fill="#cc1f1f"/>
-<circle cx="344.0" cy="453.0" r="2.6" fill="#cc1f1f"/>
-<circle cx="353.0" cy="453.0" r="2.6" fill="#cc1f1f"/>
+<path d="M331,443.5 H357 Q363,443.5 363,449.5 V456.5 Q363,462.5 357,462.5 H341 L333,469.5 L334,462.5 H331 Q325,462.5 325,456.5 V449.5 Q325,443.5 331,443.5 Z" fill="#f2d6dc" stroke="#CC6677" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="335.0" cy="453.0" r="2.6" fill="#882255"/>
+<circle cx="344.0" cy="453.0" r="2.6" fill="#882255"/>
+<circle cx="353.0" cy="453.0" r="2.6" fill="#882255"/>
 <circle cx="336" cy="491.5" r="2.4" fill="#4a5565"/>
 <circle cx="344" cy="491.5" r="2.4" fill="#4a5565"/>
 <circle cx="352" cy="491.5" r="2.4" fill="#4a5565"/>
 <line x1="372" y1="436" x2="389" y2="436" stroke="#4a5565" stroke-width="2.6"/>
 <path d="M398,436 L387,430 L387,442 Z" fill="#4a5565"/>
-<rect x="402" y="404" width="276" height="64" rx="9" fill="#e8f0fb" stroke="#6f97d6" stroke-width="2.4"/>
-<rect x="506.9" y="411" width="152.7" height="25" rx="4" fill="#f9d4d4" stroke="#e59a9a" stroke-width="1.3"/>
+<rect x="402" y="404" width="276" height="64" rx="9" fill="#e7eef6" stroke="#4477AA" stroke-width="2.4"/>
+<rect x="506.9" y="411" width="152.7" height="25" rx="4" fill="#f2d6dc" stroke="#dda0ad" stroke-width="1.3"/>
 <text x="416" y="429" font-size="20.5" text-anchor="start" font-weight="normal" fill="#1f1f1f">Here is the updated summary</text>
 <text x="416" y="454" font-size="20.5" text-anchor="start" font-weight="normal" fill="#1f1f1f">for your review.</text>
 <line x1="606" y1="350" x2="542" y2="404" stroke="#4a5565" stroke-width="2" stroke-dasharray="6,5"/>
 <line x1="624" y1="353" x2="630" y2="404" stroke="#4a5565" stroke-width="2" stroke-dasharray="6,5"/>
 <path d="M596,338 Q620,319 644,338 Q620,357 596,338 Z" fill="white" stroke="#1f1f1f" stroke-width="2.6"/>
-<circle cx="620" cy="338" r="8.5" fill="#29a9d6" stroke="#1f1f1f" stroke-width="2"/>
+<circle cx="620" cy="338" r="8.5" fill="#88CCEE" stroke="#1f1f1f" stroke-width="2"/>
 <circle cx="620" cy="338" r="3.4" fill="#1f1f1f"/>
-<circle cx="662" cy="338" r="10.5" fill="#3f9a4f"/>
+<circle cx="662" cy="338" r="10.5" fill="#44AA99"/>
 <path d="M657,338 L660.5,342 L667.5,333.5" fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="682" y1="436" x2="699" y2="436" stroke="#4a5565" stroke-width="2.6"/>
 <path d="M708,436 L697,430 L697,442 Z" fill="#4a5565"/>
@@ -179,22 +179,22 @@
 <circle cx="727.0" cy="436.0" r="2.6" fill="#4a5565"/>
 <circle cx="736.0" cy="436.0" r="2.6" fill="#4a5565"/>
 <circle cx="745.0" cy="436.0" r="2.6" fill="#4a5565"/>
-<path d="M723,459.5 H749 Q755,459.5 755,465.5 V472.5 Q755,478.5 749,478.5 H733 L725,485.5 L726,478.5 H723 Q717,478.5 717,472.5 V465.5 Q717,459.5 723,459.5 Z" fill="#f9d4d4" stroke="#d9534f" stroke-width="2.2" stroke-linejoin="round"/>
-<circle cx="727.0" cy="469.0" r="2.6" fill="#cc1f1f"/>
-<circle cx="736.0" cy="469.0" r="2.6" fill="#cc1f1f"/>
-<circle cx="745.0" cy="469.0" r="2.6" fill="#cc1f1f"/>
+<path d="M723,459.5 H749 Q755,459.5 755,465.5 V472.5 Q755,478.5 749,478.5 H733 L725,485.5 L726,478.5 H723 Q717,478.5 717,472.5 V465.5 Q717,459.5 723,459.5 Z" fill="#f2d6dc" stroke="#CC6677" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="727.0" cy="469.0" r="2.6" fill="#882255"/>
+<circle cx="736.0" cy="469.0" r="2.6" fill="#882255"/>
+<circle cx="745.0" cy="469.0" r="2.6" fill="#882255"/>
 <circle cx="728" cy="507.5" r="2.4" fill="#4a5565"/>
 <circle cx="736" cy="507.5" r="2.4" fill="#4a5565"/>
 <circle cx="744" cy="507.5" r="2.4" fill="#4a5565"/>
 <g transform="translate(796,428)" stroke="#1f1f1f" stroke-width="2.7300000000000004">
 <line x1="0" y1="-31.5" x2="0" y2="-22.05"/>
-<circle cx="0" cy="-34.65" r="4.7250000000000005" fill="#f2c230"/>
-<rect x="-31.5" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#d9362b"/>
-<rect x="25.200000000000003" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#d9362b"/>
+<circle cx="0" cy="-34.65" r="4.7250000000000005" fill="#DDCC77"/>
+<rect x="-31.5" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#CC6677"/>
+<rect x="25.200000000000003" y="-8.4" width="6.300000000000001" height="18.900000000000002" rx="2.1" fill="#CC6677"/>
 <rect x="-26.25" y="-22.05" width="52.5" height="44.1" rx="11.55" fill="#f4f5f7"/>
-<circle cx="-10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#29a9d6"/>
+<circle cx="-10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#88CCEE"/>
 <circle cx="-10.5" cy="-3.1500000000000004" r="2.7300000000000004" fill="#1f1f1f" stroke="none"/>
-<circle cx="10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#29a9d6"/>
+<circle cx="10.5" cy="-3.1500000000000004" r="7.3500000000000005" fill="#88CCEE"/>
 <circle cx="10.5" cy="-3.1500000000000004" r="2.7300000000000004" fill="#1f1f1f" stroke="none"/>
 <rect x="-6.300000000000001" y="9.450000000000001" width="12.600000000000001" height="4.2" rx="2.1" fill="#1f1f1f" stroke="none"/>
 </g>
@@ -205,7 +205,7 @@
 <rect x="846" y="396" width="178" height="5" rx="2.5" fill="#c9cbd0"/>
 <rect x="846" y="407" width="120" height="5" rx="2.5" fill="#c9cbd0"/>
 <text x="846" y="438" font-size="19.5" text-anchor="start" font-weight="normal" fill="#1f1f1f">Private information:</text>
-<rect x="844" y="448" width="184" height="52" rx="5" fill="#fde8e8" stroke="#cc1f1f" stroke-width="2.2"/>
-<rect x="852" y="463" width="166" height="5" rx="2.5" fill="#cc1f1f"/>
-<rect x="852" y="480" width="120" height="5" rx="2.5" fill="#cc1f1f"/>
+<rect x="844" y="448" width="184" height="52" rx="5" fill="#f6e3e7" stroke="#882255" stroke-width="2.2"/>
+<rect x="852" y="463" width="166" height="5" rx="2.5" fill="#882255"/>
+<rect x="852" y="480" width="120" height="5" rx="2.5" fill="#882255"/>
 </svg>

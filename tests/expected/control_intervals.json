@@ -1,0 +1,9 @@
+{
+  "_source": "Numbers reported in Table 1 of the camera-ready paper, entered by hand: standard-reply and no-history accuracy in percent as [mean, lower, upper], with 95% whole-game bootstrap intervals over ten games, rounded to 0.1.",
+  "sol": {"standard": [27.5, 20.0, 34.4], "fresh": [26.2, 20.0, 33.1]},
+  "terra": {"standard": [20.6, 15.6, 25.6], "fresh": [26.9, 20.0, 34.4]},
+  "opus": {"standard": [22.5, 16.9, 27.5], "fresh": [30.0, 21.2, 42.5]},
+  "luna": {"standard": [21.2, 17.5, 25.6], "fresh": [20.6, 14.4, 26.9]},
+  "sonnet": {"standard": [25.6, 21.9, 30.0], "fresh": [30.6, 22.5, 39.4]},
+  "stateless_sender": {"standard": [24.4, 17.5, 30.6], "fresh": [20.6, 16.9, 25.0]}
+}
