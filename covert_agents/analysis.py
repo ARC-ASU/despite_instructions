@@ -329,9 +329,13 @@ def selection_results(evidence):
     return result
 
 
-def shared_prior_results(evidence):
-    prior = evidence.rows("prior_discovery")
-    result = {"compatibility": {}, "learning": {}, "scaled": {}, "bilateral": {}, "weather": {}}
+def prior_compatibility(prior):
+    """Chance that an isolated receiver decodes an isolated sender's choice.
+
+    Averages over the four states on the discovery study's holdout split. Each
+    role's choice matrix is conditional on a valid decision (original estimator).
+    """
+    result = {}
     for family in sorted({r["family"] for r in prior}):
         matrices = []
         for role in ("sender", "receiver"):
@@ -349,10 +353,18 @@ def shared_prior_results(evidence):
             # Compatibility is conditional on a valid decision (original estimator).
             denominators = Counter(r["target"] for r in rs if r["decision"] is not None)
             matrices.append(counts / np.array([denominators[t] for t in range(4)])[:, None])
-        result["compatibility"][family] = float((matrices[0] * matrices[1].T).sum() / 4)
-    rows = evidence.rows("prior_learning")
+        result[family] = float((matrices[0] * matrices[1].T).sum() / 4)
+    return result
+
+
+def prior_learning(rows):
+    """Fixed-sender learning curves with the exact reference strategies.
+
+    Early AUC is the trapezoid area over checkpoints 0-4, divided by 4.
+    """
+    result = {}
     for family in sorted({r["family"] for r in rows}):
-        result["learning"][family] = {}
+        result[family] = {}
         for condition in ("focal", "anti_focal"):
             rs = [r for r in rows if r["family"] == family and r["condition"] == condition]
             games = []
@@ -380,13 +392,40 @@ def shared_prior_results(evidence):
                     for key in ("model", "independent", "greedy")
                 }
                 games.append(dict(rollout=game, curve=curve, early_auc=early))
-            result["learning"][family][condition] = dict(
+            result[family][condition] = dict(
                 games=games,
                 early=estimate([g["early_auc"]["model"] for g in games]),
                 early_minus_greedy=estimate(
                     [g["early_auc"]["model"] - g["early_auc"]["greedy"] for g in games]
                 ),
             )
+    return result
+
+
+def evaluation_scores(rows, conditions):
+    """Game-level accuracy at evaluation rounds 0 and 24 for each condition."""
+    result = {}
+    for condition in conditions:
+        result[condition] = {}
+        for cp in (0, 24):
+            rs = [
+                r
+                for r in rows
+                if r["condition"] == condition and r["phase"] == "evaluation" and r["round"] == cp
+            ]
+            result[condition][str(cp)] = group_scores(
+                rs, lambda r: r["game"], lambda r: r["correct"], 4, 8
+            )
+    return result
+
+
+def shared_prior_results(evidence):
+    """Codebook compatibility, fixed-sender learning, and coordination endpoints."""
+    result = {
+        "compatibility": prior_compatibility(evidence.rows("prior_discovery")),
+        "learning": prior_learning(evidence.rows("prior_learning")),
+        "scaled": {},
+    }
     for k in (16, 64):
         result["scaled"][str(k)] = {}
         for condition in ("canonical", "rotated"):
@@ -408,28 +447,10 @@ def shared_prior_results(evidence):
         if name not in evidence.manifest:
             continue
         bilateral += [dict(r, condition=r.get("condition", "k16")) for r in evidence.rows(name)]
-    for condition in ("k16", "structured", "tags"):
-        result["bilateral"][condition] = {}
-        for cp in (0, 24):
-            rs = [
-                r
-                for r in bilateral
-                if r["condition"] == condition and r["phase"] == "evaluation" and r["round"] == cp
-            ]
-            result["bilateral"][condition][str(cp)] = group_scores(
-                rs, lambda r: r["game"], lambda r: r["correct"], 4, 8
-            )
-    for condition in ("feedback", "no_feedback"):
-        result["weather"][condition] = {}
-        for cp in (0, 24):
-            rs = [
-                r
-                for r in evidence.rows("prior_generated_weather")
-                if r["condition"] == condition and r["phase"] == "evaluation" and r["round"] == cp
-            ]
-            result["weather"][condition][str(cp)] = group_scores(
-                rs, lambda r: r["game"], lambda r: r["correct"], 4, 8
-            )
+    result["bilateral"] = evaluation_scores(bilateral, ("k16", "structured", "tags"))
+    result["weather"] = evaluation_scores(
+        evidence.rows("prior_generated_weather"), ("feedback", "no_feedback")
+    )
     return result
 
 
