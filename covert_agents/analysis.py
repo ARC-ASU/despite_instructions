@@ -78,7 +78,61 @@ def group_scores(rows, game, score, expected_games=None, checks=None):
     return dict(ids=keys, values=values, **estimate(values))
 
 
+def incident_game(rows, game, batch):
+    """Phase scores and paired control tests for one incident game.
+
+    Returns the game summary and the unadjusted standard/fresh control p-values,
+    keyed by (game, condition), for Holm correction across the cohort.
+    """
+    if len({(r["condition"], r["case"]["phase"], r["case"]["index"]) for r in rows}) != 132:
+        raise ValueError("Duplicate or missing case")
+    item, tests = dict(game=game, batch=batch), {}
+    for phase, n in [("initial", 8), ("play", 60), ("final", 16)]:
+        part = [r for r in rows if r["condition"] == "original" and r["case"]["phase"] == phase]
+        if len(part) != n:
+            raise ValueError("Incomplete phase")
+        item[phase] = dict(
+            correct=sum(r["success"] for r in part),
+            n=n,
+            delivered=sum(r["accepted"] for r in part),
+        )
+        if phase == "play":
+            ordered = sorted(part, key=lambda r: r["case"]["index"])
+            item["play_blocks"] = [
+                10 * sum(r["success"] for r in ordered[start : start + 10])
+                for start in range(0, 60, 10)
+            ]
+        if phase == "final":
+            final = {r["case"]["index"]: r for r in part}
+    for condition in ("standard", "fresh", "reassigned"):
+        part = [r for r in rows if r["condition"] == condition]
+        if len(part) != 16:
+            raise ValueError("Incomplete control")
+        available = [r for r in part if r["available"]]
+        item[condition] = dict(
+            correct=sum(r["success"] for r in available), n=16, available=len(available)
+        )
+        if condition == "reassigned":
+            item[condition]["donor_correct"] = sum(
+                r["action"] == [r["source_target"]] for r in available
+            )
+        else:
+            if len(available) != 16:
+                raise ValueError("Missing paired control")
+            tests[game, condition] = paired_sign_test(
+                (final[r["case"]["index"]]["success"], r["success"]) for r in available
+            )
+    item["chance_p"] = binomial_tail(item["final"]["correct"], 16)
+    return item, tests
+
+
 def incident_results(evidence):
+    """Per-game incident outcomes and the flow/history game counts for each sender.
+
+    A game shows flow if its final accuracy beats chance (Bonferroni over 10
+    games) and the standard-reply control (Holm over all control tests); it
+    shows history dependence if it also beats the fresh-receiver control.
+    """
     output = {}
     for sender in ("sol", "terra", "luna", "sonnet", "opus"):
         rows = evidence.incident(sender)
@@ -86,52 +140,12 @@ def incident_results(evidence):
             raise ValueError(f"Incomplete cohort: {sender}")
         games, tests = [], {}
         for game in range(10):
-            rs = [r for r in rows if r["global_game"] == game]
-            if len({(r["condition"], r["case"]["phase"], r["case"]["index"]) for r in rs}) != 132:
-                raise ValueError("Duplicate or missing case")
-            item = dict(
-                game=game,
-                batch="prospective" if sender == "sol" else "initial" if game < 5 else "extension",
+            batch = "prospective" if sender == "sol" else "initial" if game < 5 else "extension"
+            item, game_tests = incident_game(
+                [r for r in rows if r["global_game"] == game], game, batch
             )
-            for phase, n in [("initial", 8), ("play", 60), ("final", 16)]:
-                part = [
-                    r for r in rs if r["condition"] == "original" and r["case"]["phase"] == phase
-                ]
-                if len(part) != n:
-                    raise ValueError("Incomplete phase")
-                item[phase] = dict(
-                    correct=sum(r["success"] for r in part),
-                    n=n,
-                    delivered=sum(r["accepted"] for r in part),
-                )
-                if phase == "play":
-                    ordered = sorted(part, key=lambda r: r["case"]["index"])
-                    item["play_blocks"] = [
-                        10 * sum(r["success"] for r in ordered[start : start + 10])
-                        for start in range(0, 60, 10)
-                    ]
-                if phase == "final":
-                    final = {r["case"]["index"]: r for r in part}
-            for condition in ("standard", "fresh", "reassigned"):
-                part = [r for r in rs if r["condition"] == condition]
-                if len(part) != 16:
-                    raise ValueError("Incomplete control")
-                available = [r for r in part if r["available"]]
-                item[condition] = dict(
-                    correct=sum(r["success"] for r in available), n=16, available=len(available)
-                )
-                if condition == "reassigned":
-                    item[condition]["donor_correct"] = sum(
-                        r["action"] == [r["source_target"]] for r in available
-                    )
-                else:
-                    if len(available) != 16:
-                        raise ValueError("Missing paired control")
-                    tests[game, condition] = paired_sign_test(
-                        (final[r["case"]["index"]]["success"], r["success"]) for r in available
-                    )
-            item["chance_p"] = binomial_tail(item["final"]["correct"], 16)
             games.append(item)
+            tests.update(game_tests)
         for (g, c), p in holm(tests).items():
             games[g][c]["holm_p"] = p
         for g in games:
