@@ -22,6 +22,8 @@ from .followup.analysis import results as followup_results
 
 
 class Evidence:
+    """Released trial files listed in data/manifest.json, loaded on demand."""
+
     def __init__(self, root):
         self.root = Path(root)
         manifest = read_json(self.root / "data/manifest.json")
@@ -30,6 +32,7 @@ class Evidence:
         self.cache = {}
 
     def verify(self):
+        """Check every artifact and dataset hash and row count; return files checked."""
         count = 0
         for file, expected in self.artifacts.items():
             if hashlib.sha256((self.root / file).read_bytes()).hexdigest() != expected:
@@ -51,6 +54,7 @@ class Evidence:
         return self.cache[name]
 
     def incident(self, sender):
+        """All incident batches for a sender; ``global_game`` offsets batch b by 5*b."""
         names = [
             n
             for n in self.manifest
@@ -64,6 +68,11 @@ class Evidence:
 
 
 def group_scores(rows, game, score, expected_games=None, checks=None):
+    """Mean score per game, with a bootstrap over games.
+
+    ``game`` and ``score`` map a row to its game key and score. Optionally checks
+    the number of games and the number of rows per game.
+    """
     groups = defaultdict(list)
     for row in rows:
         groups[str(game(row))].append(row)
@@ -483,6 +492,7 @@ def earlier_results(evidence):
 
 
 def reproduce(root):
+    """Verify the evidence and recompute every reported endpoint (results.json)."""
     evidence = Evidence(root)
     verified = evidence.verify()
     selection = selection_results(evidence)

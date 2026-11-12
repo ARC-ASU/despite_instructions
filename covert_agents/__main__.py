@@ -11,6 +11,7 @@ from . import priors
 
 
 def execute(config, client, emit):
+    """Dispatch a config to its protocol runner by ``kind``."""
     kind = config.get("kind", "incident")
     if kind == "incident":
         return IncidentProtocol.from_dict(config).run(client, config["cases"], emit)
@@ -22,6 +23,7 @@ def execute(config, client, emit):
 
 
 def replay(root, names=None):
+    """Rerun recorded configs against archived replies, checking requests and outcomes."""
     from .followup.replay import replay as followup_replay
 
     evidence = Evidence(root)
