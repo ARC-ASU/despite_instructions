@@ -9,14 +9,12 @@ provider call needs ``--execute``, a positive ``--max-calls``, and a new
 """
 
 import argparse
-import importlib
-import json
 from pathlib import Path
 
-from ..clients import CallableClient
+from ..clients import load_provider, record_run
 from ..incident import IncidentProtocol
 from ..interventions import posthoc_paraphrase
-from ..io import read_json, read_rows, write_json
+from ..io import read_json, read_rows
 from . import configs, controls, monitors, rewriters
 
 SOL_CONFIG = Path("configs/recorded/incident_sol.json")
@@ -84,23 +82,8 @@ def _execute(a, ap, source, work):
         ap.error("Provider calls require --execute")
     if not a.max_calls or a.max_calls <= 0:
         ap.error("--max-calls must be positive")
-    module, function = a.client.rsplit(":", 1)
-    generate = getattr(importlib.import_module(module), function)
-    a.output.mkdir(parents=True, exist_ok=False)
-    write_json(a.output / "source.json", source)
-    if hasattr(generate, "public_settings"):
-        write_json(a.output / "provider.json", generate.public_settings())
-    with (a.output / "calls.jsonl").open("x") as calls, \
-            (a.output / "trials.jsonl").open("x") as trials:
-        def emit_to(handle):
-            def emit(row):
-                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-                handle.flush()
-            return emit
-
-        client = CallableClient(generate, max_calls=a.max_calls, emit=emit_to(calls))
-        work(client, emit_to(trials))
-    write_json(a.output / "completed.json", {"calls": client.calls})
+    client = record_run(a.output, load_provider(a.client), a.max_calls, {"source.json": source},
+                        work)
     print(f"Completed {client.calls} provider calls; outputs in {a.output}")
 
 

@@ -1,4 +1,7 @@
-"""Role-local transcripts. Frozen probes never append to these histories."""
+"""Role-local transcripts for the incident and selection protocols.
+
+Frozen probes never append to these histories.
+"""
 
 
 def render(history, current):

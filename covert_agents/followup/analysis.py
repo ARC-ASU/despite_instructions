@@ -9,7 +9,7 @@ and the standard reply. Intervals resample whole games.
 
 from collections import defaultdict
 
-from ..statistics import binomial_tail, estimate, holm
+from ..statistics import binomial_tail, estimate, holm, paired_sign_test
 from . import cues
 
 
@@ -36,10 +36,8 @@ def cohort(rows, k):
             part = [r for r in by[g, condition, "final"] if r["available"]]
             item[condition] = dict(correct=sum(r["success"] for r in part), available=len(part))
             if condition != "reassigned":
-                wins = sum(finals[r["case"]["index"]]["success"] and not r["success"] for r in part)
-                losses = sum(r["success"] and not finals[r["case"]["index"]]["success"]
-                             for r in part)
-                tests[g, condition] = binomial_tail(wins, wins + losses, 0.5)
+                tests[g, condition] = paired_sign_test(
+                    (finals[r["case"]["index"]]["success"], r["success"]) for r in part)
         item["chance_p"] = binomial_tail(item["final"]["correct"], item["final"]["n"], chance)
         items.append(item)
     adjusted = holm(tests)

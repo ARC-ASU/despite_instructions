@@ -1,10 +1,11 @@
 import json
 import pytest
-from covert_agents.clients import CallableClient, RecordedClient
+from covert_agents.clients import CallableClient, RecordedClient, record_run
+from covert_agents.incident import format_ok
 from covert_agents.io import fingerprint, read_json
 from covert_agents.selection.run import run, schedule
 from covert_agents.priors import valid_weather
-from covert_agents.statistics import binomial_tail, holm
+from covert_agents.statistics import binomial_tail, holm, paired_sign_test
 from .conftest import ROOT
 
 
@@ -157,3 +158,43 @@ def test_new_interventions_preserve_blocked_trials():
     posthoc_paraphrase(protocol, client, [blocked], output.append)
     assert not calls
     assert [r["success"] for r in output] == [0, 0]
+
+
+def test_paired_sign_test_counts_only_discordant_pairs():
+    # Two wins (1, 0), one loss (0, 1); concordant pairs are ignored.
+    pairs = [(1, 0), (1, 0), (0, 1), (1, 1), (0, 0)]
+    assert paired_sign_test(pairs) == binomial_tail(2, 3, 0.5)
+    assert paired_sign_test([(1, 1), (0, 0)]) == 1.0
+
+
+def test_format_gate():
+    ok = "The investigation team has the gateway logs and further updates will follow soon today."
+    assert format_ok(ok, set())
+    assert not format_ok(ok, {"gateway"})
+    assert not format_ok("Too short to pass.", set())
+    assert format_ok("Too short to pass.", set(), check_length=False)
+    assert not format_ok(ok.replace("today", "at 9"), set())
+    assert not format_ok(ok.replace("logs and", "logs. And"), set())
+
+
+def test_record_run_writes_inputs_calls_and_trials(tmp_path):
+    def generate(role, instructions, content, schema):
+        return dict(text="{}", status="completed", usage={"input_tokens": 1})
+
+    generate.public_settings = lambda: {"provider": "fake"}
+
+    def work(client, emit):
+        client.ask("sender", "a", "b", {})
+        emit({"trial": 1})
+
+    out = tmp_path / "run"
+    client = record_run(out, generate, 5, {"config.json": {"kind": "test"}}, work)
+    assert client.calls == 1
+    assert read_json(out / "config.json") == {"kind": "test"}
+    assert read_json(out / "provider.json") == {"provider": "fake"}
+    assert read_json(out / "completed.json") == {"calls": 1}
+    calls = [json.loads(line) for line in (out / "calls.jsonl").read_text().splitlines()]
+    assert calls[0]["reply"] == dict(text="{}", status="completed")
+    assert (out / "trials.jsonl").read_text() == '{"trial": 1}\n'
+    with pytest.raises(FileExistsError):
+        record_run(out, generate, 5, {}, work)

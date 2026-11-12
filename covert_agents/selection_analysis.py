@@ -1,10 +1,17 @@
 """Sentence interventions and a decoder learned solely from past successes."""
 
+import re
 from collections import defaultdict, Counter
+import numpy as np
 from .statistics import estimate
 
 
 def past_success(rows, arm=None):
+    """Score a decoder built only from rewarded adaptation rounds on the final probes.
+
+    Each message decodes to the receiver action(s) it most often earned a reward
+    with; ties split credit. Values are per game.
+    """
     units = defaultdict(list)
     for row in rows:
         if arm is None or row.get("arm") == arm:
@@ -28,7 +35,27 @@ def past_success(rows, arm=None):
     return dict(values=values, **estimate(values))
 
 
+def pooled_accuracy(rows, target):
+    """Pool available checks over games; the interval resamples whole games."""
+    grouped = defaultdict(list)
+    for r in rows:
+        grouped[r["rollout_id"]].append(r["agent_b_action"] == r[target])
+    per_game = list(grouped.values())
+    n = np.array([len(v) for v in per_game])
+    correct = np.array([sum(v) for v in per_game])
+    ix = np.random.default_rng(20260925).integers(0, len(per_game), (10000, len(per_game)))
+    samples = correct[ix].sum(axis=1) / n[ix].sum(axis=1)
+    return dict(
+        n=int(n.sum()),
+        correct=int(correct.sum()),
+        mean=float(correct.sum() / n.sum()),
+        games=len(per_game),
+        ci=np.quantile(samples, [0.025, 0.975]).tolist(),
+    )
+
+
 def interventions(rows):
+    """Receiver accuracy under each recorded counterfactual message audit."""
     records = [r for r in rows if r["phase"] == "counterfactual"]
     originals = {
         (r["rollout_id"], r["episode_index"]): r for r in records if r["audit"] == "fresh_receiver"
@@ -38,30 +65,9 @@ def interventions(rows):
         selected = [r for r in records if r["audit"] == audit]
         if not selected:
             continue
-
-        def aggregate(rs, target):
-            grouped = defaultdict(list)
-            for r in rs:
-                grouped[r["rollout_id"]].append(r["agent_b_action"] == r[target])
-            # Pool available checks; bootstrap whole games, preserving sizes.
-            pairs = list(grouped.values())
-            import numpy as np
-
-            n = np.array([len(v) for v in pairs])
-            correct = np.array([sum(v) for v in pairs])
-            ix = np.random.default_rng(20260925).integers(0, len(pairs), (10000, len(pairs)))
-            samples = correct[ix].sum(axis=1) / n[ix].sum(axis=1)
-            return dict(
-                n=int(n.sum()),
-                correct=int(correct.sum()),
-                mean=float(correct.sum() / n.sum()),
-                games=len(pairs),
-                ci=np.quantile(samples, [0.025, 0.975]).tolist(),
-            )
-
-        output[audit] = dict(actual=aggregate(selected, "private_value"))
+        output[audit] = dict(actual=pooled_accuracy(selected, "private_value"))
         if audit == "derange":
-            output[audit]["replacement"] = aggregate(selected, "source_secret")
+            output[audit]["replacement"] = pooled_accuracy(selected, "source_secret")
             changed = [
                 r
                 for r in selected
@@ -69,8 +75,8 @@ def interventions(rows):
                 != originals[r["rollout_id"], r["episode_index"]]["forwarded_message"]
             ]
             if changed:
-                output[audit]["changed_actual"] = aggregate(changed, "private_value")
-                output[audit]["changed_replacement"] = aggregate(changed, "source_secret")
+                output[audit]["changed_actual"] = pooled_accuracy(changed, "private_value")
+                output[audit]["changed_replacement"] = pooled_accuracy(changed, "source_secret")
     return output
 
 
@@ -91,7 +97,6 @@ def results(evidence):
 
 def paired_contrasts(selection):
     """Match games by numeric replicate ID before bootstrapping differences."""
-    import re
 
     def by_game(group):
         return {

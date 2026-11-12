@@ -12,7 +12,7 @@ from pathlib import Path
 import hashlib
 import numpy as np
 from .io import read_json, read_rows
-from .statistics import binomial_tail, holm, estimate
+from .statistics import binomial_tail, estimate, holm, paired_sign_test
 from .references import reference_curves
 from .selection_analysis import results as selection_audits, paired_contrasts
 from .prior_analysis import results as prior_audits
@@ -22,6 +22,8 @@ from .followup.analysis import results as followup_results
 
 
 class Evidence:
+    """Released trial files listed in data/manifest.json, loaded on demand."""
+
     def __init__(self, root):
         self.root = Path(root)
         manifest = read_json(self.root / "data/manifest.json")
@@ -30,6 +32,7 @@ class Evidence:
         self.cache = {}
 
     def verify(self):
+        """Check every artifact and dataset hash and row count; return files checked."""
         count = 0
         for file, expected in self.artifacts.items():
             if hashlib.sha256((self.root / file).read_bytes()).hexdigest() != expected:
@@ -51,6 +54,7 @@ class Evidence:
         return self.cache[name]
 
     def incident(self, sender):
+        """All incident batches for a sender; ``global_game`` offsets batch b by 5*b."""
         names = [
             n
             for n in self.manifest
@@ -64,6 +68,11 @@ class Evidence:
 
 
 def group_scores(rows, game, score, expected_games=None, checks=None):
+    """Mean score per game, with a bootstrap over games.
+
+    ``game`` and ``score`` map a row to its game key and score. Optionally checks
+    the number of games and the number of rows per game.
+    """
     groups = defaultdict(list)
     for row in rows:
         groups[str(game(row))].append(row)
@@ -78,7 +87,61 @@ def group_scores(rows, game, score, expected_games=None, checks=None):
     return dict(ids=keys, values=values, **estimate(values))
 
 
+def incident_game(rows, game, batch):
+    """Phase scores and paired control tests for one incident game.
+
+    Returns the game summary and the unadjusted standard/fresh control p-values,
+    keyed by (game, condition), for Holm correction across the cohort.
+    """
+    if len({(r["condition"], r["case"]["phase"], r["case"]["index"]) for r in rows}) != 132:
+        raise ValueError("Duplicate or missing case")
+    item, tests = dict(game=game, batch=batch), {}
+    for phase, n in [("initial", 8), ("play", 60), ("final", 16)]:
+        part = [r for r in rows if r["condition"] == "original" and r["case"]["phase"] == phase]
+        if len(part) != n:
+            raise ValueError("Incomplete phase")
+        item[phase] = dict(
+            correct=sum(r["success"] for r in part),
+            n=n,
+            delivered=sum(r["accepted"] for r in part),
+        )
+        if phase == "play":
+            ordered = sorted(part, key=lambda r: r["case"]["index"])
+            item["play_blocks"] = [
+                10 * sum(r["success"] for r in ordered[start : start + 10])
+                for start in range(0, 60, 10)
+            ]
+        if phase == "final":
+            final = {r["case"]["index"]: r for r in part}
+    for condition in ("standard", "fresh", "reassigned"):
+        part = [r for r in rows if r["condition"] == condition]
+        if len(part) != 16:
+            raise ValueError("Incomplete control")
+        available = [r for r in part if r["available"]]
+        item[condition] = dict(
+            correct=sum(r["success"] for r in available), n=16, available=len(available)
+        )
+        if condition == "reassigned":
+            item[condition]["donor_correct"] = sum(
+                r["action"] == [r["source_target"]] for r in available
+            )
+        else:
+            if len(available) != 16:
+                raise ValueError("Missing paired control")
+            tests[game, condition] = paired_sign_test(
+                (final[r["case"]["index"]]["success"], r["success"]) for r in available
+            )
+    item["chance_p"] = binomial_tail(item["final"]["correct"], 16)
+    return item, tests
+
+
 def incident_results(evidence):
+    """Per-game incident outcomes and the flow/history game counts for each sender.
+
+    A game shows flow if its final accuracy beats chance (Bonferroni over 10
+    games) and the standard-reply control (Holm over all control tests); it
+    shows history dependence if it also beats the fresh-receiver control.
+    """
     output = {}
     for sender in ("sol", "terra", "luna", "sonnet", "opus"):
         rows = evidence.incident(sender)
@@ -86,56 +149,12 @@ def incident_results(evidence):
             raise ValueError(f"Incomplete cohort: {sender}")
         games, tests = [], {}
         for game in range(10):
-            rs = [r for r in rows if r["global_game"] == game]
-            if len({(r["condition"], r["case"]["phase"], r["case"]["index"]) for r in rs}) != 132:
-                raise ValueError("Duplicate or missing case")
-            item = dict(
-                game=game,
-                batch="prospective" if sender == "sol" else "initial" if game < 5 else "extension",
+            batch = "prospective" if sender == "sol" else "initial" if game < 5 else "extension"
+            item, game_tests = incident_game(
+                [r for r in rows if r["global_game"] == game], game, batch
             )
-            for phase, n in [("initial", 8), ("play", 60), ("final", 16)]:
-                part = [
-                    r for r in rs if r["condition"] == "original" and r["case"]["phase"] == phase
-                ]
-                if len(part) != n:
-                    raise ValueError("Incomplete phase")
-                item[phase] = dict(
-                    correct=sum(r["success"] for r in part),
-                    n=n,
-                    delivered=sum(r["accepted"] for r in part),
-                )
-                if phase == "play":
-                    ordered = sorted(part, key=lambda r: r["case"]["index"])
-                    item["play_blocks"] = [
-                        10 * sum(r["success"] for r in ordered[start : start + 10])
-                        for start in range(0, 60, 10)
-                    ]
-                if phase == "final":
-                    final = {r["case"]["index"]: r for r in part}
-            for condition in ("standard", "fresh", "reassigned"):
-                part = [r for r in rs if r["condition"] == condition]
-                if len(part) != 16:
-                    raise ValueError("Incomplete control")
-                available = [r for r in part if r["available"]]
-                item[condition] = dict(
-                    correct=sum(r["success"] for r in available), n=16, available=len(available)
-                )
-                if condition == "reassigned":
-                    item[condition]["donor_correct"] = sum(
-                        r["action"] == [r["source_target"]] for r in available
-                    )
-                else:
-                    if len(available) != 16:
-                        raise ValueError("Missing paired control")
-                    wins = sum(
-                        final[r["case"]["index"]]["success"] and not r["success"] for r in available
-                    )
-                    losses = sum(
-                        r["success"] and not final[r["case"]["index"]]["success"] for r in available
-                    )
-                    tests[game, condition] = binomial_tail(wins, wins + losses, 0.5)
-            item["chance_p"] = binomial_tail(item["final"]["correct"], 16)
             games.append(item)
+            tests.update(game_tests)
         for (g, c), p in holm(tests).items():
             games[g][c]["holm_p"] = p
         for g in games:
@@ -185,9 +204,7 @@ def paraphrase_results(evidence):
             o = originals[game, r["case"]["index"]]
             if o["success"] != r["original_success"] or o["message"] != r["original_message"]:
                 raise ValueError("Original/rewrite pairing mismatch")
-        wins = sum(r["original_success"] and not r["success"] for r in part)
-        losses = sum(r["success"] and not r["original_success"] for r in part)
-        tests[game] = binomial_tail(wins, wins + losses, 0.5)
+        tests[game] = paired_sign_test((r["original_success"], r["success"]) for r in part)
         correct = sum(r["success"] for r in part)
         post.append(
             dict(
@@ -235,9 +252,9 @@ def paraphrase_results(evidence):
             if c == "reassigned":
                 item["donor_correct"] = sum(r["action"] == [r["source_target"]] for r in rs)
             else:
-                wins = sum(final[r["case"]["index"]]["success"] and not r["success"] for r in rs)
-                losses = sum(r["success"] and not final[r["case"]["index"]]["success"] for r in rs)
-                tests[game, c] = binomial_tail(wins, wins + losses, 0.5)
+                tests[game, c] = paired_sign_test(
+                    (final[r["case"]["index"]]["success"], r["success"]) for r in rs
+                )
         formation.append(item)
     for (g, c), p in holm(tests).items():
         formation[g]["controls"][c + "_adjusted_p"] = p
@@ -321,9 +338,13 @@ def selection_results(evidence):
     return result
 
 
-def shared_prior_results(evidence):
-    prior = evidence.rows("prior_discovery")
-    result = {"compatibility": {}, "learning": {}, "scaled": {}, "bilateral": {}, "weather": {}}
+def prior_compatibility(prior):
+    """Chance that an isolated receiver decodes an isolated sender's choice.
+
+    Averages over the four states on the discovery study's holdout split. Each
+    role's choice matrix is conditional on a valid decision (original estimator).
+    """
+    result = {}
     for family in sorted({r["family"] for r in prior}):
         matrices = []
         for role in ("sender", "receiver"):
@@ -341,10 +362,18 @@ def shared_prior_results(evidence):
             # Compatibility is conditional on a valid decision (original estimator).
             denominators = Counter(r["target"] for r in rs if r["decision"] is not None)
             matrices.append(counts / np.array([denominators[t] for t in range(4)])[:, None])
-        result["compatibility"][family] = float((matrices[0] * matrices[1].T).sum() / 4)
-    rows = evidence.rows("prior_learning")
+        result[family] = float((matrices[0] * matrices[1].T).sum() / 4)
+    return result
+
+
+def prior_learning(rows):
+    """Fixed-sender learning curves with the exact reference strategies.
+
+    Early AUC is the trapezoid area over checkpoints 0-4, divided by 4.
+    """
+    result = {}
     for family in sorted({r["family"] for r in rows}):
-        result["learning"][family] = {}
+        result[family] = {}
         for condition in ("focal", "anti_focal"):
             rs = [r for r in rows if r["family"] == family and r["condition"] == condition]
             games = []
@@ -372,13 +401,40 @@ def shared_prior_results(evidence):
                     for key in ("model", "independent", "greedy")
                 }
                 games.append(dict(rollout=game, curve=curve, early_auc=early))
-            result["learning"][family][condition] = dict(
+            result[family][condition] = dict(
                 games=games,
                 early=estimate([g["early_auc"]["model"] for g in games]),
                 early_minus_greedy=estimate(
                     [g["early_auc"]["model"] - g["early_auc"]["greedy"] for g in games]
                 ),
             )
+    return result
+
+
+def evaluation_scores(rows, conditions):
+    """Game-level accuracy at evaluation rounds 0 and 24 for each condition."""
+    result = {}
+    for condition in conditions:
+        result[condition] = {}
+        for cp in (0, 24):
+            rs = [
+                r
+                for r in rows
+                if r["condition"] == condition and r["phase"] == "evaluation" and r["round"] == cp
+            ]
+            result[condition][str(cp)] = group_scores(
+                rs, lambda r: r["game"], lambda r: r["correct"], 4, 8
+            )
+    return result
+
+
+def shared_prior_results(evidence):
+    """Codebook compatibility, fixed-sender learning, and coordination endpoints."""
+    result = {
+        "compatibility": prior_compatibility(evidence.rows("prior_discovery")),
+        "learning": prior_learning(evidence.rows("prior_learning")),
+        "scaled": {},
+    }
     for k in (16, 64):
         result["scaled"][str(k)] = {}
         for condition in ("canonical", "rotated"):
@@ -400,28 +456,10 @@ def shared_prior_results(evidence):
         if name not in evidence.manifest:
             continue
         bilateral += [dict(r, condition=r.get("condition", "k16")) for r in evidence.rows(name)]
-    for condition in ("k16", "structured", "tags"):
-        result["bilateral"][condition] = {}
-        for cp in (0, 24):
-            rs = [
-                r
-                for r in bilateral
-                if r["condition"] == condition and r["phase"] == "evaluation" and r["round"] == cp
-            ]
-            result["bilateral"][condition][str(cp)] = group_scores(
-                rs, lambda r: r["game"], lambda r: r["correct"], 4, 8
-            )
-    for condition in ("feedback", "no_feedback"):
-        result["weather"][condition] = {}
-        for cp in (0, 24):
-            rs = [
-                r
-                for r in evidence.rows("prior_generated_weather")
-                if r["condition"] == condition and r["phase"] == "evaluation" and r["round"] == cp
-            ]
-            result["weather"][condition][str(cp)] = group_scores(
-                rs, lambda r: r["game"], lambda r: r["correct"], 4, 8
-            )
+    result["bilateral"] = evaluation_scores(bilateral, ("k16", "structured", "tags"))
+    result["weather"] = evaluation_scores(
+        evidence.rows("prior_generated_weather"), ("feedback", "no_feedback")
+    )
     return result
 
 
@@ -454,6 +492,7 @@ def earlier_results(evidence):
 
 
 def reproduce(root):
+    """Verify the evidence and recompute every reported endpoint (results.json)."""
     evidence = Evidence(root)
     verified = evidence.verify()
     selection = selection_results(evidence)

@@ -4,8 +4,9 @@
 controls after each game. If the call limit stops a run inside that phase, the
 cohort itself is complete and the missing controls are frozen evaluations: they
 use final messages and receiver histories already on disk and update nothing.
-This rebuilds those histories, picks donors exactly as ``IncidentProtocol.run``
-does, and emits the missing control rows in the same shape.
+This rebuilds those histories and uses ``IncidentProtocol.control_message`` and
+``IncidentProtocol.control``, as ``IncidentProtocol.run`` does, so donors and
+rows match a run that was not cut off.
 """
 
 from ..interventions import final_messages, frozen_histories
@@ -23,18 +24,7 @@ def missing(protocol, rows):
             for condition in protocol.controls:
                 if (game, case["index"], condition) in done:
                     continue
-                donor = None
-                if condition == "reassigned":
-                    donor = next((r for r in finals[game] if r["accepted"]
-                                  and r["case"]["public"] == case["public"]
-                                  and r["case"]["target"] != case["target"]
-                                  and r["message"] != original["message"]), None)
-                if condition == "standard":
-                    message = protocol.standard_message
-                elif condition == "reassigned":
-                    message = donor["message"] if donor else None
-                else:
-                    message = original["delivered"]
+                message, donor = protocol.control_message(condition, original, finals[game])
                 yield game, case, condition, message, donor
 
 
@@ -43,10 +33,4 @@ def complete(protocol, client, rows, emit):
     for game, case, condition, message, donor in list(missing(protocol, rows)):
         client.context = dict(game=game, phase="control", index=case["index"], condition=condition)
         history = [] if condition == "fresh" else histories[game]
-        raw, action = (protocol.receive(client, case["public"], message, history)
-                       if message is not None else (None, None))
-        emit(dict(
-            case=case, condition=condition, available=message is not None, message=message,
-            action=action, success=int(message is not None and action == [case["target"]]),
-            source_target=donor["case"]["target"] if donor else None, receiver_response=raw,
-        ))
+        emit(protocol.control(client, case, condition, message, donor, history))
